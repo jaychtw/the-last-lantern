@@ -1,0 +1,410 @@
+{
+  "target": "http://127.0.0.1:8090/",
+  "artifact": "e3763acd073127111090d59c484ac49fbff52b2deeacea629f8fc59f9681be68",
+  "publicDeployment": false,
+  "checks": [
+    "Packaged build starts into the exploration scene.",
+    "844×390 landscape has no horizontal overflow; the page scrolls vertically to controls. Portrait remains recommended for this candidate.",
+    "Touch navigation reaches the contact encounter, live language switching preserves battle, and Attack resolves both sides with domain logs.",
+    "No page exceptions."
+  ],
+  "audits": [
+    {
+      "state": "exploration",
+      "lang": "en",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#brand-title"
+            ],
+            [
+              "#language"
+            ],
+            [
+              "#chapter-label"
+            ],
+            [
+              "#chapter-name"
+            ],
+            [
+              "#location"
+            ],
+            [
+              "#location-sub"
+            ],
+            [
+              ".heading-ornament"
+            ],
+            [
+              "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-place=\"mira\"] > b"
+            ],
+            [
+              ".sun-symbol"
+            ],
+            [
+              "#area-label"
+            ],
+            [
+              "#area-name"
+            ],
+            [
+              ".quest-glyph"
+            ],
+            [
+              "#objective-label"
+            ],
+            [
+              "#objective-text"
+            ],
+            [
+              "#hero-name"
+            ],
+            [
+              "#level"
+            ],
+            [
+              ".stat-line:nth-child(2) > span"
+            ],
+            [
+              "#hp-value"
+            ],
+            [
+              ".mana > span"
+            ],
+            [
+              "#mp-value"
+            ],
+            [
+              "#explore > span"
+            ],
+            [
+              "#journal > span"
+            ],
+            [
+              "#settings > span"
+            ],
+            [
+              "button[data-dir=\"up\"]"
+            ],
+            [
+              "button[data-dir=\"left\"]"
+            ],
+            [
+              ".dpad > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-dir=\"right\"]"
+            ],
+            [
+              "button[data-dir=\"down\"]"
+            ],
+            [
+              "#tap-hint"
+            ],
+            [
+              "#footer-text"
+            ],
+            [
+              ".footer-mark"
+            ],
+            [
+              "#gate-label"
+            ]
+          ]
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "state": "exploration",
+      "lang": "zh-TW",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              "#brand-title"
+            ],
+            [
+              "#chapter-label"
+            ],
+            [
+              "#chapter-name"
+            ],
+            [
+              "#location"
+            ],
+            [
+              "#location-sub"
+            ],
+            [
+              ".heading-ornament"
+            ],
+            [
+              "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-place=\"mira\"] > b"
+            ],
+            [
+              ".sun-symbol"
+            ],
+            [
+              "#area-label"
+            ],
+            [
+              "#area-name"
+            ],
+            [
+              ".quest-glyph"
+            ],
+            [
+              "#objective-label"
+            ],
+            [
+              "#objective-text"
+            ],
+            [
+              "#hero-name"
+            ],
+            [
+              "#level"
+            ],
+            [
+              ".stat-line:nth-child(2) > span"
+            ],
+            [
+              "#hp-value"
+            ],
+            [
+              ".mana > span"
+            ],
+            [
+              "#mp-value"
+            ],
+            [
+              "#explore > span"
+            ],
+            [
+              "#journal > span"
+            ],
+            [
+              "#settings > span"
+            ],
+            [
+              "button[data-dir=\"up\"]"
+            ],
+            [
+              "button[data-dir=\"left\"]"
+            ],
+            [
+              ".dpad > span[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-dir=\"right\"]"
+            ],
+            [
+              "button[data-dir=\"down\"]"
+            ],
+            [
+              "#tap-hint"
+            ],
+            [
+              "#footer-text"
+            ],
+            [
+              ".footer-mark"
+            ],
+            [
+              "#gate-label"
+            ]
+          ]
+        }
+      ],
+      "passes": 40
+    },
+    {
+      "state": "battle",
+      "lang": "en",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".battle-top > div > .eyebrow"
+            ],
+            [
+              "#dialog-title"
+            ],
+            [
+              "button[data-command=\"pause-battle\"]"
+            ],
+            [
+              ".enemy-card > .tiny"
+            ],
+            [
+              ".enemy-card > small"
+            ],
+            [
+              ".battle-hero-status > strong"
+            ],
+            [
+              ".battle-hero-status > span"
+            ],
+            [
+              ".turn-status"
+            ],
+            [
+              ".turn-status > span"
+            ],
+            [
+              "button[data-action=\"attack\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"attack\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"attack\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-command=\"magic\"] > .command-symbol"
+            ],
+            [
+              "button[data-command=\"magic\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-command=\"magic\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"tonic\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"tonic\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"tonic\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"guard\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"guard\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"guard\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"flee\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"flee\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"flee\"] > span:nth-child(2) > small"
+            ],
+            [
+              "summary"
+            ]
+          ]
+        }
+      ],
+      "passes": 25
+    },
+    {
+      "state": "battle",
+      "lang": "zh-TW",
+      "violations": [],
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "targets": [
+            [
+              ".battle-top > div > .eyebrow"
+            ],
+            [
+              "#dialog-title"
+            ],
+            [
+              "button[data-command=\"pause-battle\"]"
+            ],
+            [
+              ".enemy-card > .tiny"
+            ],
+            [
+              ".enemy-card > small"
+            ],
+            [
+              ".battle-hero-status > strong"
+            ],
+            [
+              ".battle-hero-status > span"
+            ],
+            [
+              ".turn-status"
+            ],
+            [
+              ".turn-status > span"
+            ],
+            [
+              "button[data-action=\"attack\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"attack\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"attack\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-command=\"magic\"] > .command-symbol"
+            ],
+            [
+              "button[data-command=\"magic\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-command=\"magic\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"tonic\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"tonic\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"tonic\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"guard\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"guard\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"guard\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"flee\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"flee\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"flee\"] > span:nth-child(2) > small"
+            ],
+            [
+              "summary"
+            ]
+          ]
+        }
+      ],
+      "passes": 25
+    }
+  ]
+}

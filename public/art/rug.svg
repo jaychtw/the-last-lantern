@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="220" viewBox="0 0 310 220"><defs>
+<linearGradient id="leaf" x2=".35" y2="1"><stop stop-color="#bed88d"/><stop offset=".5" stop-color="#6f9d68"/><stop offset="1" stop-color="#355b51"/></linearGradient>
+<linearGradient id="roof" x2=".25" y2="1"><stop stop-color="#aab3bb"/><stop offset=".35" stop-color="#6c7c90"/><stop offset="1" stop-color="#3c4c64"/></linearGradient>
+<linearGradient id="wall" x2=".9" y2=".6"><stop stop-color="#f4dfb2"/><stop offset="1" stop-color="#bca781"/></linearGradient>
+<linearGradient id="wood" x2=".7" y2="1"><stop stop-color="#bf946a"/><stop offset="1" stop-color="#684735"/></linearGradient>
+<linearGradient id="cloth" x2=".8" y2="1"><stop stop-color="#69b5a7"/><stop offset=".45" stop-color="#387c79"/><stop offset="1" stop-color="#204c54"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#fff3b4" stop-opacity=".9"/><stop offset=".4" stop-color="#edbe6f" stop-opacity=".4"/><stop offset="1" stop-color="#edbe6f" stop-opacity="0"/></radialGradient>
+<radialGradient id="blob" cx=".34" cy=".25"><stop stop-color="#e3f7cf"/><stop offset=".4" stop-color="#9eccad"/><stop offset=".85" stop-color="#55948e"/><stop offset="1" stop-color="#346978"/></radialGradient>
+<linearGradient id="stone" x2=".7" y2="1"><stop stop-color="#c9d1b9"/><stop offset="1" stop-color="#6f8b7d"/></linearGradient>
+</defs><path d="M15 25L284 12L301 192L29 210Z" fill="#a77155" stroke="#d6b486" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" /><path d="M35 43L267 31L279 174L47 189Z" fill="none" stroke="#d9b283" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M75 120L155 57L237 112L164 175Z" fill="none" stroke="#c6a57a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><path d="M123 119L157 91L192 117L161 145Z" fill="#657567" /></svg>

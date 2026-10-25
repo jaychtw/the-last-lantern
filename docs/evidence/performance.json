@@ -1,0 +1,60 @@
+{
+  "recordedAt": "2026-10-24T21:47:37.959Z",
+  "url": "http://127.0.0.1:8090/",
+  "browser": "154.0.8037.57",
+  "environment": "Cloud Linux; headless Chromium. Emulation is not physical-device certification.",
+  "samples": [
+    {
+      "width": 320,
+      "deviceScaleFactor": 2,
+      "renderer": "canvas2d (software GPU fallback)",
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderResolution": 1.5,
+      "frames": 262,
+      "meanMs": 17.429389312977104,
+      "meanFPS": 57.374356728347735,
+      "p95Ms": 16.800000000000182,
+      "scene": "Hearthmere; keyboard movement with animated hero and environment",
+      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+    },
+    {
+      "width": 390,
+      "deviceScaleFactor": 2,
+      "renderer": "canvas2d (software GPU fallback)",
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderResolution": 1.5,
+      "frames": 263,
+      "meanMs": 17.10950570342205,
+      "meanFPS": 58.447042090759595,
+      "p95Ms": 16.800000000000182,
+      "scene": "Hearthmere; keyboard movement with animated hero and environment",
+      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+    },
+    {
+      "width": 768,
+      "deviceScaleFactor": 1,
+      "renderer": "canvas2d (software GPU fallback)",
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderResolution": 1,
+      "frames": 256,
+      "meanMs": 17.837890625,
+      "meanFPS": 56.06044016204971,
+      "p95Ms": 33.30000000000018,
+      "scene": "Hearthmere; keyboard movement with animated hero and environment",
+      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+    },
+    {
+      "width": 1440,
+      "deviceScaleFactor": 1,
+      "renderer": "canvas2d (software GPU fallback)",
+      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderResolution": 1,
+      "frames": 191,
+      "meanMs": 24.51937172774869,
+      "meanFPS": 40.78407926204305,
+      "p95Ms": 33.400000000000546,
+      "scene": "Hearthmere; keyboard movement with animated hero and environment",
+      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+    }
+  ]
+}

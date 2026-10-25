@@ -1,0 +1,14 @@
+{
+  "violations": [],
+  "incomplete": [
+    {
+      "id": "aria-prohibited-attr",
+      "impact": "serious"
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious"
+    }
+  ],
+  "passes": 18
+}

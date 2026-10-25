@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.vite/
+test-results/
+playwright-report/
+*.log
+playtest/*
+!playtest/the-last-lantern-gate-a.zip
+!playtest/SHA256SUMS.txt
+!playtest/README.md

@@ -1,0 +1,141 @@
+The Last Lantern — Game Design Document v1.0
+Status: Proposed design baseline for Codex; visual Gate A requires human acceptance before full production.
+Genre: Original single-hero, top-down fantasy RPG with turn-based battles.
+Platforms: Desktop and mobile web; installable/offline-friendly if feasible without compromising core scope.
+Languages: English and Traditional Chinese (zh-TW), from the outset.
+Audience: Family-friendly, roughly ages 8+; accessible to newcomers while rewarding exploration.
+Inspiration: The compact, solitary-hero adventure loop of early console RPGs, especially Dragon Quest I. Do not copy any franchise's names, characters, monsters, maps, music, dialogue, logos, distinctive UI or visual assets.
+1. Vision
+Build a polished, approachable RPG in which one hero alone ventures from a welcoming town into an increasingly mysterious kingdom to rekindle ancient lanterns. The emotional arc is curiosity → uncertainty → growing competence → discovery → restoration. The player should feel that every new piece of equipment, spell, shortcut and piece of local knowledge expands what is possible.
+Non-negotiable pillars
+1. Exactly one controllable hero; no party recruitment or companion combat.
+2. Classic exploration and progression: walk, converse, explore, fight, gain experience, equip gear, learn magic, recover, unlock new areas.
+3. Modern presentation: cohesive, expressive, original artwork and animation approaching the polish of a well-produced Nintendo Switch-era indie RPG. Never equate higher resolution alone with quality.
+4. Manageable scope: a complete, replayable short adventure; not a procedurally infinite RPG or open-world epic.
+5. Mobile-first usability without sacrificing desktop controls.
+6. Bilingual, accessible, verifiable, and offline-capable static delivery where practical.
+2. Narrative
+Working title: The Last Lantern / 最後的引路燈
+The kingdom of Evershade once depended on three Waylanterns, each lighting a safe passage through wilderness and ruins. Their flames have begun to fade. In the village of Hearthmere, a lone courier finds a small lantern that still responds to their touch. Guided by a retired lamplighter, the hero travels to relight the three beacons, learning that a forgotten guardian has been sealing the roads to keep a dangerous ancient flame from spreading.
+
+The final choice is not a branching moral dilemma: the hero must restore the network without releasing the ancient blaze. The guardian is a tragic obstacle, not an evil caricature. Keep dialogue economical, warm and readable; occasional gentle humor. No lengthy opening exposition.
+Story beats
+- Act I — Hearthmere: Learn movement, conversation, first equipment purchase, and first safe battle; restore the Meadow Lantern.
+- Act II — The Roads: Explore woodland and quarry routes; obtain a spell and key item; restore the Woodland Lantern.
+- Act III — The Ruins: Reach the old watchtower, uncover the guardian's purpose, restore the Tower Lantern, and confront the final boss.
+- Epilogue: Roads reopen, townspeople acknowledge the hero's actions, end credits and saveable clear status.
+The hero may be named by the player, with a sensible localized default. Keep the hero's appearance fixed for asset consistency; optional pronouns are not a requirement for v1.
+3. Scope and world
+Release v1 target
+- One hero; one central village; three distinct wilderness regions; two compact dungeons; a final tower/boss arena.
+- Approx. 2–4 hours for a typical first playthrough, an aspiration to validate rather than a hard promise.
+- Three Waylantern objectives, clear quest journal, meaningful NPC dialogue, optional secrets and treasure.
+- Roughly 10–12 enemy archetypes, 3 bosses (including final), 5–7 spells/skills, and 15–20 items/equipment entries. These are production targets, adjustable to preserve quality.
+- No multiplayer, gacha, ads, accounts, online backend, crafting tree, procedural map generation, voice acting, or elaborate cutscene pipeline.
+World topology
+Hearthmere (hub) ↔ Meadow Path (intro) ↔ Meadow Shrine; Hearthmere ↔ Whisperwood (midgame) ↔ Moss Cavern; Whisperwood ↔ Quarry Road ↔ Old Watchtower (final). Use shortcuts and visible landmarks to make backtracking rewarding, not tedious. Each region needs a distinct silhouette, palette, ambience and traversal identity.
+Exploration
+- Tile/grid-aligned map authoring with smooth interpolated character movement; no mandatory grid-by-grid stop unless testing demonstrates it feels better.
+- Collision, door transitions, readable interact prompts, signs, treasure, shops, inn, save points, quest landmarks.
+- Enemies appear visibly on the map; contact triggers battle. Avoid unavoidable random encounters and cheap offscreen ambushes.
+- Enemy respawns after leaving/reentering regions or resting, not instantly on the player's position.
+- No jump/platforming requirement.
+4. Combat
+One-versus-one or one-versus-small-group turn-based combat, with only one allied combatant. Encounter composition should remain legible and fair for a lone hero.
+Player turn options
+- Attack: reliable physical damage, no MP cost.
+- Magic: spend MP for attack, healing, or utility spells.
+- Item: use a consumable from inventory.
+- Guard: reduce incoming damage for the round; modest MP recovery only if balance requires it and is clearly explained.
+- Flee: chance to escape ordinary encounters; not bosses; failure consumes turn.
+Core formulas (initial tunable model)
+- Physical damage = max(1, attacker.attack - floor(defender.defense * 0.55) + boundedRandom(-2, 2)).
+- Magic damage/healing use explicit spell power and bounded variance; resistances are data-driven.
+- Accuracy is reliable; avoid frequent frustrating misses. Critical hits are uncommon and clearly signaled.
+- Turn order by speed; resolve status durations deterministically. Battle outcomes and HP/MP changes must be auditable in logs/tests.
+Combat presentation
+- Short battle transition; dynamic enemy illustration; hero visible as a small foreground portrait or battle sprite (choose whichever looks better at POC).
+- Animated attacks and reactions, readable damage numbers, concise battle log, optional speed-up and reduced-motion behavior.
+- Victory grants XP, coins and occasional drops; defeat returns hero to last safe inn/checkpoint with a modest, clearly disclosed cost (e.g., partial coins), not permanent lost progress.
+Progression
+- Levels 1–12/15 depending on balance. Growth is deterministic and meaningful; small number of spells unlocked at clear milestones.
+- Weapons, armor and one accessory slot; shops and treasure provide upgrades. No randomized gear-stat rolls.
+- Avoid grinding walls: main-route battles plus modest exploration should suffice. Balance with test simulations and human play.
+5. Example content specification
+Spells/skills (working): Ember (single-target fire), Mend (heal), Ward (short defense buff), Gleam (light attack against shadow foes), Focus (next spell boost), Greater Mend (strong heal). Names and tuning can be refined without changing roles.
+
+Enemies (original concepts): Dewdrop Blob, Bramble Hopper, Moss Moth, Pebbleback, Lantern Wisp, Twig Sentinel, Cave Nibbler, Ashling, Hollow Knight, Watchtower Eye; region-specific elite variants permitted. Favor charming silhouettes over grotesque violence.
+
+Bosses: Thornkeeper (teaches Guard/heal rhythm); Rootbound Warden (teaches buff and elemental timing); The Dim Guardian (multi-phase final encounter with readable telegraphs). Every boss must be beatable without obscure item dependencies.
+
+Economy: Coins earned from battles and chests; predictable shop prices; inn restores HP/MP; inventory stacks and clear caps. Quest-critical items cannot be discarded or sold.
+6. Art direction and Switch-generation quality bar
+Desired style
+Original stylized 2.5D storybook fantasy: clean, appealing shapes; rich but disciplined colors; soft directional lighting; expressive character poses; hand-authored environmental layers; subtle depth/parallax and atmosphere. Aim for the cohesion and finish associated with polished Switch-generation indie RPGs, not photorealism or imitation of a specific copyrighted game's assets.
+Rendering approach
+Codex should assess the feasible pipeline and document the choice: high-quality 2D sprites with layered/parallax environments is preferred for predictable browser performance and consistent asset production; lightweight 2.5D effects are optional. A low-quality 3D pipeline is not preferable merely because it is 3D.
+Asset quality acceptance
+- Consistent hero anatomy and outfit across idle/walk/attack/hurt/victory poses; readable at gameplay scale.
+- Original environment assets for town, meadow, forest, cavern, and tower; no programmer-art rectangles or emoji standing in for final content.
+- Cohesive UI: legible text, clear HP/MP/XP, beautiful but restrained panel framing.
+- Animated environment (grass, lantern light, water, leaves) and feedback where useful; no distracting constant movement.
+- A single attractive screenshot is not proof of a production pipeline. Show real layered assets, character consistency, movement and combat animation in the running engine.
+- Any generative art requires provenance, consistency checks, and rights-safe original output. No third-party IP reproduction.
+Performance
+Target stable 60 FPS on ordinary recent desktops and 30–60 FPS on midrange phones under representative play. Measure, do not assert. Provide reduced-motion option, scalable rendering, asset loading discipline and graceful degradation.
+7. Input, UX and accessibility
+- Desktop: WASD/arrows movement, Enter/Space interact/confirm, Escape back/menu, optional mouse controls.
+- Mobile: visible responsive virtual movement control (thumb pad or four-way buttons), context-sensitive interact, accessible battle menu; avoid controls obscuring exploration.
+- Controller support desirable if feasible, not a release blocker unless committed at Gate B.
+- Safe-area support, landscape and portrait behavior documented. Landscape may be recommended on phones only if portrait has an acceptable fallback; do not silently clip the scene.
+- English/Traditional Chinese language switching, full translated UI, dialogue, menus, tutorial, item and spell names. Test overflow in both.
+- Adjustable text size, high-contrast legibility, no information conveyed only by color, reduced motion, mute/volume, keyboard focus, touch-target sizing, optional battle speed.
+- Tutorial through play; avoid a wall of instructions. Pause should not expose the player to damage or unbounded time pressure.
+8. Save and state integrity
+- At least three manual save slots plus optional autosave at safe transitions; no saving mid-resolution of combat turns unless exact restore is supported.
+- Persist hero name, stats, inventory, equipment, quests, map flags, chests, shortcuts, NPC state, playtime, settings, and location. Validate schema and version.
+- Corrupt/blocked storage: clear warning and non-destructive recovery; allow session play if persistence unavailable.
+- Deterministic, seeded battle logic where possible; never duplicate loot or lose quest progress on reload.
+- Static hosting under GitHub Pages project subpath; relative asset URLs and offline-friendly runtime assets.
+9. Engineering architecture
+- New RPG-specific codebase. Do not use Match3 Core; it is unrelated to RPG mechanics.
+- Reference UGDS v1.0.0 at jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b for process, quality and evidence.
+- Inspect Shape Match, Cute Animal Match, Snacks Match – Raohe, and Squirrel Control for applicable patterns in bilingual UI, settings, input, static deployment, automated tests, documentation and release gates; do not clone their game UI or mechanics.
+- Separate deterministic domain logic (map progression, inventory, combat, quests, save schema) from rendering and audio.
+- Data-drive enemies, items, spells, encounters, maps and dialogue. Avoid building a generic RPG creation toolkit prematurely.
+- Prefer TypeScript + a proven browser 2D game renderer/framework (e.g., Phaser or PixiJS) if its asset pipeline can achieve the POC quality bar; Codex may propose Godot Web export if it demonstrates superior visual and mobile outcomes with acceptable deployment constraints. Document tradeoffs before choosing.
+- Unit tests for combat, progression, save/load, quests, encounter rules and economy; browser tests for full user flows and both languages; performance and accessibility evidence.
+10. Milestones and authority
+Gate A — Art + interaction vertical slice (human approval required)
+Deliver a real playable polished slice, not just concept stills:
+1. One explorable section of Hearthmere and Meadow Path, including one interior and one outdoor scene.
+2. Hero idle/walk animation, collisions, one NPC conversation, a chest and a working transition.
+3. One fully animated turn-based battle against an original enemy; HP/MP and battle feedback visible.
+4. Desktop and mobile control demonstrations; English and zh-TW.
+5. Real gameplay screenshots and a short captured gameplay video or animated sequence if tooling permits, plus asset/pipeline provenance and a performance snapshot.
+6. Clear visual comparison against the stated quality bar and a candid list of limitations.
+STOP after Gate A. Do not implement all regions, bosses or full content and do not publicly deploy until the user explicitly approves the visual and interaction direction. Codex may resolve ordinary technical details independently.
+Gate B — Full game implementation (requires Gate A approval)
+Build the complete short adventure, progression, content, combat, save system, sound and localization. Complete automated tests, produce QA evidence and a review candidate. No public deployment without explicit authorization.
+Gate C — Human gameplay acceptance
+User tests real desktop/mobile gameplay, readability, balance, polish, audio and narrative pacing. Address findings without broadening scope by default.
+Gate D — Release
+Upon explicit user authorization: deploy GitHub Pages, verify public gameplay and asset hashes, record release commit/tag, QA status and manual-test limitations. Do not claim physical-device or screen-reader verification unless actually performed.
+11. Acceptance criteria
+- One hero from opening to credits, with coherent narrative and three beacon objectives.
+- Exploration, dialogue, shops, items, equipment, leveling, spells, turn-based battles, three bosses, clear ending.
+- Visually polished original art, consistent hero and enemies, functioning layered animation (not merely static mockups).
+- No soft locks or unwinnable required encounters; no essential item permanently missable.
+- Saves/reloads preserve exact meaningful state; robust corrupted-storage handling.
+- Playable via desktop keyboard and mobile touch; responsive, bilingual, accessible alternative interactions.
+- Passing relevant automated unit/browser tests; evidence for performance and limitations.
+- Production-ready public build only after creative and gameplay acceptance and separate deployment authorization.
+12. Risks and mitigation
+1. Switch-quality ambition vs AI asset consistency: front-load a real animated vertical slice; refuse full production on static-image quality alone.
+2. Scope creep: keep one hero, three objectives, compact world, and bounded content; cut optional breadth before lowering polish.
+3. Mobile usability/performance: validate input, text and actual device characteristics early; use scalable 2D production.
+4. Combat grind or unfair spikes: deterministic balancing tools plus first-time human playtesting.
+5. Copyright/style drift: original character, monster, map, music, logo and dialogue; references describe genre experience, not assets to reproduce.
+6. Premature release: explicit gates separate source push, QA, human approval and deployment.
+13. Codex handoff
+Read this GDD and the pinned UGDS; inspect prior projects only for reusable engineering and QA patterns. Begin with Gate A only. Select a production-feasible visual pipeline, create original layered assets, and build a playable vertical slice that demonstrates actual movement, environment composition, dialogue, combat, responsive controls and bilingual UI. Favor quality and consistency over feature breadth. Run and report tests honestly, commit/push reviewable work to the project's repository when authorized, and provide evidence and a concise list of remaining risks. Stop for the user's visual/interaction approval before Gate B or any public deployment.
