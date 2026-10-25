@@ -1,11 +1,11 @@
 """Encode genuine browser captures for review; no generated frames or speed edits."""
 from pathlib import Path
 from datetime import datetime
-import hashlib, json, subprocess, math, shutil, re
+import hashlib, json, subprocess, math, shutil, re, os
 
 root = Path(__file__).resolve().parents[1]
 evidence = root / 'docs/evidence'
-out = evidence / 'gate-c'
+out = Path(os.environ.get('LANTERN_RECORDING_DIR', str(evidence / 'gate-c'))).resolve()
 originals = Path('/tmp/lantern-gate-c-original-recordings')
 originals.mkdir(exist_ok=True)
 
@@ -51,7 +51,7 @@ short = out / 'gameplay.mp4'
 encode(['-threads', '2', '-i', str(sources['desktop-en']), '-filter_complex_threads', '1', '-filter_complex', ';'.join(filters), '-map', '[out]', '-an', '-c:v', 'libx264', '-preset', 'fast', '-crf', '23', '-pix_fmt', 'yuv420p', '-threads', '2', '-movflags', '+faststart', str(short)])
 p = probe(short)
 assert abs(float(p['format']['duration']) - 63) < .2
-report = {'version': '0.4.0-gate-c', 'build': re.search(r'src="[^"]*/([^/"]+\.js)"', (root/'dist/index.html').read_text()).group(1), 'capture': 'Actual successful complete browser campaigns on the final runtime. Recordings are best-effort 25 FPS captures at reduced resolution, not quantitative performance or physical-device evidence.', 'audio': 'Silent: Playwright capture does not record the synthesized game audio.', 'recordings': records, 'excerpt': {'source': sources['desktop-en'].name, 'file': 'gate-c/gameplay.mp4', 'sha256': digest(short), 'bytes': short.stat().st_size, 'durationSeconds': float(p['format']['duration']), 'stream': p['streams'][0], 'cutsSeconds': cuts, 'editing': 'Five real-time excerpts selected around actual campaign capture events; no speed changes, interpolation, generated frames or substituted mockups.'}}
+report = {'version': json.loads((root/'package.json').read_text())['version'], 'build': re.search(r'src="[^"]*/([^/"]+\.js)"', (root/'dist/index.html').read_text()).group(1), 'capture': 'Actual successful complete browser campaigns on the final runtime. Recordings are best-effort 25 FPS captures at reduced resolution, not quantitative performance or physical-device evidence.', 'audio': 'Silent: Playwright capture does not record the synthesized game audio.', 'recordings': records, 'excerpt': {'source': sources['desktop-en'].name, 'file': str(short.relative_to(evidence)), 'sha256': digest(short), 'bytes': short.stat().st_size, 'durationSeconds': float(p['format']['duration']), 'stream': p['streams'][0], 'cutsSeconds': cuts, 'editing': 'Five real-time excerpts selected around actual campaign capture events; no speed changes, interpolation, generated frames or substituted mockups.'}}
 (out / 'recordings.json').write_text(json.dumps(report, indent=2)+'\n')
 (evidence / 'recordings.json').write_text(json.dumps(report, indent=2)+'\n')
 for source in sources.values():

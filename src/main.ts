@@ -358,6 +358,11 @@ for(const button of document.querySelectorAll<HTMLButtonElement>('[data-dir]')){
 }
 Object.defineProperty(window,'__lantern',{value:()=>({game:structuredClone(game),battle:battle?structuredClone(battle):null,panel,busy,metrics:world.metrics()}),writable:false});
 
+// Opt-in only: no diagnostic module, observer, timer or styling in ordinary play.
+if(new URLSearchParams(location.search).get('diagnostics')==='1'){
+  void import('./diagnostics').then(({enableDiagnostics})=>enableDiagnostics(()=>{held.clear();touchDirection={x:0,y:0};}));
+}
+
 setText('#loading',t('loading'));
 world.init(game).then(()=>{
   document.querySelector('#loading')!.remove();preferences();render();

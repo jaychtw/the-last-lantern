@@ -13,7 +13,7 @@ instructions = '''THE LAST LANTERN / 最後的引路燈 — Gate C performance a
 
 This is a Gate C engineering review candidate, not an approved production release.
 Requires Python 3 and a recent browser with Canvas2D/WebP. No Node.js needed to play.
-Review report: https://github.com/jaychtw/the-last-lantern/blob/main/docs/GATE-C-REVIEW.md
+Review report: https://github.com/jaychtw/the-last-lantern/blob/main/docs/GATE-C-FOLLOWUP.md
 
 1. Extract the entire ZIP to a folder.
 2. Open a terminal in that folder.
@@ -23,6 +23,16 @@ Review report: https://github.com/jaychtw/the-last-lantern/blob/main/docs/GATE-C
    Do not open index.html directly; ES modules need a local HTTP server.
 5. To use a phone on your trusted Wi-Fi, run with --lan and use your
    computer's LAN IP address. Stop the helper with Ctrl+C when finished.
+
+OPTIONAL PHYSICAL-DEVICE DIAGNOSTICS / 實體裝置診斷（選用）
+Save first, then open http://127.0.0.1:8090/?diagnostics=1 on this computer,
+or http://COMPUTER-LAN-IP:8090/?diagnostics=1 on your phone with --lan.
+Tap Diagnostics, identify your actual device, then record 60 seconds while
+playing or 3 minutes during repeated region transitions. Download/copy JSON.
+No DevTools, SDK or extension is required. See DIAGNOSTICS.txt for the full
+procedure and memory/backend limitations. No automatic upload occurs.
+先存檔，再開啟含 ?diagnostics=1 的網址。點「診斷」，填寫實際裝置，
+記錄遊玩後下載 JSON。無須開發工具，不會自動上傳。一般網址不啟用診斷。
 
 請完整解壓縮 ZIP，在資料夾中執行 python3 serve-playtest.py
 （Windows 可用 py serve-playtest.py），再開啟終端機顯示的網址。
@@ -48,10 +58,13 @@ desktop/touch usability, English/Traditional Chinese readability and comfort.
 The revised art uses original Blender-authored 3D models, materials, lights
 and character poses, composited as independent prerendered layers/frames.
 The supplied concept collage is a reference only, never a playable image.
-The owner accepted the Gate B presentation as the minimum visual baseline.
-The artwork, campaign and visual identity are preserved. Read the Gate C
-report for measured performance gaps; desktop cloud exploration remains
-below target. Human gameplay, pacing, sound and balance review remain open.
+The owner played b763562 on a physical desktop and accepted its visual
+presentation, reporting smooth and satisfactory play. This is subjective
+experience evidence; numerical FPS/Canvas acceleration were not supplied.
+The accepted artwork, campaign and visual identity are preserved. The
+follow-up identifies substantial Chromium image-cache accounting rather
+than accumulated game references. Physical-phone memory/performance,
+quantitative desktop validation, pacing, sound and balance remain open.
 The camera is fixed and lighting is primarily baked. Performance must be
 reviewed on actual devices; source render time is not runtime frame time.
 
@@ -64,6 +77,7 @@ network services. First delivery/refresh still requires serving these files.
 This candidate has no service worker/installable PWA yet.
 '''
 files = {'START-HERE.txt': instructions.encode(), 'serve-playtest.py': (root/'scripts/serve-playtest.py').read_bytes()}
+files['DIAGNOSTICS.txt']=(root/'docs/PHYSICAL-DEVICE-VALIDATION.md').read_bytes()
 for p in sorted(dist.rglob('*')):
     if p.is_file():
         files['game/'+p.relative_to(dist).as_posix()] = p.read_bytes()

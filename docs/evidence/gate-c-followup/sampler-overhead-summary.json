@@ -1,0 +1,30 @@
+{
+  "method": "Current verified candidate, diagnostics disabled (c) versus enabled and recording (replica). Counterbalanced 30-second traversal windows, fresh browser, 2-second warmup, identical main JS and viewport/DPR. Original 600ms/second keyboard schedule and independent rAF/CDP sampler. A small cloud overhead control, not physical-device validation or a precise zero-overhead claim.",
+  "rows": [
+    {
+      "enabled": false,
+      "samples": 2,
+      "FPS": 33.27180518267869,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 66.59999999999854,
+      "over50_5Ms": 21,
+      "runFPS": [
+        36.3610936298161,
+        30.18423364660153
+      ]
+    },
+    {
+      "enabled": true,
+      "samples": 2,
+      "FPS": 34.020738669462894,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50,
+      "over50_5Ms": 2,
+      "runFPS": [
+        35.57546391203642,
+        32.46515406796705
+      ]
+    }
+  ],
+  "interpretation": "Small noisy cloud control; no precise universal overhead or zero-cost claim. Enabled and disabled distributions overlap; all unfavorable tails retained."
+}

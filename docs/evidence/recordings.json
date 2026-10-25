@@ -1,16 +1,16 @@
 {
-  "version": "0.4.0-gate-c",
-  "build": "index-ZW57hMnJ.js",
+  "version": "0.4.1-gate-c-followup",
+  "build": "index-CkKa9k9b.js",
   "capture": "Actual successful complete browser campaigns on the final runtime. Recordings are best-effort 25 FPS captures at reduced resolution, not quantitative performance or physical-device evidence.",
   "audio": "Silent: Playwright capture does not record the synthesized game audio.",
   "recordings": [
     {
       "original": "campaign-desktop-en.webm",
-      "originalSha256": "e4b6dc340d6e03d31aa148720706d72d17b2ad4d76b7a5cb769f03b26c552271",
+      "originalSha256": "643f3f9c18e3c67598903f5b5d30481310206db3efb6c54bb184fb62e1696373",
       "file": "campaign-desktop-en.mp4",
-      "sha256": "02dda5890aaffd46b291709ca2a61e36ea5469a5e2d6348c2b50c10967016820",
-      "bytes": 23438071,
-      "durationSeconds": 682.0,
+      "sha256": "5fb397f047afa0b9ec9413cc5763065bd9c6771d275b1b0cd6d14f5ede967f3f",
+      "bytes": 23407273,
+      "durationSeconds": 702.96,
       "stream": {
         "codec_name": "h264",
         "width": 720,
@@ -21,11 +21,11 @@
     },
     {
       "original": "campaign-phone-zh-TW.webm",
-      "originalSha256": "8f676cd1d4cbe161fe5c7068b509a72a9f68af5d31b36bfa1c17ec8377644f6c",
+      "originalSha256": "d9a0001b0eb89ec385fa99c1b91113704a9ad8fac95caa8c8bdc457165242cc9",
       "file": "campaign-phone-zh-TW.mp4",
-      "sha256": "1d798885908fdfd6bc63b6bf23ad0018eff09bc8795c5e3932befc261359a92c",
-      "bytes": 18940907,
-      "durationSeconds": 637.76,
+      "sha256": "66b0f3db2cf0880ee834109a6d4abaf5bd4edcd1f9d58ee452ce60759223c5bb",
+      "bytes": 18871553,
+      "durationSeconds": 646.12,
       "stream": {
         "codec_name": "h264",
         "width": 312,
@@ -37,9 +37,9 @@
   ],
   "excerpt": {
     "source": "campaign-desktop-en.webm",
-    "file": "gate-c/gameplay.mp4",
-    "sha256": "4251f033ddddddcc7d8fbe082a853c2180e0096dbcd5e91de889799db68f874a",
-    "bytes": 4551067,
+    "file": "gate-c-followup/gameplay.mp4",
+    "sha256": "970152b9be670636daaea43972c405f3447ea020c48d6d9d58484945806bcc4e",
+    "bytes": 4607963,
     "durationSeconds": 62.96,
     "stream": {
       "codec_name": "h264",
@@ -53,20 +53,20 @@
         12
       ],
       [
-        202,
-        214
+        212,
+        224
       ],
       [
-        231,
-        243
+        243,
+        255
       ],
       [
-        578,
-        593
+        603,
+        618
       ],
       [
-        619,
-        631
+        643,
+        655
       ]
     ],
     "editing": "Five real-time excerpts selected around actual campaign capture events; no speed changes, interpolation, generated frames or substituted mockups."

@@ -1,0 +1,11 @@
+{
+  "version": "0.4.1-gate-c-followup",
+  "archiveSha256": "bfe11367a2812b62911231d3c982fce5939dd33bfce37577f58774193351cb61",
+  "files": 95,
+  "allHashesMatch": true,
+  "verifiedBuildMatchesBrowserSuite": true,
+  "servedGameFiles": 89,
+  "allHTTPHashesMatch": true,
+  "diagnosticChunksServed": true,
+  "server": "Exact extracted follow-up ZIP served by its Python helper on loopback port 8096. No public deployment."
+}

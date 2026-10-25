@@ -1,0 +1,60 @@
+
+> the-last-lantern@0.4.1-gate-c-followup test:browser
+> node scripts/browser-tests.mjs tests/browser/diagnostics.spec.ts --workers=1
+
+[2m[WebServer] [22m(node:134151) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m(node:134164) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:134182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:134182) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/browser/diagnostics.spec.ts:6:1 › normal gameplay does not load or mount optional diagnostics (4.0s)
+  ✓  2 tests/browser/diagnostics.spec.ts:11:1 › diagnostics export on a narrow touch-emulated layout without leaking saves (6.3s)
+  ✘  3 tests/browser/diagnostics.spec.ts:26:1 › diagnostic capture finishes automatically and stays available over battle dialogs (2.1m)
+
+
+  1) tests/browser/diagnostics.spec.ts:26:1 › diagnostic capture finishes automatically and stays available over battle dialogs
+
+    [31mTest timeout of 120000ms exceeded.[39m
+
+    Error: locator.click: Test timeout of 120000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#panel .diagnostic-modal-launch')[22m
+
+
+      26 | test('diagnostic capture finishes automatically and stays available over battle dialogs',async({page})=>{
+      27 |   test.setTimeout(120000);await page.goto('./?diagnostics=1');await page.locator('[data-command=begin]').click();await page.locator('#explore').click();await page.locator('[data-destination=meadow]').click();await expect(page.locator('html')).toHaveAttribute('data-scene','meadow',{timeout:30000});await page.locator('#explore').click();await page.locator('[data-destination=clearing]').click();await expect(page.locator('.battle-stage')).toHaveAttribute('data-ready','true',{timeout:30000});
+    > 28 |   await page.locator('#panel .diagnostic-modal-launch').click();await page.locator('[data-diagnostic=start]').click();await page.locator('[data-action=attack]').click();await page.waitForTimeout(61000);await page.locator('#panel .diagnostic-modal-launch').click();await page.locator('[data-diagnostic=copy]').click();
+         |                                                         ^
+      29 |   const data=JSON.parse(await page.locator('[data-diagnostic=output]').inputValue());expect(data.samples[0].reason).toBe('duration-completed');expect(data.samples[0].durationMs).toBeGreaterThanOrEqual(60000);expect(data.samples[0].buckets.some((b:{state:{mode:string}})=>b.state.mode==='battle')).toBe(true);await page.locator('[data-diagnostic=close]').click();await expect(page.locator('[data-action=attack]')).toBeEnabled();
+      30 | });
+      31 |
+        at /workspace/the-last-lantern/tests/browser/diagnostics.spec.ts:28:57
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/browser/diagnostics.spec.ts:26:1 › diagnostic capture finishes automatically and stays available over battle dialogs
+  2 passed (2.4m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

@@ -1,0 +1,413 @@
+{
+  "schema": "last-lantern-diagnostics-v1",
+  "exportedAt": "2026-10-25T18:47:56.542Z",
+  "method": "Visible-page browser rAF intervals. Paused menus, loading, viewport changes and reduced motion are tagged; not a physical presentation or input-to-photon counter. 60 Hz missed slots are estimates, not compositor drops. Diagnostic overhead is not zero. No saves, hero names, URL origin or automatic upload.",
+  "limits": {
+    "maxFramesPerSample": 72000,
+    "maxStoredSamples": 12,
+    "discardedSamples": 0,
+    "longTasksSupported": true,
+    "memory": "JS heap may be absent/coarse. Texture pixel estimates exclude native caches. Total native memory unavailable.",
+    "hardware": "Device/Canvas acceleration fields are owner reports, not automatic verification. WebGL cannot establish the Canvas2D backend."
+  },
+  "environment": {
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "platform": "Linux x86_64",
+    "logicalCPUs": 5,
+    "approximateDeviceRAMGiB": 32,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "dpr": 1,
+    "screen": {
+      "width": 1440,
+      "height": 1000
+    },
+    "secureContext": true,
+    "crossOriginIsolated": false,
+    "canvas2DBackend": "Unavailable to standard page APIs",
+    "physicalHardwareVerifiedByAutomation": false,
+    "runtimeFile": "index-CkKa9k9b.js"
+  },
+  "webgl": {
+    "vendor": "Google Inc. (Google)",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+    "canvas2DBackend": "Unknown; separate context, not proof of Canvas2D acceleration."
+  },
+  "ownerReport": {
+    "device": "emulated",
+    "canvasAcceleration": "unknown",
+    "notes": "Automated cloud UI/export demonstration, not physical-device validation."
+  },
+  "samples": [
+    {
+      "startedAt": "2026-10-25T18:47:52.304Z",
+      "durationLimitMs": 60000,
+      "durationMs": 3506.1000000089407,
+      "reason": "review-opened",
+      "buckets": [
+        {
+          "state": {
+            "scene": "town",
+            "mode": "exploration",
+            "width": 1440,
+            "height": 1000,
+            "dpr": 1,
+            "motion": "full",
+            "lang": "en"
+          },
+          "summary": {
+            "frames": 88,
+            "observedMs": 3466.5000000000005,
+            "meanFPS": 25.385835857493145,
+            "meanMs": 39.39204545454546,
+            "p50Ms": 33.399999999999636,
+            "p95Ms": 50.100000000000364,
+            "p99Ms": 249.90000000000055,
+            "maxMs": 249.90000000000055,
+            "low1FPS": 4.001600640256093,
+            "over50_5Ms": 4,
+            "over100Ms": 1,
+            "estimatedMissed60HzSlots": 120
+          },
+          "frameIntervalsMs": [
+            33.30000000000018,
+            33.40000000000009,
+            33.29999999999973,
+            33.30000000000018,
+            16.699999999999818,
+            33.40000000000009,
+            33.30000000000018,
+            33.29999999999973,
+            33.40000000000009,
+            16.59999999999991,
+            33.30000000000018,
+            33.40000000000009,
+            33.29999999999973,
+            33.30000000000018,
+            33.40000000000009,
+            33.29999999999973,
+            33.30000000000018,
+            50,
+            33.40000000000009,
+            49.899999999999636,
+            33.40000000000009,
+            49.90000000000009,
+            33.40000000000009,
+            33.29999999999973,
+            33.40000000000009,
+            50,
+            33.30000000000018,
+            33.29999999999973,
+            33.40000000000009,
+            33.30000000000018,
+            33.29999999999973,
+            50.100000000000364,
+            33.29999999999973,
+            33.30000000000018,
+            33.29999999999973,
+            66.70000000000027,
+            33.40000000000009,
+            33.29999999999973,
+            33.30000000000018,
+            33.29999999999973,
+            50,
+            33.30000000000018,
+            33.30000000000018,
+            33.399999999999636,
+            33.30000000000018,
+            33.30000000000018,
+            33.399999999999636,
+            50,
+            33.30000000000018,
+            33.40000000000009,
+            33.29999999999973,
+            33.40000000000009,
+            33.20000000000027,
+            33.399999999999636,
+            50,
+            33.400000000000546,
+            33.29999999999927,
+            33.30000000000018,
+            33.30000000000018,
+            50,
+            33.399999999999636,
+            33.30000000000018,
+            33.30000000000018,
+            33.30000000000018,
+            66.69999999999982,
+            33.399999999999636,
+            33.30000000000018,
+            50,
+            33.30000000000018,
+            33.399999999999636,
+            66.60000000000036,
+            50,
+            33.399999999999636,
+            49.900000000000546,
+            33.399999999999636,
+            33.30000000000018,
+            50,
+            33.399999999999636,
+            249.90000000000055,
+            33.399999999999636,
+            33.30000000000018,
+            33.399999999999636,
+            33.30000000000018,
+            49.900000000000546,
+            33.399999999999636,
+            33.30000000000018,
+            50,
+            33.30000000000018
+          ]
+        }
+      ],
+      "boundaries": [],
+      "memory": [
+        {
+          "atMs": 2196.7000000029802,
+          "jsHeap": {
+            "usedBytes": 3150102,
+            "totalBytes": 5961566,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        },
+        {
+          "atMs": 2254.300000011921,
+          "jsHeap": {
+            "usedBytes": 3238257,
+            "totalBytes": 5961793,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        },
+        {
+          "atMs": 3265.300000011921,
+          "jsHeap": {
+            "usedBytes": 3228799,
+            "totalBytes": 5961923,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        },
+        {
+          "atMs": 4261.70000000298,
+          "jsHeap": {
+            "usedBytes": 3669555,
+            "totalBytes": 6224067,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        },
+        {
+          "atMs": 5203.4000000059605,
+          "jsHeap": {
+            "usedBytes": 3064503,
+            "totalBytes": 5175575,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        },
+        {
+          "atMs": 5702.70000000298,
+          "jsHeap": {
+            "usedBytes": 3267218,
+            "totalBytes": 5175614,
+            "limitBytes": 4395630592,
+            "note": "Browser-specific/coarse JS heap only, not native images, canvas, process RAM or device memory."
+          },
+          "logicalTextures": {
+            "count": 39,
+            "rgbaPixelBytes": 74489600,
+            "battleBackgroundPixelBytes": 0,
+            "renderDPR": 1
+          },
+          "totalNativeOrProcessMemoryBytes": null,
+          "note": "Logical texture pixels are not measured RAM. Native/process memory is unavailable through this portable diagnostic."
+        }
+      ],
+      "longTasks": [
+        {
+          "atMs": 1218.5,
+          "durationMs": 57
+        },
+        {
+          "atMs": 2285.7000000029802,
+          "durationMs": 50
+        }
+      ],
+      "longTaskOverflow": 0,
+      "environment": {
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "platform": "Linux x86_64",
+        "logicalCPUs": 5,
+        "approximateDeviceRAMGiB": 32,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "dpr": 1,
+        "screen": {
+          "width": 1440,
+          "height": 1000
+        },
+        "secureContext": true,
+        "crossOriginIsolated": false,
+        "canvas2DBackend": "Unavailable to standard page APIs",
+        "physicalHardwareVerifiedByAutomation": false,
+        "runtimeFile": "index-CkKa9k9b.js"
+      },
+      "observations": {
+        "device": "emulated",
+        "canvasAcceleration": "unknown",
+        "notes": "Automated cloud UI/export demonstration, not physical-device validation."
+      },
+      "summary": {
+        "frames": 88,
+        "observedMs": 3466.5000000000005,
+        "meanFPS": 25.385835857493145,
+        "meanMs": 39.39204545454546,
+        "p50Ms": 33.399999999999636,
+        "p95Ms": 50.100000000000364,
+        "p99Ms": 249.90000000000055,
+        "maxMs": 249.90000000000055,
+        "low1FPS": 4.001600640256093,
+        "over50_5Ms": 4,
+        "over100Ms": 1,
+        "estimatedMissed60HzSlots": 120
+      },
+      "frameIntervalsMs": [
+        33.30000000000018,
+        33.40000000000009,
+        33.29999999999973,
+        33.30000000000018,
+        16.699999999999818,
+        33.40000000000009,
+        33.30000000000018,
+        33.29999999999973,
+        33.40000000000009,
+        16.59999999999991,
+        33.30000000000018,
+        33.40000000000009,
+        33.29999999999973,
+        33.30000000000018,
+        33.40000000000009,
+        33.29999999999973,
+        33.30000000000018,
+        50,
+        33.40000000000009,
+        49.899999999999636,
+        33.40000000000009,
+        49.90000000000009,
+        33.40000000000009,
+        33.29999999999973,
+        33.40000000000009,
+        50,
+        33.30000000000018,
+        33.29999999999973,
+        33.40000000000009,
+        33.30000000000018,
+        33.29999999999973,
+        50.100000000000364,
+        33.29999999999973,
+        33.30000000000018,
+        33.29999999999973,
+        66.70000000000027,
+        33.40000000000009,
+        33.29999999999973,
+        33.30000000000018,
+        33.29999999999973,
+        50,
+        33.30000000000018,
+        33.30000000000018,
+        33.399999999999636,
+        33.30000000000018,
+        33.30000000000018,
+        33.399999999999636,
+        50,
+        33.30000000000018,
+        33.40000000000009,
+        33.29999999999973,
+        33.40000000000009,
+        33.20000000000027,
+        33.399999999999636,
+        50,
+        33.400000000000546,
+        33.29999999999927,
+        33.30000000000018,
+        33.30000000000018,
+        50,
+        33.399999999999636,
+        33.30000000000018,
+        33.30000000000018,
+        33.30000000000018,
+        66.69999999999982,
+        33.399999999999636,
+        33.30000000000018,
+        50,
+        33.30000000000018,
+        33.399999999999636,
+        66.60000000000036,
+        50,
+        33.399999999999636,
+        49.900000000000546,
+        33.399999999999636,
+        33.30000000000018,
+        50,
+        33.399999999999636,
+        249.90000000000055,
+        33.399999999999636,
+        33.30000000000018,
+        33.399999999999636,
+        33.30000000000018,
+        49.900000000000546,
+        33.399999999999636,
+        33.30000000000018,
+        50,
+        33.30000000000018
+      ]
+    }
+  ]
+}

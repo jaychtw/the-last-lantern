@@ -55,3 +55,9 @@ Source/evidence/package publication to `main` follows the owner’s established 
 ## Gate C rendering discipline
 
 Normal exploration rendering, resizing, marker/input handling, artwork, animation, filters and resolution remain at the accepted baseline. Prototypes for marker layout batching and reduced-motion frame reuse were withdrawn after pacing checks. Battle sky/environment composition alone is cached at exact physical canvas dimensions and copied 1:1; this lazy, bounded surface is reused across action phases, rebuilt on backdrop/size changes, and released on a world rebuild. Characters, UI and effects remain live. Diagnostics report battle cache bytes/builds. No gameplay, save, content, translation or audio change ships. See the Gate C report for unresolved desktop pacing and physical-device limits.
+
+## Gate C targeted follow-up
+
+The `b763562` renderer, scene/resource lifecycle and normal game loop are preserved. `main.ts` checks `diagnostics=1` once and conditionally imports the diagnostic module/CSS; the normal path loads no diagnostic observer, timer, style or sampler. The optional module reads the existing read-only metrics, keeps bounded per-state rAF samples, stops on hidden pages, and exports only timings/environment/owner-entered observations. It does not export saves or change rules, persistence, artwork or DPR. Completed summaries are cached; sampling work stops when inactive. The touch launcher reuses the instruction-hint space and dialog launchers remain available in combat.
+
+Extended controls and native dumps identify substantial Chromium decoded-image cache accounting with stable application image/canvas/DOM references. No demonstrated application leak supports a new unloading policy. Native cache/allocator behavior and physical-device budgets remain distinct from logical texture pixels or JS heap. [Investigation](GATE-C-FOLLOWUP.md) · [physical-device procedure](PHYSICAL-DEVICE-VALIDATION.md).

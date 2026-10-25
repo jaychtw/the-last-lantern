@@ -1,14 +1,16 @@
 # The Last Lantern / 最後的引路燈
 
-An original single-hero fantasy RPG in English and Traditional Chinese. **Gate B presentation accepted as the visual baseline; Gate C engineering review pending owner acceptance.** Public deployment remains gated.
+An original single-hero fantasy RPG in English and Traditional Chinese. **The owner accepted `b763562` after smooth, visually satisfactory desktop play; targeted Gate C validation remains under review.** Public deployment remains gated.
 
-[Download the Gate C playable ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-c.zip) · [Playtest instructions](playtest/README.md) · [Gameplay, QA and limits](docs/GATE-C-REVIEW.md) · [Approval record](docs/APPROVALS.md)
+[Download the Gate C playable ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-c.zip) · [Playtest instructions](playtest/README.md) · [Investigation, QA and limits](docs/GATE-C-FOLLOWUP.md) · [Desktop/phone diagnostics](docs/PHYSICAL-DEVICE-VALIDATION.md) · [Approval record](docs/APPROVALS.md)
 
 Extract the ZIP and run its Python 3 helper. No cloud workspace, Node/npm, Blender or account is needed to play. It serves only bundled files locally; `--lan` optionally supports a phone on trusted Wi-Fi. No public game deployment has been performed.
 
 ![Hearthmere, captured from the running game](docs/evidence/gameplay-1440-en.png)
 
-[Forest](docs/evidence/campaign-forest-desktop-en.png) · [Cavern](docs/evidence/campaign-cavern-desktop-en.png) · [Equipment](docs/evidence/campaign-equipment-desktop-en.png) · [Guardian](docs/evidence/campaign-guardian-desktop-en.png) · [Gate C gameplay recording](docs/evidence/gate-c/gameplay.mp4)
+[Forest](docs/evidence/campaign-forest-desktop-en.png) · [Cavern](docs/evidence/campaign-cavern-desktop-en.png) · [Equipment](docs/evidence/campaign-equipment-desktop-en.png) · [Guardian](docs/evidence/campaign-guardian-desktop-en.png) · [Gate C gameplay recording](docs/evidence/gate-c-followup/gameplay.mp4)
+
+Optional local measurements: save first, then open the helper address with `?diagnostics=1`. The bilingual panel records/exports timing and available memory indicators without DevTools or a runtime service. Diagnostics are disabled on the normal URL. [Owner procedure and limits](docs/PHYSICAL-DEVICE-VALIDATION.md).
 
 ## The adventure
 
@@ -52,10 +54,10 @@ npm run assets:campaign
 
 `npm run assets` rebuilds both original and campaign assets. These are substantial CPU authoring operations, separate from normal builds/browser performance. Editable `.blend` sources and original geometry/material/pose scripts are committed; raw PNG exports stay in ignored `assets/renders/`. No online image service is required to rebuild/play the committed game.
 
-`npm run package:playtest` creates a local Gate C review ZIP, without deploying. For Gate C performance, see the paired reproduction commands and measurement limits in [the review report](docs/GATE-C-REVIEW.md). `npm run measure:gate-c` runs the longer scenario benchmark; `LANTERN_BENCH_URL` and `LANTERN_BENCH_LABEL` select the served build and output. Run separately from browser QA, asset rendering, video encoding and trace analysis. The older `npm run measure` remains a short legacy snapshot, not the Gate C acceptance method.
+`npm run package:playtest` creates a local Gate C review ZIP, without deploying. For Gate C performance, see the paired reproduction commands and measurement limits in [the historical report](docs/GATE-C-REVIEW.md). `npm run measure:gate-c` runs the longer scenario benchmark; `LANTERN_BENCH_URL` and `LANTERN_BENCH_LABEL` select the served build and output. Run separately from browser QA, asset rendering, video encoding and trace analysis. The older `npm run measure` remains a short legacy snapshot, not the Gate C acceptance method.
 
 ## Acceptance and authority
 
-[Unchanged GDD](docs/design/GDD-v1.0.txt) · [UGDS v1.0.0](docs/design/UGDS-v1.0.0.md), pinned to `jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b` · [Approved Gate A report](docs/GATE-A-REVIEW.md) · [Current Gate C report](docs/GATE-C-REVIEW.md) · [Third-party notices](docs/THIRD-PARTY-NOTICES.md)
+[Unchanged GDD](docs/design/GDD-v1.0.txt) · [UGDS v1.0.0](docs/design/UGDS-v1.0.0.md), pinned to `jaychtw/game-development-standards@d5c6696efdd6efc028118600466db44aecae0c9b` · [Approved Gate A report](docs/GATE-A-REVIEW.md) · [Current Gate C follow-up](docs/GATE-C-FOLLOWUP.md) · [Third-party notices](docs/THIRD-PARTY-NOTICES.md)
 
-Gate C asks for real human desktop/mobile gameplay, balance, pacing, readability, audio and polish review. Physical-device performance, Safari/Firefox, screen readers and independent first-time-player testing remain separate from cloud automation. Source push, tests, CI, human acceptance and public deployment are distinct. Gate D deployment requires explicit authorization.
+The owner has reported smooth, satisfactory real-desktop play and accepted the visual baseline. Numerical desktop performance, physical-phone play, balance, pacing, readability, audio and polish still need the disclosed verification. Physical-device performance, Safari/Firefox, screen readers and independent first-time-player testing remain separate from cloud automation. Source push, tests, CI, human acceptance and public deployment are distinct. Gate D deployment requires explicit authorization.

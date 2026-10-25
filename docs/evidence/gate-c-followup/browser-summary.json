@@ -1,0 +1,192 @@
+{
+  "uniqueChecks": 25,
+  "latestPassed": 25,
+  "unresolvedFailures": 0,
+  "workers": 2,
+  "stats": {
+    "startTime": "2026-10-25T18:26:57.210Z",
+    "duration": 869885.58,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "file": "battle-layout.spec.ts",
+      "title": "narrow battle keeps larger-text commands below status in both languages",
+      "status": "passed",
+      "durationMs": 18970,
+      "startTime": "2026-10-25T18:27:00.096Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with English desktop inputs",
+      "status": "passed",
+      "durationMs": 705755,
+      "startTime": "2026-10-25T18:27:00.092Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with Traditional Chinese touch inputs",
+      "status": "passed",
+      "durationMs": 647181,
+      "startTime": "2026-10-25T18:27:19.605Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Gate A save migration is non-destructive in the actual browser",
+      "status": "passed",
+      "durationMs": 3694,
+      "startTime": "2026-10-25T18:38:06.910Z"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in English",
+      "status": "passed",
+      "durationMs": 3892,
+      "startTime": "2026-10-25T18:38:10.667Z"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in zh-TW",
+      "status": "passed",
+      "durationMs": 2529,
+      "startTime": "2026-10-25T18:38:14.586Z"
+    },
+    {
+      "file": "diagnostics.spec.ts",
+      "title": "normal gameplay does not load or mount optional diagnostics",
+      "status": "passed",
+      "durationMs": 2567,
+      "startTime": "2026-10-25T18:38:17.164Z"
+    },
+    {
+      "file": "diagnostics.spec.ts",
+      "title": "diagnostics export on a narrow touch-emulated layout without leaking saves",
+      "status": "passed",
+      "durationMs": 6385,
+      "startTime": "2026-10-25T18:38:19.763Z"
+    },
+    {
+      "file": "diagnostics.spec.ts",
+      "title": "diagnostic capture finishes automatically and stays available over battle dialogs",
+      "status": "passed",
+      "durationMs": 75540,
+      "startTime": "2026-10-25T18:38:26.182Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered English desktop interactions",
+      "status": "passed",
+      "durationMs": 77389,
+      "startTime": "2026-10-25T18:38:46.440Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered Traditional Chinese touch interactions",
+      "status": "passed",
+      "durationMs": 53164,
+      "startTime": "2026-10-25T18:39:41.791Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "defeat returns home, keeps discoveries, and supports retry",
+      "status": "passed",
+      "durationMs": 35415,
+      "startTime": "2026-10-25T18:40:03.869Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 320px",
+      "status": "passed",
+      "durationMs": 5678,
+      "startTime": "2026-10-25T18:40:34.999Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 390px",
+      "status": "passed",
+      "durationMs": 6050,
+      "startTime": "2026-10-25T18:40:39.323Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 768px",
+      "status": "passed",
+      "durationMs": 8422,
+      "startTime": "2026-10-25T18:40:40.707Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 1440px",
+      "status": "passed",
+      "durationMs": 11573,
+      "startTime": "2026-10-25T18:40:45.420Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "corrupt autosave is kept intact; manual saving and reload recovery work",
+      "status": "passed",
+      "durationMs": 2999,
+      "startTime": "2026-10-25T18:40:49.147Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "blocked storage allows a session and explains that saving is unavailable",
+      "status": "passed",
+      "durationMs": 6720,
+      "startTime": "2026-10-25T18:40:52.180Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "keyboard focus, pause and project-subpath assets remain usable",
+      "status": "passed",
+      "durationMs": 3448,
+      "startTime": "2026-10-25T18:40:57.020Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "save/load, overwrite cancellation and new-journey confirmation preserve progress",
+      "status": "passed",
+      "durationMs": 6327,
+      "startTime": "2026-10-25T18:40:58.925Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "production character atlas contains distinct articulated frames in all eight directions",
+      "status": "passed",
+      "durationMs": 3368,
+      "startTime": "2026-10-25T18:41:00.503Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports mouse ground traversal",
+      "status": "passed",
+      "durationMs": 4953,
+      "startTime": "2026-10-25T18:41:03.893Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports touch ground traversal",
+      "status": "passed",
+      "durationMs": 3520,
+      "startTime": "2026-10-25T18:41:05.280Z"
+    },
+    {
+      "file": "render-cache.spec.ts",
+      "title": "reduced-motion pixels remain stable while input, resize and language stay live",
+      "status": "passed",
+      "durationMs": 8326,
+      "startTime": "2026-10-25T18:41:08.835Z"
+    },
+    {
+      "file": "render-cache.spec.ts",
+      "title": "battle backdrop survives action phases and refreshes on resize",
+      "status": "passed",
+      "durationMs": 17611,
+      "startTime": "2026-10-25T18:41:08.907Z"
+    }
+  ],
+  "note": "Complete follow-up suite on the final optional-diagnostic client. Focused tests are included, not added again. Both campaigns use real inputs through ending/credits and saved reload."
+}

@@ -1,0 +1,44 @@
+{
+  "version": "0.4.1-gate-c-followup",
+  "sourceBase": "b763562fe3b5a23e8d6705cc959310573ee05c77",
+  "expectedProductionJS": {
+    "index-CkKa9k9b.js": {
+      "bytes": 93938,
+      "sha256": "9077ecae54e76bd224bbcbb565310211a76311c77e8db1c3298813173bc9782c"
+    },
+    "diagnostics-BnXTJiKk.js": {
+      "bytes": 14650,
+      "sha256": "1d812df199e9c4cb59dd32fa8388c9287e8a58640d84e6ba1900b26869f21606"
+    }
+  },
+  "normalGameplayCSS": {
+    "file": "index-R7wCqtNX.css",
+    "sha256": "c1ac719e6cf5b0da6357a26ee90aa62198bd81b27bd5d59d841aa1efe5eb5b96"
+  },
+  "browser": "154.0.8037.57",
+  "domainTests": 35,
+  "browserChecks": 25,
+  "publicDeployment": false,
+  "productionAcceptance": false,
+  "workers": 2,
+  "suiteStats": {
+    "startTime": "2026-10-25T18:26:57.210Z",
+    "duration": 869885.58,
+    "expected": 25,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "runtimeChangeAfterSuite": "None. Only evidence, documentation and packaging/measurement tooling change after the complete suite.",
+  "expectedProductionCSS": {
+    "index-R7wCqtNX.css": {
+      "bytes": 34282,
+      "sha256": "c1ac719e6cf5b0da6357a26ee90aa62198bd81b27bd5d59d841aa1efe5eb5b96"
+    },
+    "diagnostics-CzVr6cc1.css": {
+      "bytes": 2051,
+      "sha256": "29559490c2ca665573ec0796a519d039c3157d466190a6223b4187c33294b2aa"
+    }
+  },
+  "archiveSha256": "bfe11367a2812b62911231d3c982fce5939dd33bfce37577f58774193351cb61"
+}

@@ -1,0 +1,638 @@
+{
+  "method": "Pooled raw interval distributions; all recorded runs included. Memory is whole-browser PSS except explicitly named native allocator accounting. Allocator hierarchy/aliases are not additive.",
+  "town": [
+    {
+      "experiment": "controls",
+      "mode": "traversal",
+      "source": "b",
+      "runs": 4,
+      "runFPS": [
+        32.283497240549394,
+        31.16116788079196,
+        30.24978866586001,
+        30.04274036267065
+      ],
+      "frames": 1492,
+      "meanFPS": 30.9341405512992,
+      "p95Ms": 33.5,
+      "p99Ms": 50.100000000000364,
+      "maxMs": 150,
+      "low1FPS": 14.988009592326069,
+      "over50_5Ms": 6,
+      "over100Ms": 1,
+      "taskSeconds": 48.412678,
+      "threadCPUSeconds": 48.28614,
+      "processCPUSeconds": 77.33000000000001,
+      "counterWindowSeconds": 48.498128999985056
+    },
+    {
+      "experiment": "controls",
+      "mode": "traversal",
+      "source": "c",
+      "runs": 4,
+      "runFPS": [
+        31.0388899032317,
+        31.081451686625837,
+        30.910368197032934,
+        35.486337344591455
+      ],
+      "frames": 1549,
+      "meanFPS": 32.12719798567225,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50.100000000000364,
+      "maxMs": 116.70000000000073,
+      "low1FPS": 14.324082363473561,
+      "over50_5Ms": 13,
+      "over100Ms": 1,
+      "taskSeconds": 48.429464,
+      "threadCPUSeconds": 48.407432,
+      "processCPUSeconds": 75.95,
+      "counterWindowSeconds": 48.53114300000016
+    },
+    {
+      "experiment": "controls",
+      "mode": "traversal",
+      "source": "replica",
+      "runs": 4,
+      "runFPS": [
+        33.36210330633382,
+        33.27938918627329,
+        31.907311332482475,
+        34.44126312295116
+      ],
+      "frames": 1603,
+      "meanFPS": 33.24705277217767,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50,
+      "maxMs": 50.100000000000364,
+      "low1FPS": 19.985892311309655,
+      "over50_5Ms": 0,
+      "over100Ms": 0,
+      "taskSeconds": 48.333496,
+      "threadCPUSeconds": 48.276781,
+      "processCPUSeconds": 77.39,
+      "counterWindowSeconds": 48.46188899999834
+    },
+    {
+      "experiment": "controls",
+      "mode": "animated-idle",
+      "source": "b",
+      "runs": 4,
+      "runFPS": [
+        33.56483399910494,
+        34.93949906219397,
+        30.41554093252225,
+        36.899142344259026
+      ],
+      "frames": 1637,
+      "meanFPS": 33.95237127343155,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50.100000000000364,
+      "maxMs": 166.59999999999945,
+      "low1FPS": 12.90714448409383,
+      "over50_5Ms": 14,
+      "over100Ms": 2,
+      "taskSeconds": 48.37268100000001,
+      "threadCPUSeconds": 48.374244000000004,
+      "processCPUSeconds": 49.94,
+      "counterWindowSeconds": 48.46718899998814
+    },
+    {
+      "experiment": "controls",
+      "mode": "animated-idle",
+      "source": "c",
+      "runs": 4,
+      "runFPS": [
+        32.2834972405494,
+        33.44537117722727,
+        33.86004514672686,
+        37.760902942030796
+      ],
+      "frames": 1655,
+      "meanFPS": 34.337453136119365,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50,
+      "maxMs": 133.29999999999927,
+      "low1FPS": 14.995148628384948,
+      "over50_5Ms": 10,
+      "over100Ms": 2,
+      "taskSeconds": 48.390015999999996,
+      "threadCPUSeconds": 48.388787,
+      "processCPUSeconds": 49.86,
+      "counterWindowSeconds": 48.45746800000779
+    },
+    {
+      "experiment": "controls",
+      "mode": "animated-idle",
+      "source": "replica",
+      "runs": 4,
+      "runFPS": [
+        37.06504666373027,
+        34.48877660414364,
+        38.454844564523746,
+        38.062312493247674
+      ],
+      "frames": 1783,
+      "meanFPS": 37.01873567418516,
+      "p95Ms": 33.400000000000546,
+      "p99Ms": 33.400000000001455,
+      "maxMs": 50.100000000000364,
+      "low1FPS": 24.506466984342907,
+      "over50_5Ms": 0,
+      "over100Ms": 0,
+      "taskSeconds": 48.318587,
+      "threadCPUSeconds": 48.301482,
+      "processCPUSeconds": 49.69,
+      "counterWindowSeconds": 48.41352899999765
+    },
+    {
+      "experiment": "identical-url",
+      "mode": "traversal",
+      "source": "c",
+      "runs": 4,
+      "runFPS": [
+        30.16691253252888,
+        33.27938918627329,
+        29.75176391393596,
+        33.030416199842314
+      ],
+      "frames": 1521,
+      "meanFPS": 31.557260555913803,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50,
+      "maxMs": 83.39999999999964,
+      "low1FPS": 16.838560303094088,
+      "over50_5Ms": 6,
+      "over100Ms": 0,
+      "taskSeconds": 48.311639,
+      "threadCPUSeconds": 48.15406,
+      "processCPUSeconds": 76.67999999999999,
+      "counterWindowSeconds": 48.432738000003155
+    },
+    {
+      "experiment": "identical-url",
+      "mode": "traversal",
+      "source": "replica",
+      "runs": 4,
+      "runFPS": [
+        31.12162330387153,
+        24.215876689119384,
+        31.327178399164605,
+        31.619831692864377
+      ],
+      "frames": 1427,
+      "meanFPS": 29.56618308242457,
+      "p95Ms": 50,
+      "p99Ms": 83.30000000000109,
+      "maxMs": 233.30000000000018,
+      "low1FPS": 7.199769607372556,
+      "over50_5Ms": 39,
+      "over100Ms": 10,
+      "taskSeconds": 48.368871999999996,
+      "threadCPUSeconds": 48.267198,
+      "processCPUSeconds": 77.53,
+      "counterWindowSeconds": 48.557116999989375
+    },
+    {
+      "experiment": "long-window",
+      "mode": "traversal",
+      "source": "c",
+      "runs": 1,
+      "runFPS": [
+        31.816947605316596
+      ],
+      "frames": 1910,
+      "meanFPS": 31.816947605316596,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50,
+      "maxMs": 99.90000000000146,
+      "low1FPS": 19.036740909956308,
+      "over50_5Ms": 1,
+      "over100Ms": 0,
+      "taskSeconds": 59.982186999999996,
+      "threadCPUSeconds": 59.938573,
+      "processCPUSeconds": 95.30000000000001,
+      "counterWindowSeconds": 60.1155049999943
+    },
+    {
+      "experiment": "long-window",
+      "mode": "traversal",
+      "source": "replica",
+      "runs": 1,
+      "runFPS": [
+        32.91472638489086
+      ],
+      "frames": 1977,
+      "meanFPS": 32.91472638489086,
+      "p95Ms": 33.400000000001455,
+      "p99Ms": 50.099999999998545,
+      "maxMs": 133.40000000000146,
+      "low1FPS": 13.176966662274335,
+      "over50_5Ms": 14,
+      "over100Ms": 4,
+      "taskSeconds": 59.845051,
+      "threadCPUSeconds": 59.690017,
+      "processCPUSeconds": 100.3,
+      "counterWindowSeconds": 60.11710800000583
+    }
+  ],
+  "memory": [
+    {
+      "arm": "scene-fixed",
+      "loads": 108,
+      "startMiB": 418.1328125,
+      "after18MiB": 836.400390625,
+      "after54MiB": 856.2275390625,
+      "after108MiB": 884.763671875,
+      "endMiB": 884.076171875,
+      "idleMiB": 874.0625,
+      "pressureMiB": 371.2119140625,
+      "contextClosedMiB": 151.0126953125,
+      "heapEndMiB": 2.146068572998047,
+      "images": 42,
+      "canvases": 1,
+      "sameImageSetEveryCycle": true,
+      "domByCycle": [
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        }
+      ],
+      "pssMiBByCycle": [
+        639.1494140625,
+        836.400390625,
+        845.966796875,
+        840.3134765625,
+        852.361328125,
+        856.2275390625,
+        860.6455078125,
+        857.158203125,
+        864.65625,
+        867.5087890625,
+        872.9853515625,
+        884.763671875
+      ]
+    },
+    {
+      "arm": "scene-resize",
+      "loads": 108,
+      "startMiB": 423.595703125,
+      "after18MiB": 845.556640625,
+      "after54MiB": 861.8720703125,
+      "after108MiB": 887.8984375,
+      "endMiB": 888.28515625,
+      "idleMiB": 878.8232421875,
+      "pressureMiB": 377.4755859375,
+      "contextClosedMiB": 151.6689453125,
+      "heapEndMiB": 2.1488914489746094,
+      "images": 42,
+      "canvases": 1,
+      "sameImageSetEveryCycle": true,
+      "domByCycle": [
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 316,
+          "jsEventListeners": 41
+        }
+      ],
+      "pssMiBByCycle": [
+        645.333984375,
+        845.556640625,
+        849.958984375,
+        854.5205078125,
+        863.3173828125,
+        861.8720703125,
+        868.6611328125,
+        869.830078125,
+        871.2392578125,
+        877.4150390625,
+        885.5869140625,
+        887.8984375
+      ]
+    },
+    {
+      "arm": "town-fixed",
+      "loads": 108,
+      "startMiB": 417.6474609375,
+      "after18MiB": 420.6962890625,
+      "after54MiB": 413.576171875,
+      "after108MiB": 407.505859375,
+      "endMiB": 408.318359375,
+      "idleMiB": 401.6044921875,
+      "pressureMiB": 290.2060546875,
+      "contextClosedMiB": 152.138671875,
+      "heapEndMiB": 2.122364044189453,
+      "images": 39,
+      "canvases": 1,
+      "sameImageSetEveryCycle": true,
+      "domByCycle": [
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        },
+        {
+          "documents": 1,
+          "nodes": 331,
+          "jsEventListeners": 41
+        }
+      ],
+      "pssMiBByCycle": [
+        420.0322265625,
+        420.6962890625,
+        421.4462890625,
+        412.4736328125,
+        413.037109375,
+        413.576171875,
+        409.740234375,
+        407.1630859375,
+        408.0888671875,
+        406.912109375,
+        407.498046875,
+        407.505859375
+      ]
+    },
+    {
+      "arm": "decode-only",
+      "loads": 108,
+      "startMiB": 217.5283203125,
+      "after18MiB": 546.158203125,
+      "after54MiB": 790.806640625,
+      "after108MiB": 808.7587890625,
+      "endMiB": 808.7587890625,
+      "idleMiB": 773.1689453125,
+      "pressureMiB": 296.447265625,
+      "contextClosedMiB": 149.4951171875,
+      "heapEndMiB": 0.7013320922851562,
+      "images": 42,
+      "canvases": 0,
+      "sameImageSetEveryCycle": true,
+      "domByCycle": [
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        },
+        {
+          "documents": 1,
+          "nodes": 49,
+          "jsEventListeners": 0
+        }
+      ],
+      "pssMiBByCycle": [
+        442.65625,
+        546.158203125,
+        649.6171875,
+        751.419921875,
+        785.501953125,
+        790.806640625,
+        791.697265625,
+        800.611328125,
+        793.318359375,
+        803.259765625,
+        802.701171875,
+        808.7587890625
+      ]
+    }
+  ],
+  "nativeCache": [
+    {
+      "label": "start",
+      "normalizedTraceId": "0x0",
+      "rendererPid": 131788,
+      "imageCacheBytes": 115740672,
+      "discardableBytes": 117239808,
+      "mallocBytes": 25289312,
+      "note": "Reported allocator accounting, not PSS; related fields may alias and must not be summed."
+    },
+    {
+      "label": "end",
+      "normalizedTraceId": "0x1",
+      "rendererPid": 131788,
+      "imageCacheBytes": 533721088,
+      "discardableBytes": 536412160,
+      "mallocBytes": 35258416,
+      "note": "Reported allocator accounting, not PSS; related fields may alias and must not be summed."
+    },
+    {
+      "label": "pressure",
+      "normalizedTraceId": "0x2",
+      "rendererPid": 131788,
+      "imageCacheBytes": 18087936,
+      "discardableBytes": 18444288,
+      "mallocBytes": 26484464,
+      "note": "Reported allocator accounting, not PSS; related fields may alias and must not be summed."
+    }
+  ]
+}

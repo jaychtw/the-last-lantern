@@ -1,0 +1,448 @@
+{
+  "baselineCommit": "b763562fe3b5a23e8d6705cc959310573ee05c77",
+  "allListedFilesByteIdentical": true,
+  "mainDifference": "Only a conditional URL-gated diagnostic import and an input-clear callback; removing that block restores baseline main.ts (whitespace-normalized). No normal-loop, game, save, visual or audio changes.",
+  "artAndManifestFiles": 79,
+  "files": [
+    {
+      "file": "docs/design/GDD-v1.0.txt",
+      "bytes": 16607,
+      "sha256": "737613034a700e2ac2396ae53fd2d131557666ef18e9c772c461009188a16170"
+    },
+    {
+      "file": "docs/design/UGDS-v1.0.0.md",
+      "bytes": 11181,
+      "sha256": "0dcbc47f98436284f595badddd084a016ebefe67f2de9a78c9290f81cef5b2d5"
+    },
+    {
+      "file": "public/art3d/arch.webp",
+      "bytes": 48138,
+      "sha256": "b3f2beacf8b6789272227fe823aa8163ed3b6ac7f4ddf8b0cf4b4f5e7fc011ba"
+    },
+    {
+      "file": "public/art3d/armour.webp",
+      "bytes": 43248,
+      "sha256": "9ea07a0956ab7a83015ce9f1656d7fd732fd7a64524cf3f8ed4deb33dc795d07"
+    },
+    {
+      "file": "public/art3d/battle-cavern.webp",
+      "bytes": 132612,
+      "sha256": "82652bd33593c9304b71b9bc431ae38c1dd83cce01e03282b9702e39890225cf"
+    },
+    {
+      "file": "public/art3d/battle-environment.webp",
+      "bytes": 382426,
+      "sha256": "9570410c12b2737c89af7737d2180acae7425700b95fb3937e480082dd3853b2"
+    },
+    {
+      "file": "public/art3d/battle-forest.webp",
+      "bytes": 247308,
+      "sha256": "78bc565afb469829602561df9c7891e2c56398692fccd5e3b29e9634bb7a83c3"
+    },
+    {
+      "file": "public/art3d/battle-quarry.webp",
+      "bytes": 86072,
+      "sha256": "2854722705a5c86009a75b0fd181efbc53957810c2d522f1e461b4b569963c55"
+    },
+    {
+      "file": "public/art3d/battle-sky.webp",
+      "bytes": 301766,
+      "sha256": "432218dc9df212df0ddf6319bdae995eb2dfe56c7f54bed210992f5037744b28"
+    },
+    {
+      "file": "public/art3d/battle-tower.webp",
+      "bytes": 188384,
+      "sha256": "c6cd86f774dc1d61eeaa92440e833cb8b9c1073e56629265fa7ea858cdca38fb"
+    },
+    {
+      "file": "public/art3d/beacon-dormant.webp",
+      "bytes": 33606,
+      "sha256": "1e719a5ac2748c1c9b1519abd9e844d98cb543ff875768561926deca59437f31"
+    },
+    {
+      "file": "public/art3d/beacon.webp",
+      "bytes": 33788,
+      "sha256": "f7e84e7f93eea6129e42bea041fdbe508435ff548ff84f7976dd4030c44d8a81"
+    },
+    {
+      "file": "public/art3d/blob.webp",
+      "bytes": 35354,
+      "sha256": "4df4a84fe79ba92e07c031a77ca475dc891406a84ea89c4d8b610800f7971b11"
+    },
+    {
+      "file": "public/art3d/bridge.webp",
+      "bytes": 33306,
+      "sha256": "0c39674d7fdc05c9ef1256438ff0f4c4ef49768f22f061da5bd605f3a5d896d3"
+    },
+    {
+      "file": "public/art3d/bush.webp",
+      "bytes": 32534,
+      "sha256": "c0ebc7e535709f3227b373bd8ef21fd8dcf60ee2f0c1380fcac8b4e72dabde3a"
+    },
+    {
+      "file": "public/art3d/cavern-ground.webp",
+      "bytes": 116124,
+      "sha256": "e8092946412aa675da1b19b90001164bba223502ffc93974b2fbaf307f7204f5"
+    },
+    {
+      "file": "public/art3d/chest-open.webp",
+      "bytes": 45660,
+      "sha256": "7d787817b018e7ba03c6e13955b6d62600df39b340178d6ec6ca38d1efed766e"
+    },
+    {
+      "file": "public/art3d/chest.webp",
+      "bytes": 30172,
+      "sha256": "9566574e34a68a7f0fe799a7d1788e27d782b0472ba10ecf95566645235386b9"
+    },
+    {
+      "file": "public/art3d/cottage-copper.webp",
+      "bytes": 125958,
+      "sha256": "21c8fce2ba175ec186d652a87d2bd40908b25da3be245d6a435aabc2307e6432"
+    },
+    {
+      "file": "public/art3d/cottage.webp",
+      "bytes": 128854,
+      "sha256": "29ff236b0fde563712af8889948cf2d5901cd3683ea71e4a5d5ae28a8f088965"
+    },
+    {
+      "file": "public/art3d/crystal.webp",
+      "bytes": 30258,
+      "sha256": "46232d8668fa4f484947dbfbbc4820b3c244cfc140091549a230446d00dc44ff"
+    },
+    {
+      "file": "public/art3d/desk.webp",
+      "bytes": 45958,
+      "sha256": "891c30f8075210cfdb4231d09acc067a3b4c221460e0d2f6f1245b80484aa1f9"
+    },
+    {
+      "file": "public/art3d/enemy-ashling-attack.webp",
+      "bytes": 40324,
+      "sha256": "3cb4638778747e004c8c5033974c897b92888c4468432b69a9ef42ab1267fd29"
+    },
+    {
+      "file": "public/art3d/enemy-ashling.webp",
+      "bytes": 38962,
+      "sha256": "a880b68fa29fa0982f5147b5566d6a3cf306016caea7ce5ffdcb38ecdc6b3f38"
+    },
+    {
+      "file": "public/art3d/enemy-eye-attack.webp",
+      "bytes": 40612,
+      "sha256": "03a3cd7db15b7d10119d9370167d827c55270189a46ee5968c3b441dc70158a9"
+    },
+    {
+      "file": "public/art3d/enemy-eye.webp",
+      "bytes": 39956,
+      "sha256": "9a2a1e60184a568b0704bc9eafdbfe217335911f6caeee22dd6e833ba3f99e2e"
+    },
+    {
+      "file": "public/art3d/enemy-guardian-attack.webp",
+      "bytes": 38050,
+      "sha256": "cee779fa49cc0906f5bd1542d66bbeb4f34258fe042386650d698298bb197aff"
+    },
+    {
+      "file": "public/art3d/enemy-guardian.webp",
+      "bytes": 38046,
+      "sha256": "230291d5dabf2ca814b184589fe2aac48687c44993ad9fd71e5419ef37458799"
+    },
+    {
+      "file": "public/art3d/enemy-hollow-attack.webp",
+      "bytes": 43448,
+      "sha256": "b9edf7d113965f8a46bf60e416940a031d13c0e73db50e2cda9aad8baabd6ecf"
+    },
+    {
+      "file": "public/art3d/enemy-hollow.webp",
+      "bytes": 42690,
+      "sha256": "ce7a315aa2665257456335aab83f2b6e6713dab00d986278db3aee2676988bef"
+    },
+    {
+      "file": "public/art3d/enemy-hopper-attack.webp",
+      "bytes": 37032,
+      "sha256": "840d405e23ceee5361cbee4cdb3b95d101272f9517f284d229422d550c560eea"
+    },
+    {
+      "file": "public/art3d/enemy-hopper.webp",
+      "bytes": 36638,
+      "sha256": "aa4b1b4119cb94f4c3c0570545281645cb02e25e0a02b84bb5fd3536d0234272"
+    },
+    {
+      "file": "public/art3d/enemy-moth-attack.webp",
+      "bytes": 40300,
+      "sha256": "d2846f0a29cd226ab13adf5f31d1a9108c7d41fb0ec556c94cc218099140236c"
+    },
+    {
+      "file": "public/art3d/enemy-moth.webp",
+      "bytes": 39452,
+      "sha256": "4f2f9613e468ebf0b0202784188cc4dab0a05de1112a1ff1ce5a085c114485fe"
+    },
+    {
+      "file": "public/art3d/enemy-nibbler-attack.webp",
+      "bytes": 34872,
+      "sha256": "28d5ef170f58aaf794abf9a6828ec649e842a90883aacf90fe602c0f1595424f"
+    },
+    {
+      "file": "public/art3d/enemy-nibbler.webp",
+      "bytes": 34538,
+      "sha256": "804a16adf1a5f14935ee92e04f193d1bde255570c0a59d1dfe1417c5310c4cfc"
+    },
+    {
+      "file": "public/art3d/enemy-pebbleback-attack.webp",
+      "bytes": 33470,
+      "sha256": "98cc1208c14b00d91c91ff4ac643fb52d37f08e603192a40fda13e7c432d97f2"
+    },
+    {
+      "file": "public/art3d/enemy-pebbleback.webp",
+      "bytes": 32578,
+      "sha256": "67d4d21db87baa47438eb02953db02f371ce22c62aea7d4691d0f2acde7d56d5"
+    },
+    {
+      "file": "public/art3d/enemy-root-attack.webp",
+      "bytes": 44842,
+      "sha256": "892b14d96d1e5aa1617db563a5c58a7ddb22bfb3915b0739fe6ec212b2abf8fb"
+    },
+    {
+      "file": "public/art3d/enemy-root.webp",
+      "bytes": 44262,
+      "sha256": "cc84c41225fb2e838b11647f8132b1c8396046151529dbf7b85030649a20e54b"
+    },
+    {
+      "file": "public/art3d/enemy-thorn-attack.webp",
+      "bytes": 45138,
+      "sha256": "1f74a44b83a46c9808c137e1810167056566f79423e5f16ab7e03113d6d8d209"
+    },
+    {
+      "file": "public/art3d/enemy-thorn.webp",
+      "bytes": 44710,
+      "sha256": "636cdf9e76c551c3edc964aedecfe64116a19b6a99cc6139950ea812af3096d1"
+    },
+    {
+      "file": "public/art3d/enemy-twig-attack.webp",
+      "bytes": 48566,
+      "sha256": "7ed234395dff82f5c240db4cfbc0f99154addbac9d7dc2686856d9a4f0a7972e"
+    },
+    {
+      "file": "public/art3d/enemy-twig.webp",
+      "bytes": 48462,
+      "sha256": "a4e8b35b91bf4b41d656cece3c4e76131e8f65bb0a576c6d099691242a3bea40"
+    },
+    {
+      "file": "public/art3d/enemy-wisp-attack.webp",
+      "bytes": 34958,
+      "sha256": "6fcd3cfbc406b87f47973cd9eaf3cfe9358d12fe1953cb497598adc0d98c2bc2"
+    },
+    {
+      "file": "public/art3d/enemy-wisp.webp",
+      "bytes": 34698,
+      "sha256": "779a5a890f36cdd1565b67eb3cc08cbc44e9ea910e3f7b61a2ac21e478c3e050"
+    },
+    {
+      "file": "public/art3d/fern.webp",
+      "bytes": 36736,
+      "sha256": "ff4e58635a0d66a5a130d12febe60c1cb70c81afc97ce6a416feb8230cf749a6"
+    },
+    {
+      "file": "public/art3d/flowers.webp",
+      "bytes": 37608,
+      "sha256": "1e14c4cbe7fa7574e0b6d891745c72f0fbc1162746de2c4b6256cba3681549bf"
+    },
+    {
+      "file": "public/art3d/forest-ground.webp",
+      "bytes": 202258,
+      "sha256": "586bbd6fdfeecfbde7f87082fba55ed6384c43ffeab983f53db96e5569f998b9"
+    },
+    {
+      "file": "public/art3d/hearth.webp",
+      "bytes": 38152,
+      "sha256": "341597aa6c21e6a1a3f83530329b0315659821f23475ed8d2c9e9b1952944487"
+    },
+    {
+      "file": "public/art3d/interior-ground.webp",
+      "bytes": 125866,
+      "sha256": "b3967f3d859b686e80dd00556ae2a7c977f408d00184491e9b43fb73fa12290b"
+    },
+    {
+      "file": "public/art3d/key.webp",
+      "bytes": 40934,
+      "sha256": "9682cfebf63010cbb2672c5442bdf351ff971381ea74e4bc77d66d7be17ede0a"
+    },
+    {
+      "file": "public/art3d/meadow-ground.webp",
+      "bytes": 206838,
+      "sha256": "213a6e4a3e9f537522fdd41aa32c6aa6795faa3e27619fe6364b9bae8aee8f13"
+    },
+    {
+      "file": "public/art3d/mira-portrait.webp",
+      "bytes": 47628,
+      "sha256": "f52c1b5db93c1f74ecb5205426266eae5cb08ffc7585a965c870b6deaddb6677"
+    },
+    {
+      "file": "public/art3d/mira-thoughtful.webp",
+      "bytes": 41978,
+      "sha256": "2ed692a934b6d68c9f83e6759b6a5cbcb6a18c9fb3807b404a39af86c37f2512"
+    },
+    {
+      "file": "public/art3d/mira.webp",
+      "bytes": 26482,
+      "sha256": "13b44900382013bc211e3604dbbd54280e739e77421a4c7c6a8ab9e08cedb0f7"
+    },
+    {
+      "file": "public/art3d/pillar.webp",
+      "bytes": 38904,
+      "sha256": "fe6688f41cb7b965ac574a144825d77e54a007273e38bf67146af01e098402a7"
+    },
+    {
+      "file": "public/art3d/quarry-ground.webp",
+      "bytes": 200766,
+      "sha256": "dc7aa01d6a1e1f93f29f56f95b1a6621f17a61fa2ad3f329e3217071b1855959"
+    },
+    {
+      "file": "public/art3d/ring.webp",
+      "bytes": 41496,
+      "sha256": "9f5844e0f2b8bc8111d80c3eb748e4fa65274de06826b6f9d60fe71d8b0e0faf"
+    },
+    {
+      "file": "public/art3d/rocks.webp",
+      "bytes": 22422,
+      "sha256": "f28ac716b52197e7fe5de3ac219594bf10aff32e5a71216e6c3ae90886325511"
+    },
+    {
+      "file": "public/art3d/rowan-attack-sheet.webp",
+      "bytes": 248692,
+      "sha256": "2060e35ec0044eb524e2ac5b2c03f4931f5c3a2a8f50d26f2039dfc15f8fc097"
+    },
+    {
+      "file": "public/art3d/rowan-cast-sheet.webp",
+      "bytes": 238820,
+      "sha256": "038ff936f229f74b9808c07c845db2ce7a825f50ced37c86a46ff9b9787f49fd"
+    },
+    {
+      "file": "public/art3d/rowan-guard-sheet.webp",
+      "bytes": 32822,
+      "sha256": "419d29ab444f8bda73b3e08ae47af22e3bea67820404b2e7e29e403a94de8e5b"
+    },
+    {
+      "file": "public/art3d/rowan-hurt-sheet.webp",
+      "bytes": 33036,
+      "sha256": "9eefeb79c3c7943268f1676b364d1abb3c32299dc0370096d24f70ff42867a6f"
+    },
+    {
+      "file": "public/art3d/rowan-idle.webp",
+      "bytes": 34032,
+      "sha256": "4d0a30709ec7e8744e0503a49708414bba48a36a476abb83636febb11b0b8b10"
+    },
+    {
+      "file": "public/art3d/rowan-portrait.webp",
+      "bytes": 72912,
+      "sha256": "4e1a1d3cdf144d6f158c24af0ca10bcec9072fc7690e77f14141fcb4bec875d8"
+    },
+    {
+      "file": "public/art3d/rowan-victory-sheet.webp",
+      "bytes": 33170,
+      "sha256": "d473c01a5c6c21f3aad97dacd0781e10eb00fbe8ba5135836977280f8a722e36"
+    },
+    {
+      "file": "public/art3d/rowan-walk.webp",
+      "bytes": 946330,
+      "sha256": "704520c841494e8fc3f77138dd314bacfd9f8562512cffd698dd6848a93aff9d"
+    },
+    {
+      "file": "public/art3d/runes.webp",
+      "bytes": 32936,
+      "sha256": "2d5089e0523b245376f50eb34ca9ca6e34681b6cabc37706ed7c65f8143d3383"
+    },
+    {
+      "file": "public/art3d/runtime.json",
+      "bytes": 43314,
+      "sha256": "7a50608d256b20fb9ddaf7cf07afd2e9c3ea9348d63a2e076fd14fce7de8370b"
+    },
+    {
+      "file": "public/art3d/sanctum-ground.webp",
+      "bytes": 206116,
+      "sha256": "3345e07be9ca814838f7a8013cc93be4e86b8086f6d23b9f62c38a42e4f3338b"
+    },
+    {
+      "file": "public/art3d/seal.webp",
+      "bytes": 25794,
+      "sha256": "a06cecd6f8ab89b68ff48e933ceb270d7e7f56012f4c38bb91b26c3a37b380d0"
+    },
+    {
+      "file": "public/art3d/seed.webp",
+      "bytes": 41948,
+      "sha256": "0a666ff8ac1348c1e575d0b504d93084f1e0f8856e92cc31e425ceaf0d5f1553"
+    },
+    {
+      "file": "public/art3d/shrine-ground.webp",
+      "bytes": 210632,
+      "sha256": "2ab854f46dd51e38c54af681a3e0188a3e4c691ddf379ad18a870da3da40e58a"
+    },
+    {
+      "file": "public/art3d/sign.webp",
+      "bytes": 39976,
+      "sha256": "ee0b2bf7ff46e4ab6f3da93ba9669ad380959b47d62ac4cb294e81abebe773c5"
+    },
+    {
+      "file": "public/art3d/smith.webp",
+      "bytes": 45376,
+      "sha256": "e80ad8152d8336672f926e2c0eb2c541e43af2781b9762becda72876183d0983"
+    },
+    {
+      "file": "public/art3d/stool.webp",
+      "bytes": 37924,
+      "sha256": "e84382b906e71cdb902b0dc0dbafc6815d5999a43fb7596e6f236d667b2074de"
+    },
+    {
+      "file": "public/art3d/tower-ground.webp",
+      "bytes": 205718,
+      "sha256": "2d853536fb548a66d123dc160c216c39f11ee30de630dcbd21d6803359f334a8"
+    },
+    {
+      "file": "public/art3d/town-ground.webp",
+      "bytes": 234816,
+      "sha256": "5dfc74afc62777787e67b1e2fbecf5eb4de99d02efce885da7514b59ccf85ef1"
+    },
+    {
+      "file": "public/art3d/tree.webp",
+      "bytes": 72428,
+      "sha256": "7c16053f8dde7db3542bfbaeb907ed3dfe1c4d95507c9df343896a00171c9165"
+    },
+    {
+      "file": "public/art3d/weapon.webp",
+      "bytes": 40182,
+      "sha256": "f2cbdf6439b0a5d9df38f7bd2f899cf7f7f045f7dc171bde97c48ca9603b36df"
+    },
+    {
+      "file": "src/audio.ts",
+      "bytes": 2849,
+      "sha256": "8b2bbbded529585a0eefccc9e288ec6b36cd9dc5408d4a6246bb1e586b0c3219"
+    },
+    {
+      "file": "src/content.ts",
+      "bytes": 19577,
+      "sha256": "865d95959589c8abf3aceaf55cfec585b6cf0335098f8ed87c17d61ac321378e"
+    },
+    {
+      "file": "src/domain.ts",
+      "bytes": 22830,
+      "sha256": "7c1b40aa3856a6c86394923fe1de3f1a1a870d1cf15e27c9bf79d2aafce2c2de"
+    },
+    {
+      "file": "src/global.d.ts",
+      "bytes": 478,
+      "sha256": "4c73528c0069f3a99da16c47e213e63d6bc05ce21e942b7ad7789a379ce47522"
+    },
+    {
+      "file": "src/i18n.ts",
+      "bytes": 14108,
+      "sha256": "3a3c0c59983c7f3180bbab857c8793c2fcf017105d22f1e15fb4c04cd9a5502f"
+    },
+    {
+      "file": "src/renderer.ts",
+      "bytes": 17057,
+      "sha256": "f10c8c80429b0b8f0ecce9849678f5a6654d80884a2b0d7ec273c49639d5235a"
+    },
+    {
+      "file": "src/style.css",
+      "bytes": 33066,
+      "sha256": "c771c848e510a3252b4ca191c794e9468728a654f7e976e46fe324e7eddc8605"
+    }
+  ]
+}

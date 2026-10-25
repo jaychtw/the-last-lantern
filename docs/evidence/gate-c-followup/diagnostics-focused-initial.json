@@ -1,0 +1,218 @@
+{
+  "config": {
+    "configFile": "/workspace/the-last-lantern/playwright.config.ts",
+    "rootDir": "/workspace/the-last-lantern/tests/browser",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/the-last-lantern/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/the-last-lantern/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort --base /the-last-lantern/",
+      "url": "http://127.0.0.1:4173/the-last-lantern/",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "diagnostics.spec.ts",
+      "file": "diagnostics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "normal gameplay does not load or mount optional diagnostics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T18:20:45.724Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "80bb835772e7bc2f1ed9-6159614c9ae584d3aadd",
+          "file": "diagnostics.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "diagnostics export on a narrow touch-emulated layout without leaking saves",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6345,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T18:20:50.234Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "80bb835772e7bc2f1ed9-b391dfac845f27a059e7",
+          "file": "diagnostics.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "diagnostic capture finishes automatically and stays available over battle dialogs",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 123883,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 120000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/workspace/the-last-lantern/tests/browser/diagnostics.spec.ts",
+                        "column": 57,
+                        "line": 28
+                      },
+                      "message": "Error: locator.click: Test timeout of 120000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#panel .diagnostic-modal-launch')\u001b[22m\n\n\n  26 | test('diagnostic capture finishes automatically and stays available over battle dialogs',async({page})=>{\n  27 |   test.setTimeout(120000);await page.goto('./?diagnostics=1');await page.locator('[data-command=begin]').click();await page.locator('#explore').click();await page.locator('[data-destination=meadow]').click();await expect(page.locator('html')).toHaveAttribute('data-scene','meadow',{timeout:30000});await page.locator('#explore').click();await page.locator('[data-destination=clearing]').click();await expect(page.locator('.battle-stage')).toHaveAttribute('data-ready','true',{timeout:30000});\n> 28 |   await page.locator('#panel .diagnostic-modal-launch').click();await page.locator('[data-diagnostic=start]').click();await page.locator('[data-action=attack]').click();await page.waitForTimeout(61000);await page.locator('#panel .diagnostic-modal-launch').click();await page.locator('[data-diagnostic=copy]').click();\n     |                                                         ^\n  29 |   const data=JSON.parse(await page.locator('[data-diagnostic=output]').inputValue());expect(data.samples[0].reason).toBe('duration-completed');expect(data.samples[0].durationMs).toBeGreaterThanOrEqual(60000);expect(data.samples[0].buckets.some((b:{state:{mode:string}})=>b.state.mode==='battle')).toBe(true);await page.locator('[data-diagnostic=close]').click();await expect(page.locator('[data-action=attack]')).toBeEnabled();\n  30 | });\n  31 |\n    at /workspace/the-last-lantern/tests/browser/diagnostics.spec.ts:28:57"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T18:20:56.600Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/the-last-lantern/test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/the-last-lantern/test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/the-last-lantern/test-results/diagnostics-diagnostic-cap-03219-ailable-over-battle-dialogs/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "80bb835772e7bc2f1ed9-6c73389a7d356a8b85f2",
+          "file": "diagnostics.spec.ts",
+          "line": 26,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-25T18:20:42.820Z",
+    "duration": 141272.43899999998,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

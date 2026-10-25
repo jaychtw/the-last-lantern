@@ -1,9 +1,9 @@
 """Compare actual deterministic runtime captures; never edits game artwork."""
 from pathlib import Path
 from PIL import Image, ImageChops, ImageStat
-import hashlib, json, math
+import hashlib, json, math, os
 
-root = Path(__file__).resolve().parents[1] / 'docs/evidence/gate-c'
+root = Path(os.environ.get('LANTERN_VISUAL_DIR', str(Path(__file__).resolve().parents[1] / 'docs/evidence/gate-c')))
 samples = []
 for after in sorted(root.glob('visual-after-*.png')):
     if after.stem.endswith('-full'):

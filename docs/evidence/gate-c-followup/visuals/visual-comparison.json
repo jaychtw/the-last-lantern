@@ -1,0 +1,458 @@
+{
+  "method": "RGB pixel comparison of identical runtime presentation fixtures/virtual time; null PSNR means zero MSE. Full UI screenshots are supporting views; no concept/mock images are compared.",
+  "pairs": 30,
+  "samples": [
+    {
+      "before": "visual-before-cavern-1440.png",
+      "after": "visual-after-cavern-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "06adfd3a919b8df55ceeeda3c3507a81a46a279cd8549136b0ecebdd368effc2",
+      "afterSha256": "06adfd3a919b8df55ceeeda3c3507a81a46a279cd8549136b0ecebdd368effc2"
+    },
+    {
+      "before": "visual-before-cavern-390.png",
+      "after": "visual-after-cavern-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0002541823631871025,
+      "psnrDb": 82.00690143291436,
+      "identicalPixels": 1316082,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "927c09e924872ce2bbb653576822bcd92fb0008e32b3a883dc43966ac3aade72",
+      "afterSha256": "0c1358cd0ae4cfd68d8c22895f051545f0e6c87adf364c9de77598c29c772588"
+    },
+    {
+      "before": "visual-before-combat-meadow-1440-enemy.png",
+      "after": "visual-after-combat-meadow-1440-enemy.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "752770d417f3d770d5c4c7b7e35fc1361f7e6b350eb2761864bc110651a2c8a7",
+      "afterSha256": "752770d417f3d770d5c4c7b7e35fc1361f7e6b350eb2761864bc110651a2c8a7"
+    },
+    {
+      "before": "visual-before-combat-meadow-1440-idle.png",
+      "after": "visual-after-combat-meadow-1440-idle.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "3cac39936b9fccddbe2c497abf0c609ca7e91593ee3a1e7f4769e02df99f8a61",
+      "afterSha256": "3cac39936b9fccddbe2c497abf0c609ca7e91593ee3a1e7f4769e02df99f8a61"
+    },
+    {
+      "before": "visual-before-combat-meadow-1440-player.png",
+      "after": "visual-after-combat-meadow-1440-player.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "d7267d8c5b472d5751c149664d801be3eac925fa496ae2dbc0959167c7601b86",
+      "afterSha256": "d7267d8c5b472d5751c149664d801be3eac925fa496ae2dbc0959167c7601b86"
+    },
+    {
+      "before": "visual-before-combat-meadow-390-enemy.png",
+      "after": "visual-after-combat-meadow-390-enemy.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "ab152fbd8f045e2f4c141855ac48c5fb4f8e9dddbc0286f4769055ad198001d1",
+      "afterSha256": "ab152fbd8f045e2f4c141855ac48c5fb4f8e9dddbc0286f4769055ad198001d1"
+    },
+    {
+      "before": "visual-before-combat-meadow-390-idle.png",
+      "after": "visual-after-combat-meadow-390-idle.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "94f58a694de2127ea6a5e481e6498f00c9b77e1169efb51a21b30acc211c0ea7",
+      "afterSha256": "94f58a694de2127ea6a5e481e6498f00c9b77e1169efb51a21b30acc211c0ea7"
+    },
+    {
+      "before": "visual-before-combat-meadow-390-player.png",
+      "after": "visual-after-combat-meadow-390-player.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "8d3f0c3b90a5332516532c04a68f95358b05d4e1d7d7a32ad450d09a0778b73c",
+      "afterSha256": "8d3f0c3b90a5332516532c04a68f95358b05d4e1d7d7a32ad450d09a0778b73c"
+    },
+    {
+      "before": "visual-before-combat-sanctum-1440-enemy.png",
+      "after": "visual-after-combat-sanctum-1440-enemy.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "ca89d1ef77d7b00ab012497acee4fc8fb6ce555454998c13e37df385587610b6",
+      "afterSha256": "ca89d1ef77d7b00ab012497acee4fc8fb6ce555454998c13e37df385587610b6"
+    },
+    {
+      "before": "visual-before-combat-sanctum-1440-idle.png",
+      "after": "visual-after-combat-sanctum-1440-idle.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "d9992b05817734392eb1268d2aea8a2e0ee57d85bd739d1bd0e707b73e2df686",
+      "afterSha256": "d9992b05817734392eb1268d2aea8a2e0ee57d85bd739d1bd0e707b73e2df686"
+    },
+    {
+      "before": "visual-before-combat-sanctum-1440-player.png",
+      "after": "visual-after-combat-sanctum-1440-player.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "74e4146666462904caa2d860d5df2f100b47a9abf40f65b07af7d9a9488f0b4e",
+      "afterSha256": "74e4146666462904caa2d860d5df2f100b47a9abf40f65b07af7d9a9488f0b4e"
+    },
+    {
+      "before": "visual-before-combat-sanctum-390-enemy.png",
+      "after": "visual-after-combat-sanctum-390-enemy.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "6f80cf7092444d7e6a8558334f52d106ce22d539d64c3b0968d939ff3cc6399c",
+      "afterSha256": "6f80cf7092444d7e6a8558334f52d106ce22d539d64c3b0968d939ff3cc6399c"
+    },
+    {
+      "before": "visual-before-combat-sanctum-390-idle.png",
+      "after": "visual-after-combat-sanctum-390-idle.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "087d843c6500475a0ca74a671d6cfc77182f15558f75c106cb3ea2ed09824ac6",
+      "afterSha256": "087d843c6500475a0ca74a671d6cfc77182f15558f75c106cb3ea2ed09824ac6"
+    },
+    {
+      "before": "visual-before-combat-sanctum-390-player.png",
+      "after": "visual-after-combat-sanctum-390-player.png",
+      "size": [
+        585,
+        1266
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 740610,
+      "pixels": 740610,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "6fce5188761945aa18f6e5530807596675b4159ec79c4c1daac2f3d834f8e17a",
+      "afterSha256": "6fce5188761945aa18f6e5530807596675b4159ec79c4c1daac2f3d834f8e17a"
+    },
+    {
+      "before": "visual-before-forest-1440.png",
+      "after": "visual-after-forest-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.00030185185185185187,
+      "psnrDb": 81.1290565539352,
+      "identicalPixels": 1439044,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "557e6302b7d622db5ad0c169b54a155890c62cb7a10c4443514dce09a2b04bf6",
+      "afterSha256": "9d6a00c40426bfbed87fb444560cd44a5d0807e2e55f8ac139596adb90abd062"
+    },
+    {
+      "before": "visual-before-forest-390.png",
+      "after": "visual-after-forest-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0001951938267104144,
+      "psnrDb": 85.1259165735827,
+      "identicalPixels": 1315950,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "5682aecf084f2a5a70cead9a518522db4dae0706f0803487cd7b6258f162a593",
+      "afterSha256": "e0564d22f54ad229995aaa4af2bd6065071fce9b798573ec7803e024358babe6"
+    },
+    {
+      "before": "visual-before-interior-1440.png",
+      "after": "visual-after-interior-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "c33cfbf12410be2b73ef2e7f61b2bcc08343aa0da5681cd7975c613d67f9306e",
+      "afterSha256": "c33cfbf12410be2b73ef2e7f61b2bcc08343aa0da5681cd7975c613d67f9306e"
+    },
+    {
+      "before": "visual-before-interior-390.png",
+      "after": "visual-after-interior-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1316640,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "00ef91d474fd91471b35b57a7a05efdb29f07a259489ca919ea1ecc15b45c79e",
+      "afterSha256": "00ef91d474fd91471b35b57a7a05efdb29f07a259489ca919ea1ecc15b45c79e"
+    },
+    {
+      "before": "visual-before-meadow-1440.png",
+      "after": "visual-after-meadow-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0008456018518518518,
+      "psnrDb": 77.92561786999866,
+      "identicalPixels": 1437313,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "17d392b44ba9758f9849018f467f52a3f188275dfe4b49c8559504e7b178ea3f",
+      "afterSha256": "7bc93ceb29d82fcd4b7bf91c1e0765ba2244d8b4aff69326e081d3927bcc0121"
+    },
+    {
+      "before": "visual-before-meadow-390.png",
+      "after": "visual-after-meadow-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0009506521651071414,
+      "psnrDb": 77.69087854078036,
+      "identicalPixels": 1313994,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "c4fbb56902701c2accd23bdb1188aa59f363cfc27978d620df83f982e39afa58",
+      "afterSha256": "ca905ef199a2cd60e5b92db449ca68bf6946e3cf9618d55c24f9183cdd09b942"
+    },
+    {
+      "before": "visual-before-quarry-1440.png",
+      "after": "visual-after-quarry-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0006483796296296296,
+      "psnrDb": 77.83264608182925,
+      "identicalPixels": 1438814,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "dfa172b86691338d85653ab021e314f143cfd169d560d29519b0b0dc632a0920",
+      "afterSha256": "3a0b86587ac7140dd8c6411ad5eda6f22098c8167317afee2dc323963047091c"
+    },
+    {
+      "before": "visual-before-quarry-390.png",
+      "after": "visual-after-quarry-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0005655810750597481,
+      "psnrDb": 79.4817013378467,
+      "identicalPixels": 1315365,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "ddb5191702c8f19d37d2fa38a8997d7f48477c50e223b8c635a14dc011edb072",
+      "afterSha256": "2452e8c95b1723b8b2df63500be2ce7c16dd6fa76da4e19fac0f84c3f602adf2"
+    },
+    {
+      "before": "visual-before-sanctum-1440.png",
+      "after": "visual-after-sanctum-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.002703240740740741,
+      "psnrDb": 72.30186174391069,
+      "identicalPixels": 1434729,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "bc6b4356278b4b8155e469641e58f2a569a3bac1bab4aa1703d63b00578a9c16",
+      "afterSha256": "9a6ac1899e85906a665fbb7386d61446116a9e5de4a9015d0c74c1c4d6645e6a"
+    },
+    {
+      "before": "visual-before-sanctum-390.png",
+      "after": "visual-after-sanctum-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1316640,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "38e4332097a7d86adca1026dc1e2923930cf345bd7374b913a8717d40b4d4013",
+      "afterSha256": "38e4332097a7d86adca1026dc1e2923930cf345bd7374b913a8717d40b4d4013"
+    },
+    {
+      "before": "visual-before-shrine-1440.png",
+      "after": "visual-after-shrine-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.000299537037037037,
+      "psnrDb": 82.52664455273589,
+      "identicalPixels": 1439157,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "80e09db218f2ff81aa85afb99617a8516f107f006cae42b95cee8adec9273417",
+      "afterSha256": "654b7e730b7566d11660ce3dd1f1ab9e3a33f5fafd83ac7e13c5f5b47a71d004"
+    },
+    {
+      "before": "visual-before-shrine-390.png",
+      "after": "visual-after-shrine-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0003260825535707052,
+      "psnrDb": 82.33577401512008,
+      "identicalPixels": 1315769,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "0f9df90657550af9515859c524d3a9f7c0b26e7e78148896afff9d09f97c3c0b",
+      "afterSha256": "d1361c8f0058c563c197e758d0b849f8adea1123556d8e06b57c786265932a3d"
+    },
+    {
+      "before": "visual-before-tower-1440.png",
+      "after": "visual-after-tower-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0002497685185185185,
+      "psnrDb": 81.75099835061475,
+      "identicalPixels": 1439561,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "95a101de525d6b5c70e7edadf4db6283a48129c31fc2e9e6d978aa479fb9f31d",
+      "afterSha256": "ede451c18113ef5868a19145a6e29ab6056a9a8d9401405ef44c3596eb4e9e04"
+    },
+    {
+      "before": "visual-before-tower-390.png",
+      "after": "visual-after-tower-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.0004891238303560578,
+      "psnrDb": 79.8283220676418,
+      "identicalPixels": 1315616,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "07843040bf078072a36ce17ce4bb73eac63205f612230341b7c2b84bcd5a72b7",
+      "afterSha256": "2802d6aabdf9b6c4f8a3b1ab9b3c551c39519c57ed045a3e509c9d2a78a92b91"
+    },
+    {
+      "before": "visual-before-town-1440.png",
+      "after": "visual-after-town-1440.png",
+      "size": [
+        1440,
+        1000
+      ],
+      "meanAbsoluteChannelError": 0.0,
+      "psnrDb": null,
+      "identicalPixels": 1440000,
+      "pixels": 1440000,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "7b9b8fc11b21e1a50758d5cccd35999121c04957fa6af12309b1aa5836b2551f",
+      "afterSha256": "7b9b8fc11b21e1a50758d5cccd35999121c04957fa6af12309b1aa5836b2551f"
+    },
+    {
+      "before": "visual-before-town-390.png",
+      "after": "visual-after-town-390.png",
+      "size": [
+        780,
+        1688
+      ],
+      "meanAbsoluteChannelError": 0.00013721796897152346,
+      "psnrDb": 86.69305971073445,
+      "identicalPixels": 1316141,
+      "pixels": 1316640,
+      "over16LevelsPercent": 0.0,
+      "beforeSha256": "552a7cb20661a2331f7227c4fa82ae2b6849e54cdd1c5ec39269bcb97ff04043",
+      "afterSha256": "3dfbed8041828d8ec7606ce9151c2169540c5c5f3766c644f7b2b9d608fb1fc3"
+    }
+  ],
+  "maxMeanAbsoluteChannelError": 0.002703240740740741,
+  "maxOver16LevelsPercent": 0.0
+}
