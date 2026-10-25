@@ -18,7 +18,7 @@ try{
     const meanMs=timings.reduce((a,b)=>a+b,0)/timings.length;
     report.samples.push({width,deviceScaleFactor:width<600?2:1,renderer:after.renderer,gpu:after.gpu,renderResolution:after.resolution,
       frames:timings.length,meanMs,meanFPS:1000/meanMs,p95Ms:timings[Math.floor(timings.length*.95)],
-      scene:'Hearthmere; keyboard movement with animated hero and environment',limitations:'Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement.'});
+      scene:'Hearthmere; prerendered 3D assets, animated hero, scenery and camera-following movement',limitations:'Cloud native Canvas2D compositor; no CPU throttling or physical-device test. No video recording or Blender asset rendering during measurement.'});
     await context.close();
   }
   await writeFile('docs/evidence/performance.json',JSON.stringify(report,null,2)+'\n');

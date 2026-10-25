@@ -4,6 +4,10 @@ dist/
 test-results/
 playwright-report/
 *.log
+assets/renders/
+assets/source/*.blend1
+assets/source/*.blend2
+__pycache__/
 playtest/*
 !playtest/the-last-lantern-gate-a.zip
 !playtest/SHA256SUMS.txt

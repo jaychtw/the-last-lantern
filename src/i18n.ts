@@ -32,7 +32,7 @@ const en={
   flee:'Flee',fleeSub:'75% chance · costs a turn',yourTurn:'Your turn. What will you do?',
   charged:'It gathers itself for a heavy splash. Guard or heal!',resolving:'The round unfolds…',
   noMana:'Not enough MP for that spell.',noTonic:'No tonics remaining.',ended:'This encounter has ended.',
-  appears:'A Dewdrop Blob bounces into your path.',strike:'Your lantern staff deals {n} damage.',emberHit:'Ember glows! {n} fire damage.',
+  appears:'A Dewdrop Blob bounces into your path.',strike:'Your blade deals {n} damage.',emberHit:'Ember glows! {n} fire damage.',
   healed:'You recover {n} HP.',guarded:'You brace behind your lantern.',enemyHit:'A little splash deals {n} damage.',
   heavyHit:'The heavy splash deals {n} damage.',telegraph:'The dewdrop draws in a deep breath…',escaped:'You return safely to the path.',
   escapeFail:'The dewdrop blocks the way this time.',victoryLog:'The dewdrop settles peacefully into the grass.',
@@ -57,7 +57,7 @@ const en={
   paused:'Take your time. The world is waiting.',savedNote:'Saves stay in this browser. Three manual slots and a safe-transition autosave.',
   canvas:'Exploration scene. Use WASD or arrow keys to walk, Enter to interact, or Explore to choose a destination.',
   location:'Location',inventory:'Your satchel',pausedLabel:'Paused',completeStatus:'Completed',notComplete:'To discover',
-  fog:'Beyond the meadow',footer:'An original storybook adventure',review:'Art & interaction review',
+  fog:'Beyond the meadow',footer:'An original fantasy adventure',review:'Art & interaction review',
 };
 type Messages={ [K in keyof typeof en]:string };
 const zh:Messages={
@@ -89,7 +89,7 @@ const zh:Messages={
   mend:'癒合',mendSub:'4 MP · 恢復 20 HP',item:'藥水',itemSub:'最多恢復 24 HP',guard:'防禦',guardSub:'減少 65% 傷害',
   flee:'逃跑',fleeSub:'75% 機率 · 消耗回合',yourTurn:'輪到你了，想怎麼做？',charged:'牠正在蓄力，準備猛烈潑水！防禦或治療吧！',resolving:'回合進行中……',
   noMana:'MP 不足，無法施放魔法。',noTonic:'日葉藥水已用完。',ended:'這場戰鬥已經結束。',
-  appears:'一隻露珠團蹦蹦跳跳地擋住去路。',strike:'你的提燈杖造成 {n} 點傷害。',emberHit:'餘燼閃耀！造成 {n} 點火焰傷害。',
+  appears:'一隻露珠團蹦蹦跳跳地擋住去路。',strike:'你的短劍造成 {n} 點傷害。',emberHit:'餘燼閃耀！造成 {n} 點火焰傷害。',
   healed:'恢復 {n} HP。',guarded:'你舉起小燈，穩住腳步。',enemyHit:'小水花造成 {n} 點傷害。',heavyHit:'猛烈潑水造成 {n} 點傷害。',
   telegraph:'露珠團深深吸了一口氣……',escaped:'你平安回到小路上。',escapeFail:'這次露珠團攔住了去路。',victoryLog:'露珠團平靜地融入草叢。',
   defeatLog:'米拉找到你，帶你回家。',victory:'一點勇氣，就能走得更遠。',victoryDetail:'+18 經驗值 · +8 金幣 · 道路暢通了',
@@ -107,7 +107,7 @@ const zh:Messages={
   autoKept:'無法讀取的自動存檔已保留。請使用手動欄位儲存這段旅程。',restart:'重新開始這一章',restartQuestion:'重新出發？現有存檔欄位將會保留。',
   restartConfirm:'重新出發',paused:'慢慢來，世界會等著你。',savedNote:'存檔保存在此瀏覽器，提供三個手動欄位與安全轉場自動存檔。',
   canvas:'探索場景。使用 WASD 或方向鍵移動，Enter 互動，或按「探索」選擇目的地。',
-  location:'所在地',inventory:'你的背包',pausedLabel:'已暫停',completeStatus:'已完成',notComplete:'等待發現',fog:'草甸的另一端',footer:'原創繪本風冒險',review:'美術與互動審閱',
+  location:'所在地',inventory:'你的背包',pausedLabel:'已暫停',completeStatus:'已完成',notComplete:'等待發現',fog:'草甸的另一端',footer:'原創奇幻冒險',review:'美術與互動審閱',
 };
 export type Key=keyof Messages;
 export const messages:Record<Lang,Messages>={en,'zh-TW':zh};

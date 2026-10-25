@@ -9,10 +9,10 @@ if not (dist / 'index.html').exists():
 out = root / 'playtest'
 out.mkdir(exist_ok=True)
 archive = out / 'the-last-lantern-gate-a.zip'
-instructions = '''THE LAST LANTERN / 最後的引路燈 — Gate A review
+instructions = '''THE LAST LANTERN / 最後的引路燈 — Revised Gate A visual review
 
 This is a local playable art-and-interaction candidate, not an approved release.
-Requires Python 3 and a recent browser with WebGL. No Node.js needed to play.
+Requires Python 3 and a recent browser with Canvas2D/WebP. No Node.js needed to play.
 
 1. Extract the entire ZIP to a folder.
 2. Open a terminal in that folder.
@@ -41,8 +41,12 @@ at a 10% coin cost (rounded down), retaining discoveries.
 
 Please review the original art, hero movement, dialogue/battle feedback,
 desktop/touch usability, English/Traditional Chinese readability and comfort.
-The current art is an authored layered-vector candidate. Whether it reaches
-the GDD's Switch-era indie quality ambition is awaiting human review.
+The revised art uses original Blender-authored 3D models, materials, lights
+and character poses, composited as independent prerendered layers/frames.
+The supplied concept collage is a reference only, never a playable image.
+Whether this candidate reaches the new visual target awaits human review.
+The camera is fixed and lighting is primarily baked. Performance must be
+reviewed on actual devices; source render time is not runtime frame time.
 
 Gate B and public deployment require separate explicit approval.
 Physical-phone performance, screen readers and first-time player balance

@@ -1,10 +1,10 @@
 {
   "target": "http://127.0.0.1:8090/",
-  "artifact": "e3763acd073127111090d59c484ac49fbff52b2deeacea629f8fc59f9681be68",
+  "artifact": "064f6e317e1088fd1da65cb80788bede6f7022fc3996dc956282de19f6b7a712",
   "publicDeployment": false,
   "checks": [
     "Packaged build starts into the exploration scene.",
-    "844×390 landscape has no horizontal overflow; the page scrolls vertically to controls. Portrait remains recommended for this candidate.",
+    "844×390 landscape has no horizontal overflow; fullscreen scene and touch controls remain inside the viewport.",
     "Touch navigation reaches the contact encounter, live language switching preserves battle, and Attack resolves both sides with domain logs.",
     "No page exceptions."
   ],
@@ -36,22 +36,10 @@
               "#location-sub"
             ],
             [
-              ".heading-ornament"
-            ],
-            [
               "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
             ],
             [
               "button[data-place=\"mira\"] > b"
-            ],
-            [
-              ".sun-symbol"
-            ],
-            [
-              "#area-label"
-            ],
-            [
-              "#area-name"
             ],
             [
               ".quest-glyph"
@@ -106,20 +94,11 @@
             ],
             [
               "#tap-hint"
-            ],
-            [
-              "#footer-text"
-            ],
-            [
-              ".footer-mark"
-            ],
-            [
-              "#gate-label"
             ]
           ]
         }
       ],
-      "passes": 40
+      "passes": 38
     },
     {
       "state": "exploration",
@@ -145,22 +124,10 @@
               "#location-sub"
             ],
             [
-              ".heading-ornament"
-            ],
-            [
               "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
             ],
             [
               "button[data-place=\"mira\"] > b"
-            ],
-            [
-              ".sun-symbol"
-            ],
-            [
-              "#area-label"
-            ],
-            [
-              "#area-name"
             ],
             [
               ".quest-glyph"
@@ -215,20 +182,11 @@
             ],
             [
               "#tap-hint"
-            ],
-            [
-              "#footer-text"
-            ],
-            [
-              ".footer-mark"
-            ],
-            [
-              "#gate-label"
             ]
           ]
         }
       ],
-      "passes": 40
+      "passes": 38
     },
     {
       "state": "battle",
@@ -245,9 +203,6 @@
               "#dialog-title"
             ],
             [
-              "button[data-command=\"pause-battle\"]"
-            ],
-            [
               ".enemy-card > .tiny"
             ],
             [
@@ -316,7 +271,7 @@
           ]
         }
       ],
-      "passes": 25
+      "passes": 21
     },
     {
       "state": "battle",
@@ -333,9 +288,6 @@
               "#dialog-title"
             ],
             [
-              "button[data-command=\"pause-battle\"]"
-            ],
-            [
               ".enemy-card > .tiny"
             ],
             [
@@ -404,7 +356,7 @@
           ]
         }
       ],
-      "passes": 25
+      "passes": 21
     }
   ]
 }

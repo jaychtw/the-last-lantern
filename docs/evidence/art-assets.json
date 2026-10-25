@@ -1,0 +1,273 @@
+{
+  "pipeline": "Blender 4.3.2 CPU Cycles 48 samples, original distant image_gen matte, WebP packing, native Canvas2D runtime",
+  "textures": 32,
+  "encodedBytes": 3801314,
+  "decodedRGBABytes": 87219872,
+  "walkDirections": 8,
+  "walkFrames": 64,
+  "battleFrames": {
+    "attack": 8,
+    "cast": 8,
+    "guard": 1,
+    "hurt": 1,
+    "victory": 1
+  },
+  "files": {
+    "battle-environment.webp": {
+      "bytes": 382426,
+      "size": [
+        1600,
+        900
+      ],
+      "sha256": "9570410c12b2737c89af7737d2180acae7425700b95fb3937e480082dd3853b2"
+    },
+    "battle-sky.webp": {
+      "bytes": 301766,
+      "size": [
+        1672,
+        941
+      ],
+      "sha256": "432218dc9df212df0ddf6319bdae995eb2dfe56c7f54bed210992f5037744b28"
+    },
+    "beacon-dormant.webp": {
+      "bytes": 33606,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "1e719a5ac2748c1c9b1519abd9e844d98cb543ff875768561926deca59437f31"
+    },
+    "beacon.webp": {
+      "bytes": 33788,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "f7e84e7f93eea6129e42bea041fdbe508435ff548ff84f7976dd4030c44d8a81"
+    },
+    "blob.webp": {
+      "bytes": 35354,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "4df4a84fe79ba92e07c031a77ca475dc891406a84ea89c4d8b610800f7971b11"
+    },
+    "bridge.webp": {
+      "bytes": 33306,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "0c39674d7fdc05c9ef1256438ff0f4c4ef49768f22f061da5bd605f3a5d896d3"
+    },
+    "bush.webp": {
+      "bytes": 32534,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "c0ebc7e535709f3227b373bd8ef21fd8dcf60ee2f0c1380fcac8b4e72dabde3a"
+    },
+    "chest-open.webp": {
+      "bytes": 45660,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "7d787817b018e7ba03c6e13955b6d62600df39b340178d6ec6ca38d1efed766e"
+    },
+    "chest.webp": {
+      "bytes": 30172,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9566574e34a68a7f0fe799a7d1788e27d782b0472ba10ecf95566645235386b9"
+    },
+    "cottage-copper.webp": {
+      "bytes": 125958,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "21c8fce2ba175ec186d652a87d2bd40908b25da3be245d6a435aabc2307e6432"
+    },
+    "cottage.webp": {
+      "bytes": 128854,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "29ff236b0fde563712af8889948cf2d5901cd3683ea71e4a5d5ae28a8f088965"
+    },
+    "desk.webp": {
+      "bytes": 45958,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "891c30f8075210cfdb4231d09acc067a3b4c221460e0d2f6f1245b80484aa1f9"
+    },
+    "flowers.webp": {
+      "bytes": 37608,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "1e14c4cbe7fa7574e0b6d891745c72f0fbc1162746de2c4b6256cba3681549bf"
+    },
+    "hearth.webp": {
+      "bytes": 38152,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "341597aa6c21e6a1a3f83530329b0315659821f23475ed8d2c9e9b1952944487"
+    },
+    "interior-ground.webp": {
+      "bytes": 125866,
+      "size": [
+        1200,
+        1020
+      ],
+      "sha256": "b3967f3d859b686e80dd00556ae2a7c977f408d00184491e9b43fb73fa12290b"
+    },
+    "meadow-ground.webp": {
+      "bytes": 206838,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "213a6e4a3e9f537522fdd41aa32c6aa6795faa3e27619fe6364b9bae8aee8f13"
+    },
+    "mira-portrait.webp": {
+      "bytes": 47628,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "f52c1b5db93c1f74ecb5205426266eae5cb08ffc7585a965c870b6deaddb6677"
+    },
+    "mira-thoughtful.webp": {
+      "bytes": 41978,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "2ed692a934b6d68c9f83e6759b6a5cbcb6a18c9fb3807b404a39af86c37f2512"
+    },
+    "mira.webp": {
+      "bytes": 26482,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "13b44900382013bc211e3604dbbd54280e739e77421a4c7c6a8ab9e08cedb0f7"
+    },
+    "rocks.webp": {
+      "bytes": 22422,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "f28ac716b52197e7fe5de3ac219594bf10aff32e5a71216e6c3ae90886325511"
+    },
+    "rowan-attack-sheet.webp": {
+      "bytes": 248692,
+      "size": [
+        1536,
+        768
+      ],
+      "sha256": "2060e35ec0044eb524e2ac5b2c03f4931f5c3a2a8f50d26f2039dfc15f8fc097"
+    },
+    "rowan-cast-sheet.webp": {
+      "bytes": 238820,
+      "size": [
+        1536,
+        768
+      ],
+      "sha256": "038ff936f229f74b9808c07c845db2ce7a825f50ced37c86a46ff9b9787f49fd"
+    },
+    "rowan-guard-sheet.webp": {
+      "bytes": 32822,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "419d29ab444f8bda73b3e08ae47af22e3bea67820404b2e7e29e403a94de8e5b"
+    },
+    "rowan-hurt-sheet.webp": {
+      "bytes": 33036,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "9eefeb79c3c7943268f1676b364d1abb3c32299dc0370096d24f70ff42867a6f"
+    },
+    "rowan-idle.webp": {
+      "bytes": 34032,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "4d0a30709ec7e8744e0503a49708414bba48a36a476abb83636febb11b0b8b10"
+    },
+    "rowan-portrait.webp": {
+      "bytes": 72912,
+      "size": [
+        768,
+        768
+      ],
+      "sha256": "4e1a1d3cdf144d6f158c24af0ca10bcec9072fc7690e77f14141fcb4bec875d8"
+    },
+    "rowan-victory-sheet.webp": {
+      "bytes": 33170,
+      "size": [
+        384,
+        384
+      ],
+      "sha256": "d473c01a5c6c21f3aad97dacd0781e10eb00fbe8ba5135836977280f8a722e36"
+    },
+    "rowan-walk.webp": {
+      "bytes": 946330,
+      "size": [
+        2048,
+        2048
+      ],
+      "sha256": "704520c841494e8fc3f77138dd314bacfd9f8562512cffd698dd6848a93aff9d"
+    },
+    "sign.webp": {
+      "bytes": 39976,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ee0b2bf7ff46e4ab6f3da93ba9669ad380959b47d62ac4cb294e81abebe773c5"
+    },
+    "stool.webp": {
+      "bytes": 37924,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "e84382b906e71cdb902b0dc0dbafc6815d5999a43fb7596e6f236d667b2074de"
+    },
+    "town-ground.webp": {
+      "bytes": 234816,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "5dfc74afc62777787e67b1e2fbecf5eb4de99d02efce885da7514b59ccf85ef1"
+    },
+    "tree.webp": {
+      "bytes": 72428,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "7c16053f8dde7db3542bfbaeb907ed3dfe1c4d95507c9df343896a00171c9165"
+    }
+  }
+}

@@ -1,26 +1,19 @@
-# Play Gate A outside the cloud workspace
+# Revised Gate A local playtest
 
-[Download the tested ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-a.zip).
+[Download the playable ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-a.zip) — **3,980,067 bytes**. [Review report and reference comparison](../docs/GATE-A-REVIEW.md).
 
-1. Extract the entire ZIP to a folder.
-2. Open a terminal in that folder.
-3. Run `python3 serve-playtest.py` (Windows: `py serve-playtest.py`).
-4. Open the computer address printed by the helper.
+1. Extract the entire ZIP.
+2. In that folder run `python3 serve-playtest.py` (Windows: `py serve-playtest.py`).
+3. Open the printed local address. Use `--lan` and your computer's LAN IP for a phone on trusted Wi-Fi; stop with Ctrl+C.
 
-Python 3 and a recent browser with WebGL enabled are required. No Node.js, npm, accounts or cloud-workspace access is needed to play. Open the served address rather than opening `index.html` directly.
+No cloud workspace, Node/npm, Blender or account is needed. Recent Canvas2D/WebP-capable browser and Python 3 are required. Open through the helper, not directly through `index.html`. Bilingual `START-HERE.txt`, local fonts/licenses and per-file hashes are inside.
 
-For a phone on the same trusted Wi-Fi, start the helper with `--lan` and open your computer's LAN address on the phone. Stop the helper with Ctrl+C. It serves only the extracted `game/` directory. Portrait is recommended for this candidate.
-
-請完整解壓縮 ZIP，在該資料夾中執行 `python3 serve-playtest.py`（Windows 可用 `py serve-playtest.py`），再開啟終端機顯示的網址。不需要 Node.js 或雲端工作區。手機可使用 `--lan`，透過同一個可信任 Wi-Fi 連線。
-
-Speak with Mira, visit her cottage, collect the optional supplies, follow the eastern road, meet the Dewdrop Blob, and relight the Meadow Lantern. Desktop uses WASD/arrows and Enter/E/Space. Touch uses the direction pad and Interact; Explore offers named destinations. Language switches live.
-
-This is the same tested candidate described in the [Gate A review](../docs/GATE-A-REVIEW.md). It awaits human art/interaction acceptance; full production and public game deployment are not authorized.
-
-SHA-256 of `the-last-lantern-gate-a.zip`:
+SHA-256:
 
 ```text
-e3763acd073127111090d59c484ac49fbff52b2deeacea629f8fc59f9681be68
+064f6e317e1088fd1da65cb80788bede6f7022fc3996dc956282de19f6b7a712
 ```
 
-The ZIP also contains a per-file `SHA256SUMS.txt`, font/library licenses and bilingual `START-HERE.txt` instructions. Saves stay in the browser you use; physical-device, screen-reader and hardware performance verification remain pending.
+The exact extracted artifact passed all 46 per-file hashes; all 41 served game files matched over HTTP. Gameplay and accessibility checks are separately recorded in [packaged verification](../docs/evidence/playtest-verification.json). These are local checks, not public deployment or human visual approval.
+
+This is the replacement Blender/prerendered-3D visual candidate. The previous vector-art candidate was rejected. Review the town, Mira dialogue, animated battle, desktop/touch comfort and EN/zh-TW against the supplied concept collage. The collage is not inserted in the game. Saves remain in your browser. Human visual approval, physical-device performance, Safari/Firefox and screen-reader verification remain pending. Gate B and public game deployment are not authorized.

@@ -30,8 +30,8 @@ const icons={journal:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h
 app.innerHTML=`<header class="site-header"><a class="brand" href="#" id="brand">${lanternIcon}<span id="brand-title"></span></a><span class="header-note" id="review-label"></span><div class="header-actions"><button id="sound" class="icon-button">${icons.sound}</button><button id="language" class="language-button"></button><button id="settings-top" class="icon-button">${icons.settings}</button></div></header>
 <main><section class="chapter-heading"><div><p class="eyebrow"><span id="chapter-label"></span><i></i><span id="chapter-name"></span></p><h1 id="location"></h1><p class="location-sub" id="location-sub"></p></div><div class="heading-ornament" aria-hidden="true">✧<span></span></div></section>
 <section class="game-frame" aria-label="The Last Lantern"><div id="world" role="img" tabindex="0"></div><div class="vignette" aria-hidden="true"></div><div id="place-markers"></div>
-<div class="scene-top"><div class="area-badge"><span class="sun-symbol" aria-hidden="true">☼</span><div><span class="tiny" id="area-label"></span><strong id="area-name"></strong></div></div><button id="quest" class="quest-card"><span class="quest-glyph" aria-hidden="true">◇</span><span><span class="tiny" id="objective-label"></span><span id="objective-text"></span></span><span class="quest-arrow" aria-hidden="true">↗</span></button></div>
-<div class="scene-bottom"><div class="hero-card"><div class="hero-portrait"><img src="${import.meta.env.BASE_URL}art/hero-head.svg" alt=""/></div><div class="hero-stats"><div class="hero-name"><strong id="hero-name"></strong><span id="level"></span></div><div class="stat-line"><span>HP</span><div class="stat-track"><i id="hp-bar"></i></div><b id="hp-value"></b></div><div class="stat-line mana"><span>MP</span><div class="stat-track"><i id="mp-bar"></i></div><b id="mp-value"></b></div></div></div><div id="interact-wrap"><span class="interact-name" id="interact-name"></span><button id="interact" class="interact-button"><kbd>E</kbd><span></span></button></div></div>
+<div class="scene-top"><div class="area-badge"><span class="sun-symbol" aria-hidden="true">☼</span><div><span class="tiny" id="area-label"></span><strong id="area-name"></strong></div></div><button id="quest" class="quest-card"><span class="quest-glyph" aria-hidden="true">◇</span><span><span class="tiny" id="objective-label"></span><span id="objective-text"></span></span><span class="quest-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></span></button></div>
+<div class="scene-bottom"><div class="hero-card"><div class="hero-portrait"><img src="${import.meta.env.BASE_URL}art3d/rowan-portrait.webp" alt=""/></div><div class="hero-stats"><div class="hero-name"><strong id="hero-name"></strong><span id="level"></span></div><div class="stat-line"><span>HP</span><div class="stat-track"><i id="hp-bar"></i></div><b id="hp-value"></b></div><div class="stat-line mana"><span>MP</span><div class="stat-track"><i id="mp-bar"></i></div><b id="mp-value"></b></div></div></div><div id="interact-wrap"><span class="interact-name" id="interact-name"></span><button id="interact" class="interact-button"><kbd>E</kbd><span></span></button></div></div>
 <div id="toast" role="status" aria-live="polite"></div><div id="loading" role="status"></div></section>
 <div class="under-game"><div class="keyboard-hints"><span id="keys"></span><span id="keys2"></span></div><nav class="game-nav"><button id="explore">${icons.explore}<span></span></button><button id="journal">${icons.journal}<span></span></button><button id="settings">${icons.settings}<span></span></button></nav></div>
 <div class="touch-controls"><div class="dpad"><button data-dir="up">↑</button><button data-dir="left">←</button><span aria-hidden="true">✧</span><button data-dir="right">→</button><button data-dir="down">↓</button></div><p id="tap-hint"></p><button id="touch-interact" class="touch-action">${lanternIcon}<span></span></button></div>
@@ -40,7 +40,7 @@ app.innerHTML=`<header class="site-header"><a class="brand" href="#" id="brand">
 const dialog=document.querySelector<HTMLDialogElement>('#panel')!;
 const worldHost=document.querySelector<HTMLElement>('#world')!;
 const setText=(selector:string,text:string)=>{const el=document.querySelector(selector);if(el)el.textContent=text;};
-const art=(name:string)=>`${import.meta.env.BASE_URL}art/${name}.svg`;
+const art=(name:string)=>`${import.meta.env.BASE_URL}art3d/${({lamplighter:'mira-portrait','hero-head':'rowan-portrait','hand-lantern':'beacon'} as Record<string,string>)[name]??name}.webp`;
 const storage={getItem:(key:string)=>localStorage.getItem(key),setItem:(key:string,value:string)=>localStorage.setItem(key,value)};
 function preferences(){
   sound.enabled=prefs.sound;sound.volume=prefs.volume;
@@ -52,6 +52,7 @@ function preferences(){
 function objective(){return game.flags.lit?'questDone':game.flags.won?'questLight':game.scene==='meadow'?'questClearing':game.flags.talked?'questFight':'questTalk';}
 function render(){
   document.documentElement.lang=prefs.lang;
+  document.querySelector('.game-frame')!.setAttribute('aria-label',t('title'));
   setText('#brand-title',t('title'));setText('#review-label',t('review'));
   setText('#chapter-label',t('chapter'));setText('#chapter-name',t('chapterName'));
   setText('#location',t(game.scene));setText('#location-sub',t(game.scene+'Sub'));
@@ -118,15 +119,16 @@ function closePanel(){
 function modalHeader(title:string,eyebrow='',closable=true){return `<div class="modal-tools"><button data-command="language" class="language-button" aria-label="${esc(t('language'))}">${prefs.lang==='en'?'繁體中文':'English'}</button>${closable?`<button data-command="close" class="icon-button" aria-label="${t('close')}">×</button>`:''}</div>${eyebrow?`<p class="eyebrow">${esc(eyebrow)}</p>`:''}<h2 id="dialog-title">${esc(title)}</h2>`;}
 function action(command:string,label:string,cls='primary'){return `<button data-command="${command}" class="${cls}">${esc(label)}</button>`;}
 function renderPanel(){
+  world.stopBattle();
   if(!panel){if(dialog.open)dialog.close();world.app.start();return;}
   world.app.stop();world.render();
   const focused=(document.activeElement as HTMLElement)?.dataset.command;
   let html='';dialog.className=`panel-${panel}`;
   if(panel==='start'){
     const saved=load(storage,'auto');
-    html=modalHeader(t('title'),t('gate'),false)+`<div class="welcome-lantern">${lanternIcon}</div><p class="welcome-tagline">${t('subtitle')}</p><p>${t('startText')}</p><label class="name-label" for="hero-input">${t('name')}</label><input id="hero-input" maxlength="24" autocomplete="off" value="${esc(t('defaultName'))}"/><div class="stack">${saved.kind==='ok'?action('continue',t('continue')):''}${action('begin',t(saved.kind==='ok'?'newJourney':'begin'),saved.kind==='ok'?'secondary':'primary')}</div><p class="fine">${t('startNote')}</p>${saved.kind==='corrupt'?`<p class="warning">${t('storageCorrupt')}</p>`:''}`;
+    html=modalHeader(t('title'),t('gate'),false)+`<div class="welcome-lantern"><img src="${art('rowan-idle')}" alt=""/></div><p class="welcome-tagline">${t('subtitle')}</p><p>${t('startText')}</p><label class="name-label" for="hero-input">${t('name')}</label><input id="hero-input" maxlength="24" autocomplete="off" value="${esc(t('defaultName'))}"/><div class="stack">${saved.kind==='ok'?action('continue',t('continue')):''}${action('begin',t(saved.kind==='ok'?'newJourney':'begin'),saved.kind==='ok'?'secondary':'primary')}</div><p class="fine">${t('startNote')}</p>${saved.kind==='corrupt'?`<p class="warning">${t('storageCorrupt')}</p>`:''}`;
   }else if(panel==='dialogue'){
-    html=modalHeader(t(speaker),'',false)+`<div class="dialogue-body"><img src="${art(speaker==='mira'?'lamplighter':speaker==='chest'?'chest-open':speaker==='rest'?'hearth':'hand-lantern')}" alt=""/><p>${esc(t(dialogue[line]))}</p></div><div class="dialogue-foot"><span aria-hidden="true">${'●'.repeat(line+1)}${'○'.repeat(dialogue.length-line-1)}</span>${action('next-line',t(line<dialogue.length-1?'next':'done'))}</div>`;
+    html=modalHeader(t(speaker),'',false)+`<div class="dialogue-body"><img src="${art(speaker==='mira'?(line===0?'lamplighter':'mira-thoughtful'):speaker==='chest'?'chest-open':speaker==='rest'?'hearth':'hand-lantern')}" alt=""/><p>${esc(t(dialogue[line]))}</p></div><div class="dialogue-foot"><span aria-hidden="true">${'●'.repeat(line+1)}${'○'.repeat(dialogue.length-line-1)}</span>${action('next-line',t(line<dialogue.length-1?'next':'done'))}</div>`;
   }else if(panel==='journal'){
     html=modalHeader(t('journalTitle'),t('journal'))+`<div class="journal-intro">${lanternIcon}<div><h3>${t('journalIntro')}</h3><p>${t('journalBody')}</p></div></div><ol class="quest-list">${(['talked','chest','won','lit'] as const).map((flag,i)=>`<li class="${game.flags[flag]?'done':''}"><span aria-label="${t(game.flags[flag]?'completeStatus':'notComplete')}">${game.flags[flag]?'✓':i+1}</span>${t(['stepTalk','stepChest','stepBattle','stepLantern'][i])}</li>`).join('')}</ol><div class="satchel"><span>${t('coins')} <b>${game.coins}</b></span><span>${t('tonics')} <b>${game.tonics}</b></span><span>${t('xp')} <b>${game.xp}</b></span></div><p class="fine">${t('sliceNote')}</p>`;
   }else if(panel==='explore'){
@@ -138,16 +140,17 @@ function renderPanel(){
     html=modalHeader(t(confirmText),'',false)+`<div class="confirmation-actions">${action('cancel-confirm',t('cancel'),'secondary')}${action('confirm',t(confirmText==='restartQuestion'?'restartConfirm':confirmText==='loadConfirm'?'loadJourney':confirmText==='newQuestion'?'startFresh':'replace'))}</div>`;
   }else if(panel==='battle'&&battle){
     const b=battle;
-    const commandButton=(a:Action,title:string,desc:string,icon:string,disabled=false)=>`<button data-action="${a}" ${busy||disabled?'disabled':''}><span class="command-symbol" aria-hidden="true">${icon}</span><span><strong>${t(title)}</strong><small>${t(desc)}</small></span><b>↗</b></button>`;
-    html=`<div class="battle-top"><div><p class="eyebrow">${t('encounter')}</p><h2 id="dialog-title">${t('enemy')}</h2></div><button data-command="pause-battle" class="icon-button" aria-label="${t('settings')}">Ⅱ</button></div><div class="battle-stage ${busy?'is-resolving':''}" data-attack="${dialog.dataset.attack??''}" data-phase="${dialog.dataset.phase??'player'}"><div class="battle-atmosphere"></div><div class="enemy-card"><span class="tiny">${t('enemyType')}</span><div class="enemy-track"><i style="width:${b.enemyHp/ENEMY_HP*100}%"></i></div><small>${b.enemyHp} / ${ENEMY_HP} HP</small></div><img class="battle-enemy" src="${art('blob')}" alt="${t('enemy')}"/><span class="battle-impact" aria-hidden="true">${dialog.dataset.damage??''}</span><div class="battle-hero"><img class="battle-cape" src="${art('hero-cape')}" alt=""/><img class="battle-leg left-leg" src="${art('hero-leg')}" alt=""/><img class="battle-leg right-leg" src="${art('hero-leg')}" alt=""/><img class="battle-body" src="${art('hero-body')}" alt=""/><img class="battle-arm left-arm" src="${art('hero-arm')}" alt=""/><img class="battle-arm right-arm" src="${art('hero-arm')}" alt=""/><img class="battle-head" src="${art('hero-head')}" alt=""/><img class="battle-lantern" src="${art('hand-lantern')}" alt=""/></div><div class="battle-hero-status"><strong>${esc(game.name)}</strong><span>HP ${b.hp}/${MAX_HP} · MP ${b.mp}/${MAX_MP}</span></div></div><div class="turn-status ${b.charged?'charged':''}" role="status">${busy?t('resolving'):b.charged?t('charged'):t('yourTurn')}<span>${t('round')} ${b.round}</span></div><div class="battle-commands">${magic?`${commandButton('ember','ember','emberSub','✧',b.mp<3)}${commandButton('mend','mend','mendSub','✚',b.mp<4)}${action('magic-back',t('back'),'magic-back')}`:`${commandButton('attack','attack','attackSub','⟋')}<button data-command="magic" ${busy?'disabled':''}><span class="command-symbol">✧</span><span><strong>${t('magic')}</strong><small>${t('magicSub')}</small></span><b>↗</b></button>${commandButton('tonic','item','itemSub','♧',b.tonics===0)}${commandButton('guard','guard','guardSub','⬡')}${commandButton('flee','flee','fleeSub','↝')}`}</div><details class="battle-log"><summary>${t('round')} ${b.round} · ${t('journal')}</summary><div role="log">${b.logs.map(l=>`<p>${t(l.key,l.n)}</p>`).join('')}</div></details><p id="battle-live" class="sr-only" aria-live="polite">${b.logs.slice(-2).map(l=>t(l.key,l.n)).join(' ')}</p>`;
+    const commandButton=(a:Action,title:string,desc:string,icon:string,disabled=false)=>`<button data-action="${a}" ${busy||disabled?'disabled':''}><span class="command-symbol" aria-hidden="true">${icon}</span><span><strong>${t(title)}</strong><small>${t(desc)}</small></span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></b></button>`;
+    html=`<div class="battle-top"><div><p class="eyebrow">${t('encounter')}</p><h2 id="dialog-title">${t('enemy')}</h2></div><button data-command="pause-battle" class="icon-button" aria-label="${t('settings')}">${icons.settings}</button></div><div class="battle-stage ${busy?'is-resolving':''}" data-attack="${dialog.dataset.attack??''}" data-phase="${dialog.dataset.phase??'player'}"><div class="battle-atmosphere"></div><div class="enemy-card"><span class="tiny">${t('enemyType')}</span><div class="enemy-track"><i style="width:${b.enemyHp/ENEMY_HP*100}%"></i></div><small>${b.enemyHp} / ${ENEMY_HP} HP</small></div><span class="battle-impact" aria-hidden="true">${dialog.dataset.damage??''}</span><div class="battle-hero-status"><strong>${esc(game.name)}</strong><span>HP ${b.hp}/${MAX_HP} · MP ${b.mp}/${MAX_MP}</span></div></div><div class="turn-status ${b.charged?'charged':''}" role="status">${busy?t('resolving'):b.charged?t('charged'):t('yourTurn')}<span>${t('round')} ${b.round}</span></div><div class="battle-commands">${magic?`${commandButton('ember','ember','emberSub','✧',b.mp<3)}${commandButton('mend','mend','mendSub','✚',b.mp<4)}${action('magic-back',t('back'),'magic-back')}`:`${commandButton('attack','attack','attackSub','⟋')}<button data-command="magic" ${busy?'disabled':''}><span class="command-symbol">✧</span><span><strong>${t('magic')}</strong><small>${t('magicSub')}</small></span><b aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></b></button>${commandButton('tonic','item','itemSub','♧',b.tonics===0)}${commandButton('guard','guard','guardSub','⬡')}${commandButton('flee','flee','fleeSub','↝')}`}</div><details class="battle-log"><summary>${t('round')} ${b.round} · ${t('journal')}</summary><div role="log">${b.logs.map(l=>`<p>${t(l.key,l.n)}</p>`).join('')}</div></details><p id="battle-live" class="sr-only" aria-live="polite">${b.logs.slice(-2).map(l=>t(l.key,l.n)).join(' ')}</p>`;
   }else if(panel==='result'&&battle){
     const won=battle.outcome==='victory',lost=battle.outcome==='defeat';
     html=modalHeader(t(won?'victory':lost?'defeat':'escapedTitle'),t(won?'victoryLog':lost?'defeatLog':'escaped'),false)+`<div class="result-emblem">${won?'✧':lost?'⌂':'↝'}</div><p>${t(won?'victoryDetail':lost?'defeatDetail':'escapedDetail')}</p>${action('battle-done',t(lost?'returnHome':'keepGoing'))}`;
   }else if(panel==='complete'){
-    html=modalHeader(t('completed'),t('completeBadge'),false)+`<div class="completed-art"><img src="${art('beacon')}" alt=""/><img src="${art('flame')}" alt=""/></div><p>${t('completeText')}</p><p class="fine">${t('completeNote')}</p>${action('complete-done',t('keepGoing'))}`;
+    html=modalHeader(t('completed'),t('completeBadge'),false)+`<div class="completed-art"><img src="${art('beacon')}" alt=""/></div><p>${t('completeText')}</p><p class="fine">${t('completeNote')}</p>${action('complete-done',t('keepGoing'))}`;
   }
   dialog.innerHTML=html;
   if(!dialog.open)dialog.showModal();
+  if(panel==='battle')world.mountBattle(dialog.querySelector<HTMLElement>('.battle-stage')!,dialog.dataset.attack??'',dialog.dataset.phase??'player',busy);
   if(focused)dialog.querySelector<HTMLButtonElement>(`[data-command="${focused}"]`)?.focus({preventScroll:true});
 }
 function switchLanguage(){prefs.lang=prefs.lang==='en'?'zh-TW':'en';preferences();render();}
@@ -181,7 +184,11 @@ function interact(p=nearest){
 }
 function walkTo(p:Point,place?:Place){
   if(panel||busy)return;
-  const next=route(game.scene,game,p);
+  const d=distance(game,p);
+  if(place&&place.kind!=='encounter'&&d<82){interact(place);return;}
+  const target=place&&place.kind!=='encounter'?{x:p.x+(game.x-p.x)/d*78,y:p.y+(game.y-p.y)/d*78}:p;
+  let next=route(game.scene,game,target);
+  if(!next.length&&place)next=route(game.scene,game,p);
   if(!next.length){toast('noRoute');return;}
   path=next;pendingPlace=place;
 }
@@ -225,7 +232,7 @@ const world=new World(worldHost,dt=>{
       else{dx=(p.x-game.x)/d;dy=(p.y-game.y)/d;}
     }
     const length=Math.hypot(dx,dy);if(length>0)move(game,dx/length*175*dt,dy/length*175*dt);
-    world.update(game,dt,length>0,dx);
+    world.update(game,dt,length>0,dx,dy);
     const p=places[game.scene].filter(p=>distance(game,p)<90).sort((a,b)=>distance(game,a)-distance(game,b))[0];
     if(p?.id!==nearest?.id){nearest=p;renderInteract();}
     if(game.scene==='meadow'&&!game.flags.won&&distance(game,{x:770,y:570})<65)startBattle();

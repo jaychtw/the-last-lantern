@@ -1,175 +1,96 @@
-import { Application, Assets, Container, Graphics, Sprite, Texture, Rectangle, UPDATE_PRIORITY } from 'pixi.js';
-import { type Game, type Scene, type Point, places,trees } from './domain';
+import {type Game,type Scene,type Point,places,trees} from './domain';
+type Frame={x:number;y:number;w:number;h:number;anchor:[number,number]};
+type Asset={file:string;w:number;h:number;anchor:[number,number];scale:number};
+type Manifest={assets:Record<string,Asset>;walk:Record<string,Frame[]>;poses:Record<string,{file:string;frames:Frame[]}>};
+type Actor={name:string;x:number;y:number;scale:number;depth:number};
+const project=(p:Point)=>({x:p.x,y:500+(p.y-500)*Math.SQRT1_2});
 
+/** Original Blender geometry and articulated poses, composited as independent layers.
+ * No concept image or complete-game screenshot is used as a playable scene. */
 export class World {
-  app=new Application(); root=new Container(); actors=new Container(); hero=new Container();
-  private parts:Record<string,Sprite>={}; private textures:Record<string,Texture>={};
-  private enemy?:Sprite; private chest?:Sprite; private beaconFlame?:Sprite;
-  private motes:Sprite[]=[]; private scene:Scene='town'; private time=0;
-  private moving=false; private face=1; private camera={x:0,y:0}; private zoom=1;
-  private observer?:ResizeObserver; private last=performance.now();
-  private canvas!:HTMLCanvasElement;private context?:CanvasRenderingContext2D;private gpu='unknown';
-  frameTimes:number[]=[];
-  reduced=false;
+  private canvas=document.createElement('canvas');private ctx!:CanvasRenderingContext2D;
+  private images:Record<string,HTMLImageElement>={};private manifest!:Manifest;private actors:Actor[]=[];
+  private scene:Scene='town';private time=0;private direction=0;private frame=0;private game!:Game;
+  private x=0;private y=0;private zoom=1;private width=1;private height=1;private dpr=1;
+  private running=false;private last=performance.now();private isMoving=false;private battleRaf=0;private fade=0;
+  frameTimes:number[]=[];reduced=false;
+  app={start:()=>{this.last=performance.now();this.running=true;},stop:()=>{this.running=false;}};
   constructor(private host:HTMLElement,private tick:(dt:number)=>void,private click:(p:Point)=>void){}
+  private async image(name:string,file:string){const image=new Image();image.src=`${import.meta.env.BASE_URL}art3d/${file}`;await image.decode();this.images[name]=image;}
   async init(g:Game){
-    await this.app.init({background:'#789c72',antialias:false,resolution:Math.min(devicePixelRatio,1.5),autoDensity:true,
-      preference:'webgl',powerPreference:'low-power',width:this.host.clientWidth,height:this.host.clientHeight});
-    this.app.stop();
-    // Software WebGL can be much slower than native Canvas2D. Both paths consume
-    // the identical Pixi scene graph/atlas; this is a renderer fallback, not new rules.
-    const gl=(this.app.renderer as unknown as {gl?:WebGLRenderingContext}).gl;
-    const info=gl?.getExtension('WEBGL_debug_renderer_info');
-    this.gpu=gl&&info?String(gl.getParameter(info.UNMASKED_RENDERER_WEBGL)):'unknown';
-    if(/swiftshader|llvmpipe|software/i.test(this.gpu)){
-      this.canvas=document.createElement('canvas');
-      this.context=this.canvas.getContext('2d',{alpha:false})??undefined;
-    }
-    if(!this.context)this.canvas=this.app.canvas;
-    this.app.ticker.remove(this.app.render,this.app);
-    this.app.ticker.add(()=>this.render(),this,UPDATE_PRIORITY.LOW);
-    this.host.appendChild(this.canvas);
-    this.canvas.setAttribute('aria-hidden','true');
-    const names=['town-ground','meadow-ground','interior-ground','stream'];
-    await Promise.all(names.map(async name=>{this.textures[name]=await Assets.load<Texture>(`${import.meta.env.BASE_URL}art/${name}.svg`);}));
-    const [atlas,frames]=await Promise.all([
-      Assets.load<Texture>(`${import.meta.env.BASE_URL}art/atlas.svg`),
-      fetch(`${import.meta.env.BASE_URL}art/atlas.json`).then(r=>{if(!r.ok)throw Error('Atlas metadata unavailable');return r.json() as Promise<Record<string,{x:number;y:number;w:number;h:number}>>;})
-    ]);
-    for(const [name,r] of Object.entries(frames))this.textures[name]=new Texture({source:atlas.source,frame:new Rectangle(r.x,r.y,r.w,r.h)});
-    this.app.stage.addChild(this.root);this.root.sortableChildren=true;
-    this.root.addChild(this.actors);this.actors.sortableChildren=true;
-    this.build(g);
-    this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(this.host);this.resize();
-    this.canvas.addEventListener('pointerdown',e=>{
-      const r=this.canvas.getBoundingClientRect();
-      this.click({x:(e.clientX-r.left-this.root.x)/this.zoom,y:(e.clientY-r.top-this.root.y)/this.zoom});
-    });
-    this.app.ticker.maxFPS=60;
-    this.app.ticker.add(()=>{
-      const now=performance.now(),dt=Math.min((now-this.last)/1000,.045);this.last=now;
-      if(!document.hidden){this.frameTimes.push(this.app.ticker.elapsedMS);if(this.frameTimes.length>3600)this.frameTimes.shift();this.tick(dt);}
-    });
+    const response=await fetch(`${import.meta.env.BASE_URL}art3d/runtime.json`);if(!response.ok)throw Error('3D asset manifest unavailable');this.manifest=await response.json() as Manifest;
+    await Promise.all([...Object.entries(this.manifest.assets).map(([name,a])=>this.image(name,a.file)),this.image('walk','rowan-walk.webp'),...Object.entries(this.manifest.poses).map(([name,p])=>this.image(name,p.file))]);
+    const context=this.canvas.getContext('2d',{alpha:false});if(!context)throw Error('Canvas unavailable');this.ctx=context;
+    this.canvas.setAttribute('aria-hidden','true');this.host.appendChild(this.canvas);new ResizeObserver(()=>this.resize()).observe(this.host);this.resize();this.build(g);
+    this.canvas.addEventListener('pointerdown',e=>{const r=this.canvas.getBoundingClientRect(),x=(e.clientX-r.left-this.x)/this.zoom,y=(e.clientY-r.top-this.y)/this.zoom;this.click({x,y:500+(y-500)/Math.SQRT1_2});});
+    const loop=(now:number)=>{if(this.running&&!document.hidden){const ms=Math.max(0,now-this.last);this.last=now;this.collect(ms);this.tick(Math.min(ms/1000,.045));this.render();}requestAnimationFrame(loop);};requestAnimationFrame(loop);
   }
-  private sprite(name:string,x:number,y:number,scale=1,layer=this.actors):Sprite{
-    const s=new Sprite(this.textures[name]);s.anchor.set(.5,1);s.position.set(x,y);s.scale.set(scale);s.zIndex=y;layer.addChild(s);return s;
-  }
-  private rig(){
-    this.hero=new Container();this.hero.label='courier';
-    const shadow=new Graphics().ellipse(0,-2,21,7).fill({color:0x244b43,alpha:.25});shadow.label='hero-shadow';this.hero.addChild(shadow);
-    const add=(name:string,asset:string,x:number,y:number,scale=.8)=>{
-      const s=new Sprite(this.textures[asset]);s.anchor.set(.5,0);s.position.set(x,y);s.scale.set(scale);this.parts[name]=s;this.hero.addChild(s);return s;
-    };
-    add('cape','hero-cape',0,-73,.82);
-    add('leftLeg','hero-leg',-9,-27,.76);add('rightLeg','hero-leg',9,-27,.76);
-    add('body','hero-body',0,-66,.8);
-    add('leftArm','hero-arm',-20,-63,.76);add('rightArm','hero-arm',21,-63,.76);
-    add('lantern','hand-lantern',28,-34,.65);
-    add('head','hero-head',0,-96,.8);
-    this.hero.scale.set(.84);this.actors.addChild(this.hero);
-  }
+  private collect(ms:number){if(ms>0&&ms<2000){this.frameTimes.push(ms);if(this.frameTimes.length>3600)this.frameTimes.shift();}}
+  private add(name:string,x:number,y:number,scale=1){this.actors.push({name,x,y,scale,depth:y});}
   build(g:Game){
-    this.scene=g.scene;
-    for(const child of this.root.removeChildren())child.destroy({children:true});
-    this.actors=new Container();this.actors.sortableChildren=true;this.parts={};this.motes=[];
-    this.enemy=undefined;this.chest=undefined;this.beaconFlame=undefined;
-    const ground=new Sprite(this.textures[`${g.scene}-ground`]);this.root.addChild(ground);
-    if(g.scene==='town')this.root.addChild(new Sprite(this.textures.stream));
-    this.root.addChild(this.actors);
-    const tree=(x:number,y:number,s=1,n=0)=>this.sprite('tree'+n,x,y,s);
+    this.scene=g.scene;this.game=g;this.actors=[];this.fade=this.reduced?0:1;
     if(g.scene==='town'){
-      this.sprite('cottage',350,438,1);this.sprite('cottage',832,367,.95);
-      this.sprite('beacon',625,385,.68);this.sprite('flame',625,302,.42);
-      this.sprite('lamplighter',635,450,.8);
-      this.chest=this.sprite(g.flags.chest?'chest-open':'chest',815,687,.82);
-      this.sprite('sign',1183,574,.8);this.sprite('bridge',1045,652,1.05);
-      this.sprite('rocks',520,801,1.25);
-      trees.town.forEach(([x,y,s],i)=>tree(x,y,s,i%3));
-      [[455,490],[760,415],[230,510],[909,410],[725,730],[920,790],[1200,700]].forEach(([x,y])=>this.sprite('bush',x,y,.9));
-      [[320,500],[720,480],[845,750],[290,750],[1160,690],[550,430],[870,430]].forEach(([x,y])=>this.sprite('flowers',x,y));
+      this.add('cottage-copper',250,105,.7);this.add('cottage',800,90,.65);this.add('cottage-copper',1170,150,.6);
+      this.add('cottage',350,415);this.add('cottage-copper',832,355,.98);this.add('beacon',625,335,.78);this.add('mira',635,450,.9);
+      this.add('chest',815,690,.9);this.add('sign',1183,574,.9);this.add('bridge',1045,620,1.05);this.add('rocks',520,801,1.15);
+      trees.town.forEach(([x,y,s])=>this.add('tree',x,y-23*s,s));
+      [[455,490],[760,415],[230,510],[909,410],[725,730],[920,790],[1200,700]].forEach(([x,y])=>this.add('bush',x,y,.85));
+      [[320,500],[720,480],[845,750],[290,750],[1160,690],[550,430],[870,430]].forEach(([x,y])=>this.add('flowers',x,y,.85));
     }else if(g.scene==='meadow'){
-      this.sprite('beacon',1140,390,1.2);
-      this.beaconFlame=this.sprite('flame',1140,251,.8);this.beaconFlame.visible=g.flags.lit;
-      this.sprite('sign',180,575,.8);
-      this.sprite('rocks',635,315,1.4);this.sprite('rocks',420,815,1.5);this.sprite('rocks',1080,800,1.6);
-      trees.meadow.forEach(([x,y,s],i)=>tree(x,y,s,i%3));
-      [[310,410],[565,370],[860,410],[980,500],[640,770],[280,730],[1200,600]].forEach(([x,y])=>this.sprite('bush',x,y));
-      [[430,470],[490,700],[970,370],[1070,510],[770,680],[240,480],[915,735]].forEach(([x,y])=>this.sprite('flowers',x,y,1.2));
-      this.enemy=this.sprite('blob',770,570,.48);this.enemy.visible=!g.flags.won;
-    }else{
-      this.sprite('rug',500,590,1.4);this.sprite('desk',330,350,1.05);this.sprite('hearth',775,330,1.1);
-      this.sprite('stool',645,450,1.1);this.sprite('stool',280,480,.9);this.sprite('hand-lantern',400,292,1.1);
-      this.chest=undefined;this.enemy=undefined;
-    }
-    this.rig();
-    if(g.scene!=='interior'){
-      for(let i=0;i<20;i++){
-        const s=this.sprite('flame',(i*173+80)%1400,(i*113+200)%1000,.09,this.root);
-        s.alpha=.23;s.zIndex=10000;this.motes.push(s);
-      }
-    }
-    this.update(g,0,false);
+      this.add('beacon',1140,350,1.1);this.add('sign',180,575,.9);[[635,315],[420,815],[1080,800]].forEach(([x,y])=>this.add('rocks',x,y,1.3));
+      trees.meadow.forEach(([x,y,s])=>this.add('tree',x,y-23*s,s));
+      [[310,410],[565,370],[860,410],[980,500],[640,770],[280,730],[1200,600]].forEach(([x,y])=>this.add('bush',x,y,.9));
+      [[430,470],[490,700],[970,370],[1070,510],[770,680],[240,480],[915,735]].forEach(([x,y])=>this.add('flowers',x,y));this.add('blob',770,570,.88);
+    }else{this.add('desk',330,365,1.1);this.add('hearth',775,330,1.1);this.add('stool',645,450);this.add('stool',280,480,.9);}
+    this.update(g,0,false);this.render();
   }
-  private resize(){
-    const w=this.host.clientWidth,h=this.host.clientHeight;
-    if(w&&h){
-      this.app.renderer.resize(w,h);
-      if(this.context){this.canvas.width=Math.round(w*this.app.renderer.resolution);this.canvas.height=Math.round(h*this.app.renderer.resolution);}
-      this.zoom=w<600?.8:w<1000?.94:1.02;this.root.scale.set(this.zoom);this.render();
-    }
+  private resize(){this.width=this.host.clientWidth;this.height=this.host.clientHeight;this.dpr=Math.min(devicePixelRatio,1.5);this.canvas.width=Math.round(this.width*this.dpr);this.canvas.height=Math.round(this.height*this.dpr);this.zoom=this.width<600?.88:this.width<1000?1.02:1.13;if(this.game){this.update(this.game,0,false);this.render();}}
+  update(g:Game,dt:number,moving:boolean,dx=0,dy=0){
+    if(g.scene!==this.scene)this.build(g);this.game=g;this.time+=dt;this.isMoving=moving;
+    if(moving&&(dx||dy))this.direction=(Math.round(Math.atan2(dx,dy)/(Math.PI/4))+8)%8;
+    this.frame=this.reduced?0:moving?Math.floor(this.time*12)%8:(Math.floor(this.time*1.1)%2)*4;this.fade=Math.max(0,this.fade-dt*2.7);
+    const p=project(g),sw=g.scene==='interior'?1000:1400,sh=g.scene==='interior'?850:1000;
+    this.x=sw*this.zoom<this.width?(this.width-sw*this.zoom)/2:-Math.max(0,Math.min(sw*this.zoom-this.width,p.x*this.zoom-this.width*.5));
+    this.y=sh*this.zoom<this.height?(this.height-sh*this.zoom)/2:-Math.max(0,Math.min(sh*this.zoom-this.height,p.y*this.zoom-this.height*.64));
   }
+  private asset(ctx:CanvasRenderingContext2D,name:string,x:number,y:number,scale=1){const a=this.manifest.assets[name],image=this.images[name];if(!a||!image)return;const s=a.scale*scale,w=a.w*s,h=a.h*s;ctx.drawImage(image,x-a.anchor[0]*w,y-a.anchor[1]*h,w,h);}
+  private pose(ctx:CanvasRenderingContext2D,image:HTMLImageElement,f:Frame,x:number,y:number,size:number){const h=size*f.h/f.w;ctx.drawImage(image,f.x,f.y,f.w,f.h,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);}
   render(){
-    if(!this.context){this.app.render();return;}
-    const ctx=this.context,dpr=this.app.renderer.resolution;
-    ctx.setTransform(dpr,0,0,dpr,0,0);ctx.globalAlpha=1;
-    ctx.fillStyle=this.scene==='interior'?'#293b37':'#789c72';ctx.fillRect(0,0,this.canvas.width/dpr,this.canvas.height/dpr);
-    ctx.imageSmoothingEnabled=true;
-    const draw=(node:Container)=>{
-      if(!node.visible||!node.renderable||node.alpha===0)return;
-      ctx.save();ctx.translate(node.x,node.y);if(node.rotation)ctx.rotate(node.rotation);ctx.scale(node.scale.x,node.scale.y);ctx.globalAlpha*=node.alpha;
-      if(node instanceof Sprite){
-        const f=node.texture.frame,source=node.texture.source.resource as CanvasImageSource;
-        ctx.drawImage(source,f.x,f.y,f.width,f.height,-node.anchor.x*f.width,-node.anchor.y*f.height,f.width,f.height);
-      }else if(node.label==='hero-shadow'){
-        ctx.fillStyle='#244b4340';ctx.beginPath();ctx.ellipse(0,-2,21,7,0,0,Math.PI*2);ctx.fill();
-      }
-      if(node.sortableChildren)node.sortChildren();
-      for(const child of node.children)draw(child);
-      ctx.restore();
-    };
-    draw(this.root);
-  }
-  update(g:Game,dt:number,moving:boolean,dx=0){
-    if(g.scene!==this.scene)this.build(g);
-    this.time+=dt;this.moving=moving;
-    if(Math.abs(dx)>.01)this.face=dx<0?-1:1;
-    const phase=this.time*(moving?13:2.2),bob=this.reduced?0:Math.sin(phase)*(moving?2.1:1.1);
-    this.hero.position.set(g.x,g.y+bob);this.hero.zIndex=g.y;
-    // Outfit and head remain fixed; articulated limbs and cape generate the walk/idle poses.
-    const swing=this.reduced?0:Math.sin(phase)*(moving?.45:.025);
-    this.parts.leftLeg.rotation=swing;this.parts.rightLeg.rotation=-swing;
-    this.parts.leftArm.rotation=-swing*.7;this.parts.rightArm.rotation=swing*.45;
-    this.parts.cape.rotation=this.reduced?0:Math.sin(phase*.55)*.025;
-    this.parts.lantern.rotation=this.reduced?0:Math.sin(phase*.7)*.08;
-    this.hero.scale.x=.84*this.face;
-    if(this.chest)this.chest.texture=this.textures[g.flags.chest?'chest-open':'chest'];
-    if(this.enemy){this.enemy.visible=g.scene==='meadow'&&!g.flags.won;
-      if(!this.reduced){this.enemy.y=570+Math.sin(this.time*2.4)*5;this.enemy.scale.set(.48*(1+Math.sin(this.time*2.4)*.035),.48*(1-Math.sin(this.time*2.4)*.035));}}
-    if(this.beaconFlame)this.beaconFlame.visible=g.scene==='meadow'&&g.flags.lit;
-    for(let i=0;i<this.motes.length;i++){
-      if(!this.reduced){this.motes[i].x=((i*173+80)+Math.sin(this.time*.3+i)*35)%1400;this.motes[i].y=(i*113+200)+Math.sin(this.time*.5+i)*15;}
+    if(!this.ctx||!this.manifest||!this.game)return;const ctx=this.ctx,g=this.game;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.globalAlpha=1;ctx.fillStyle=g.scene==='interior'?'#211e19':'#699a40';ctx.fillRect(0,0,this.width,this.height);
+    ctx.save();ctx.translate(this.x,this.y);ctx.scale(this.zoom,this.zoom);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+    ctx.drawImage(this.images[g.scene+'-ground'],0,0,g.scene==='interior'?1000:1400,g.scene==='interior'?850:1000);
+    for(const a of [...this.actors,{name:'hero',x:g.x,y:g.y,scale:.86,depth:g.y}].sort((a,b)=>a.depth-b.depth)){
+      if(a.name==='blob'&&g.flags.won)continue;const p=project(a);if(p.x+400<-this.x/this.zoom||p.x-400>(this.width-this.x)/this.zoom||p.y+400<-this.y/this.zoom||p.y-500>(this.height-this.y)/this.zoom)continue;
+      if(a.name==='hero')this.pose(ctx,this.images.walk,this.manifest.walk[String(this.direction)][this.frame],p.x,p.y,150*.86);
+      else{ctx.save();const meta=this.manifest.assets[a.name];
+        if(a.name==='tree'&&a.depth>g.y){const hero=project(g),w=meta.w*meta.scale*a.scale,h=meta.h*meta.scale*a.scale,left=p.x-meta.anchor[0]*w,top=p.y-meta.anchor[1]*h;if(hero.x>left+w*.15&&hero.x<left+w*.85&&hero.y>top&&hero.y-65<top+h*.78)ctx.globalAlpha=.38;}
+        ctx.translate(p.x,p.y);if(a.name==='tree'&&!this.reduced)ctx.rotate(Math.sin(this.time*.75)*.003);if(a.name==='blob'&&!this.reduced)ctx.translate(0,Math.sin(this.time*2.5)*4);const name=a.name==='chest'&&g.flags.chest?'chest-open':a.name==='beacon'&&g.scene==='meadow'&&!g.flags.lit?'beacon-dormant':a.name;this.asset(ctx,name,0,0,a.scale);ctx.restore();}
     }
-    const sw=g.scene==='interior'?1000:1400,sh=g.scene==='interior'?850:1000;
-    const width=this.app.screen.width,height=this.app.screen.height;
-    this.camera.x=sw*this.zoom<width?(sw*this.zoom-width)/2:Math.max(0,Math.min(sw*this.zoom-width,g.x*this.zoom-width*.5));
-    this.camera.y=sh*this.zoom<height?(sh*this.zoom-height)/2:Math.max(0,Math.min(sh*this.zoom-height,g.y*this.zoom-height*.63));
-    this.root.position.set(-this.camera.x,-this.camera.y);
+    if(g.flags.lit&&g.scene==='meadow'){const p=project({x:1140,y:350}),glow=ctx.createRadialGradient(p.x,p.y-100,0,p.x,p.y-100,120);glow.addColorStop(0,'#ffd77f66');glow.addColorStop(1,'#ffb13d00');ctx.fillStyle=glow;ctx.fillRect(p.x-120,p.y-220,240,240);}
+    if(!this.reduced&&g.scene!=='interior')for(let i=0;i<14;i++){const p=project({x:(i*173+80)%1400+Math.sin(this.time*.3+i)*24,y:(i*113+180)%1000});ctx.globalAlpha=.3+Math.sin(this.time+i)*.15;ctx.fillStyle='#fff4af';ctx.beginPath();ctx.arc(p.x,p.y,1.5,0,Math.PI*2);ctx.fill();}
+    ctx.restore();ctx.globalAlpha=1;if(this.fade){ctx.fillStyle=`rgba(8,19,27,${this.fade*.6})`;ctx.fillRect(0,0,this.width,this.height);}
   }
-  screen(p:Point):Point{return {x:p.x*this.zoom+this.root.x,y:p.y*this.zoom+this.root.y};}
+  screen(p:Point):Point{const q=project(p);return {x:q.x*this.zoom+this.x,y:q.y*this.zoom+this.y};}
   placePositions(){return places[this.scene].map(p=>({...p,...this.screen(p)}));}
-  metrics(){
-    const a=this.frameTimes.slice(-600).filter(t=>t>0).sort((x,y)=>x-y);
-    return {frames:a.length,frameMs:this.frameTimes.slice(-600),meanMs:a.reduce((s,v)=>s+v,0)/Math.max(1,a.length),p95Ms:a[Math.floor(a.length*.95)]??0,
-      renderer:this.context?'canvas2d (software GPU fallback)':this.app.renderer.name,gpu:this.gpu,resolution:this.app.renderer.resolution,viewport:{width:this.app.screen.width,height:this.app.screen.height},moving:this.moving};
+  stopBattle(){cancelAnimationFrame(this.battleRaf);this.battleRaf=0;}
+  mountBattle(stage:HTMLElement,action:string,phase:string,busy:boolean){
+    this.stopBattle();const canvas=document.createElement('canvas');canvas.className='battle-canvas';canvas.setAttribute('aria-hidden','true');stage.prepend(canvas);
+    const ctx=canvas.getContext('2d')!,start=performance.now();let previous=start;
+    const draw=(now:number)=>{
+      if(!stage.isConnected)return;const w=stage.clientWidth,h=stage.clientHeight,dpr=Math.min(devicePixelRatio,1.5);if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
+      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);for(const key of ['battle-sky','battle-environment']){const bg=this.images[key],cover=Math.max(w/bg.width,h/bg.height);ctx.drawImage(bg,(w-bg.width*cover)/2,(h-bg.height*cover)/2-(key==='battle-sky'?h*.22:0),bg.width*cover,bg.height*cover);}
+      const mobile=w<600,floor=h*(mobile?.54:.72),hx=w*(mobile?.27:.32),ex=w*(mobile?.73:.69),size=Math.min(w*(mobile?.64:.27),h*.55),es=size*.86;
+      const elapsed=Math.max(0,(now-start)/1000),progress=this.reduced?0:Math.min(1,elapsed/(phase==='enemy'?.55:.85));
+      const name=busy?(phase==='enemy'?'hurt':action==='attack'?'attack':action==='ember'||action==='mend'?'cast':action==='guard'?'guard':'victory'):'victory',p=this.manifest.poses[name];
+      const leap=busy&&phase==='player'&&action==='attack'&&!this.reduced?Math.sin(progress*Math.PI)*size*.17:0,knock=busy&&phase==='enemy'&&!this.reduced?Math.sin(progress*Math.PI)*-12:0;
+      this.pose(ctx,this.images[name],p.frames[Math.min(p.frames.length-1,Math.floor(progress*p.frames.length))],hx+leap+knock,floor,size);
+      const em=this.manifest.assets.blob,hop=busy&&phase==='enemy'&&!this.reduced?Math.sin(progress*Math.PI)*-w*.08:0,bob=this.reduced?0:Math.sin(elapsed*2.6)*4;
+      ctx.drawImage(this.images.blob,ex-es*em.anchor[0]+hop,floor-es*em.anchor[1]+bob,es,es);
+      if(busy){const magic=action==='ember'||action==='mend',tx=phase==='enemy'?hx:action==='mend'||action==='guard'||action==='tonic'?hx:ex,ty=floor-size*.42;ctx.save();ctx.globalCompositeOperation='screen';const light=ctx.createRadialGradient(tx,ty,0,tx,ty,size*.42);light.addColorStop(0,magic?'#ffe28caa':'#fff4ca88');light.addColorStop(1,'#ffb02a00');ctx.fillStyle=light;ctx.fillRect(tx-size*.45,ty-size*.45,size*.9,size*.9);
+        if(!this.reduced){ctx.strokeStyle=action==='guard'?'#ace8ffaa':'#fff0b2dd';ctx.lineWidth=4;ctx.beginPath();ctx.ellipse(tx,ty,size*.3,size*.34,-.4,progress*.5,Math.PI*1.5+progress);ctx.stroke();for(let i=0;i<12;i++){const angle=i*2.4,rad=progress*size*.34;ctx.fillStyle=i%2?'#ffe7a6':'#ffb467';ctx.beginPath();ctx.arc(tx+Math.cos(angle)*rad,ty+Math.sin(angle)*rad-progress*25,Math.max(.5,3*(1-progress)),0,Math.PI*2);ctx.fill();}}ctx.restore();}
+      if(stage.dataset.ready!=='true')stage.dataset.ready='true';
+      this.collect(now-previous);previous=now;if(!this.reduced)this.battleRaf=requestAnimationFrame(draw);
+    };this.battleRaf=requestAnimationFrame(draw);
   }
+  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
 }

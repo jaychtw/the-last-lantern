@@ -1,5 +1,5 @@
 {
-  "recordedAt": "2026-10-24T21:47:37.959Z",
+  "recordedAt": "2026-10-25T04:24:18.789Z",
   "url": "http://127.0.0.1:8090/",
   "browser": "154.0.8037.57",
   "environment": "Cloud Linux; headless Chromium. Emulation is not physical-device certification.",
@@ -7,54 +7,54 @@
     {
       "width": 320,
       "deviceScaleFactor": 2,
-      "renderer": "canvas2d (software GPU fallback)",
-      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderer": "Canvas2D · Blender prerendered 3D",
+      "gpu": "Not required by runtime compositor",
       "renderResolution": 1.5,
-      "frames": 262,
-      "meanMs": 17.429389312977104,
-      "meanFPS": 57.374356728347735,
-      "p95Ms": 16.800000000000182,
-      "scene": "Hearthmere; keyboard movement with animated hero and environment",
-      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+      "frames": 271,
+      "meanMs": 16.666051660516604,
+      "meanFPS": 60.002214103841474,
+      "p95Ms": 16.700000000000728,
+      "scene": "Hearthmere; prerendered 3D assets, animated hero, scenery and camera-following movement",
+      "limitations": "Cloud native Canvas2D compositor; no CPU throttling or physical-device test. No video recording or Blender asset rendering during measurement."
     },
     {
       "width": 390,
       "deviceScaleFactor": 2,
-      "renderer": "canvas2d (software GPU fallback)",
-      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderer": "Canvas2D · Blender prerendered 3D",
+      "gpu": "Not required by runtime compositor",
       "renderResolution": 1.5,
-      "frames": 263,
-      "meanMs": 17.10950570342205,
-      "meanFPS": 58.447042090759595,
+      "frames": 269,
+      "meanMs": 17.037918215613374,
+      "meanFPS": 58.69261651248039,
       "p95Ms": 16.800000000000182,
-      "scene": "Hearthmere; keyboard movement with animated hero and environment",
-      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+      "scene": "Hearthmere; prerendered 3D assets, animated hero, scenery and camera-following movement",
+      "limitations": "Cloud native Canvas2D compositor; no CPU throttling or physical-device test. No video recording or Blender asset rendering during measurement."
     },
     {
       "width": 768,
       "deviceScaleFactor": 1,
-      "renderer": "canvas2d (software GPU fallback)",
-      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderer": "Canvas2D · Blender prerendered 3D",
+      "gpu": "Not required by runtime compositor",
       "renderResolution": 1,
-      "frames": 256,
-      "meanMs": 17.837890625,
-      "meanFPS": 56.06044016204971,
-      "p95Ms": 33.30000000000018,
-      "scene": "Hearthmere; keyboard movement with animated hero and environment",
-      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+      "frames": 267,
+      "meanMs": 17.165543071161046,
+      "meanFPS": 58.25624018153256,
+      "p95Ms": 16.800000000000182,
+      "scene": "Hearthmere; prerendered 3D assets, animated hero, scenery and camera-following movement",
+      "limitations": "Cloud native Canvas2D compositor; no CPU throttling or physical-device test. No video recording or Blender asset rendering during measurement."
     },
     {
       "width": 1440,
       "deviceScaleFactor": 1,
-      "renderer": "canvas2d (software GPU fallback)",
-      "gpu": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "renderer": "Canvas2D · Blender prerendered 3D",
+      "gpu": "Not required by runtime compositor",
       "renderResolution": 1,
-      "frames": 191,
-      "meanMs": 24.51937172774869,
-      "meanFPS": 40.78407926204305,
+      "frames": 164,
+      "meanMs": 28.962195121951197,
+      "meanFPS": 34.52776959029857,
       "p95Ms": 33.400000000000546,
-      "scene": "Hearthmere; keyboard movement with animated hero and environment",
-      "limitations": "Software GPU fallback; no CPU throttling or physical-device test. No video recording during measurement."
+      "scene": "Hearthmere; prerendered 3D assets, animated hero, scenery and camera-following movement",
+      "limitations": "Cloud native Canvas2D compositor; no CPU throttling or physical-device test. No video recording or Blender asset rendering during measurement."
     }
   ]
 }

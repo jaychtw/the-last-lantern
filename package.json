@@ -1,6 +1,6 @@
 {
   "name": "the-last-lantern",
-  "version": "0.1.0-gate-a",
+  "version": "0.2.0-gate-a-revision2",
   "private": true,
   "type": "module",
   "engines": {
@@ -13,14 +13,13 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "vitest run",
     "test:browser": "node scripts/browser-tests.mjs",
-    "assets": "python3 scripts/create-assets.py",
+    "assets": "blender -b -t 4 --python scripts/render-assets.py -- --only all --samples 48 && python3 scripts/pack-3d-assets.py",
     "package:playtest": "npm run build && python3 scripts/package-playtest.py",
     "measure": "node scripts/measure.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
-    "@fontsource-variable/fraunces": "5.2.8",
-    "pixi.js": "8.14.3"
+    "@fontsource-variable/fraunces": "5.2.8"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.1",

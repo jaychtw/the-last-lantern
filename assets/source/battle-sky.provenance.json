@@ -1,0 +1,9 @@
+{
+  "asset": "battle-sky.png",
+  "role": "Original distant sky-and-valley matte; no actors, foreground geometry, buildings, gameplay or UI. Composited behind transparent Blender foreground and separately animated combatants.",
+  "generator": "OpenAI image_gen",
+  "date": "2026-10-25",
+  "sha256": "30f820fbea6028cca9ee9ab70a68f162272c909020be96fe3086e1451e79ce1c",
+  "prompt": "Create one ORIGINAL GAME PRODUCTION ASSET: a distant sky-and-valley PARALLAX MATTE LAYER for a colorful fantasy adventure. Very wide 16:9. Only far-distance blue sky, soft white cumulus clouds, hazy blue mountains and far wooded ridges. Warm afternoon light from upper-left. Polished painterly CGI. Top 60 percent sky, lower 40 percent distant ridges. NO foreground ground plane, close props, people, creatures, UI, text, roads, buildings, or collage. This is not a screenshot or completed level. Original geography, no existing IP.",
+  "source": "Original generated file preserved. Supplied concept collage is not a runtime asset."
+}

@@ -12,6 +12,7 @@ async function begin(p:Page,zh=false){
   if(zh)await p.locator('#panel [data-command=language]').click();
   await p.locator('[data-command=begin]').click();
   await expect(p.locator('#panel')).not.toBeVisible();
+  await p.waitForTimeout(450); // Capture after the real scene-entry fade completes.
 }
 async function visit(p:Page,id:string){
   await activate(p,p.locator('#explore'));
@@ -54,8 +55,13 @@ for(const zh of [false,true]){
       await p.touchscreen.tap(box.x+box.width/2,box.y+box.height/2);
     }else{await p.locator('#world').focus();await p.keyboard.down('d');await p.waitForTimeout(300);await p.keyboard.up('d');}
     expect((await state(p)).game.x).toBeGreaterThan(before.x);
-    await visit(p,'mira');await endDialogue(p);expect((await state(p)).game.flags.talked).toBe(true);
+    await visit(p,'mira');await expect(p.locator('#panel')).toHaveClass('panel-dialogue',{timeout:20000});
+    await p.screenshot({path:`docs/evidence/dialogue-${zh?'390-zh-TW':'1440-en'}.png`,fullPage:true});
+    await activate(p,p.locator('[data-command=next-line]'));
+    await p.screenshot({path:`docs/evidence/dialogue-thoughtful-${zh?'390-zh-TW':'1440-en'}.png`,fullPage:true});
+    await endDialogue(p);expect((await state(p)).game.flags.talked).toBe(true);
     await visit(p,'cottage');await expect(p.locator('html')).toHaveAttribute('data-scene','interior',{timeout:20000});
+    await p.waitForTimeout(450);
     await p.screenshot({path:`docs/evidence/interior-${zh?'390-zh-TW':'1440-en'}.png`,fullPage:true});
     await visit(p,'notes');await endDialogue(p);await visit(p,'rest');await endDialogue(p);
     await visit(p,'outside');await expect(p.locator('html')).toHaveAttribute('data-scene','town',{timeout:20000});
@@ -64,6 +70,8 @@ for(const zh of [false,true]){
     // Accessible point-to-walk navigation follows the same collision geometry.
     await visit(p,'clearing');
     await expect(p.locator('#panel')).toHaveClass('panel-battle',{timeout:30000});
+    await expect(p.locator('.battle-stage')).toHaveAttribute('data-ready','true');
+    expect(Math.round((await p.locator('#panel').boundingBox())!.width)).toBe(p.viewportSize()!.width);
     await p.screenshot({path:`docs/evidence/battle-${zh?'390-zh-TW':'1440-en'}.png`,fullPage:true});
     await winBattle(p);await p.locator('[data-command=battle-done]').click();
     await visit(p,'beacon');await expect(p.locator('#panel')).toHaveClass('panel-complete',{timeout:20000});
@@ -169,4 +177,31 @@ test('save/load, overwrite cancellation and new-journey confirmation preserve pr
   await expect(p.locator('#panel')).toHaveClass('panel-start');
   expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-auto'))).toBe(auto);
   expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-2'))).toBe(saved);
+});
+
+test('production character atlas contains distinct articulated frames in all eight directions',async({page:p})=>{
+  await begin(p);
+  const result=await p.evaluate(async()=>{
+    const m=await (await fetch('./art3d/runtime.json')).json();
+    const image=new Image();image.src='./art3d/rowan-walk.webp';await image.decode();
+    const canvas=document.createElement('canvas');canvas.width=256;canvas.height=256;const ctx=canvas.getContext('2d')!;
+    const directions=Object.values(m.walk) as Array<Array<{x:number;y:number;w:number;h:number}>>;
+    return {directions:directions.length,unique:directions.map(frames=>{
+      const hashes=frames.map(f=>{ctx.clearRect(0,0,256,256);ctx.drawImage(image,f.x,f.y,f.w,f.h,0,0,256,256);
+        const pixels=ctx.getImageData(0,0,256,256).data;let hash=2166136261,opaque=0;
+        for(let i=0;i<pixels.length;i++){hash=Math.imul(hash^pixels[i],16777619);if(i%4===3&&pixels[i]>100)opaque++;}
+        if(opaque<1000)throw Error('Empty character frame');return hash;});return new Set(hashes).size;
+    }),poseLengths:Object.fromEntries(Object.entries(m.poses).map(([name,pose])=>[name,(pose as {frames:unknown[]}).frames.length]))};
+  });
+  expect(result.directions).toBe(8);expect(result.unique.every(n=>n>=7)).toBe(true);
+  expect(result.poseLengths).toEqual({attack:8,cast:8,guard:1,hurt:1,victory:1});
+});
+
+for(const touch of [false,true])test(`inverse scene projection supports ${touch?'touch':'mouse'} ground traversal`,async({browser})=>{
+  const context=await browser.newContext({viewport:touch?{width:390,height:844}:{width:1440,height:1000},hasTouch:touch,isMobile:touch});
+  const p=await context.newPage();await begin(p);const before=await state(p),foot=before.metrics.heroScreen;
+  if(touch)await p.touchscreen.tap(foot.x+60,foot.y+20);else await p.mouse.click(foot.x+60,foot.y+20);
+  await expect.poll(async()=>(await state(p)).game.x,{timeout:10000}).toBeGreaterThan(before.game.x+30);
+  expect((await state(p)).game.y).toBeGreaterThan(before.game.y);expect((await state(p)).panel).toBe(null);
+  await context.close();
 });

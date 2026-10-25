@@ -85,12 +85,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 76763,
+                  "duration": 65626,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:43:27.116Z",
+                  "startTime": "2026-10-25T04:14:45.650Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -100,7 +100,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-e603e29903480fec63d2",
           "file": "game.spec.ts",
-          "line": 45,
+          "line": 46,
           "column": 3
         },
         {
@@ -119,12 +119,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 54326,
+                  "duration": 45989,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:44:44.595Z",
+                  "startTime": "2026-10-25T04:15:51.656Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -134,7 +134,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-c6ad654b7c322c83c274",
           "file": "game.spec.ts",
-          "line": 45,
+          "line": 46,
           "column": 3
         },
         {
@@ -153,12 +153,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 38223,
+                  "duration": 32166,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:45:38.963Z",
+                  "startTime": "2026-10-25T04:16:37.669Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -168,7 +168,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-4d298c773bb42801fd75",
           "file": "game.spec.ts",
-          "line": 92,
+          "line": 100,
           "column": 1
         },
         {
@@ -187,12 +187,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6371,
+                  "duration": 4504,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:17.233Z",
+                  "startTime": "2026-10-25T04:17:09.925Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,7 +202,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-b653b1a8613c1a2016da",
           "file": "game.spec.ts",
-          "line": 109,
+          "line": 117,
           "column": 39
         },
         {
@@ -221,12 +221,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6419,
+                  "duration": 5103,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:23.656Z",
+                  "startTime": "2026-10-25T04:17:14.448Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -236,7 +236,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-69b719436f14b83d8d57",
           "file": "game.spec.ts",
-          "line": 109,
+          "line": 117,
           "column": 39
         },
         {
@@ -255,12 +255,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8354,
+                  "duration": 7322,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:30.144Z",
+                  "startTime": "2026-10-25T04:17:19.571Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -270,7 +270,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-4753c7223ac83cb2cc8f",
           "file": "game.spec.ts",
-          "line": 109,
+          "line": 117,
           "column": 39
         },
         {
@@ -289,12 +289,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9760,
+                  "duration": 8438,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:38.540Z",
+                  "startTime": "2026-10-25T04:17:26.915Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -304,7 +304,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-d796281731573d297626",
           "file": "game.spec.ts",
-          "line": 109,
+          "line": 117,
           "column": 39
         },
         {
@@ -323,12 +323,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3571,
+                  "duration": 2707,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:48.339Z",
+                  "startTime": "2026-10-25T04:17:35.402Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -338,7 +338,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-381ffd2561adee4df5a2",
           "file": "game.spec.ts",
-          "line": 125,
+          "line": 133,
           "column": 1
         },
         {
@@ -357,12 +357,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5633,
+                  "duration": 5561,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:51.971Z",
+                  "startTime": "2026-10-25T04:17:38.128Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -372,7 +372,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-99a8094f219577a309ad",
           "file": "game.spec.ts",
-          "line": 135,
+          "line": 143,
           "column": 1
         },
         {
@@ -391,12 +391,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3603,
+                  "duration": 2998,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:46:57.632Z",
+                  "startTime": "2026-10-25T04:17:43.712Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -406,7 +406,7 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-3cfb3b90f1f1468a32a3",
           "file": "game.spec.ts",
-          "line": 144,
+          "line": 152,
           "column": 1
         },
         {
@@ -425,12 +425,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5356,
+                  "duration": 5741,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-24T21:47:01.277Z",
+                  "startTime": "2026-10-25T04:17:46.730Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -440,17 +440,119 @@
           ],
           "id": "8b1bb1493a64c9fc3ab6-d380f5b2415e497d77da",
           "file": "game.spec.ts",
-          "line": 155,
+          "line": 163,
           "column": 1
+        },
+        {
+          "title": "production character atlas contains distinct articulated frames in all eight directions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2926,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T04:17:52.495Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-572d31be0de6660f00b2",
+          "file": "game.spec.ts",
+          "line": 182,
+          "column": 1
+        },
+        {
+          "title": "inverse scene projection supports mouse ground traversal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3794,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T04:17:55.442Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-eb83d8eafb3eba71e9d9",
+          "file": "game.spec.ts",
+          "line": 200,
+          "column": 33
+        },
+        {
+          "title": "inverse scene projection supports touch ground traversal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4166,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T04:17:59.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-6c8120b17273516dbc90",
+          "file": "game.spec.ts",
+          "line": 200,
+          "column": 33
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-24T21:43:19.666Z",
-    "duration": 227462.23,
-    "expected": 11,
+    "startTime": "2026-10-25T04:14:42.788Z",
+    "duration": 201180.961,
+    "expected": 14,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

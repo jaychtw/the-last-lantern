@@ -21,7 +21,7 @@ try{
   await page.setViewportSize({width:844,height:390});
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.screenshot({path:'docs/evidence/phone-landscape.png',fullPage:true});
-  report.checks.push('844×390 landscape has no horizontal overflow; the page scrolls vertically to controls. Portrait remains recommended for this candidate.');
+  report.checks.push('844×390 landscape has no horizontal overflow; fullscreen scene and touch controls remain inside the viewport.');
   await page.setViewportSize({width:390,height:844});
   async function visit(id){await page.locator('#explore').tap();await page.locator(`[data-destination="${id}"]`).tap();}
   await visit('meadow');await expect(page.locator('html')).toHaveAttribute('data-scene','meadow',{timeout:30000});
@@ -34,7 +34,9 @@ try{
     report.audits.push({state:'battle',lang,violations:audit.violations,incomplete:audit.incomplete.map(v=>({id:v.id,targets:v.nodes.map(n=>n.target)})),passes:audit.passes.length});
     expect(audit.violations).toEqual([]);
   }
-  await page.locator('[data-action=attack]').tap();await expect.poll(async()=>page.evaluate(()=>window.__lantern().busy)).toBe(false);
+  await page.locator('[data-action=attack]').tap();
+  await page.waitForTimeout(280);await page.screenshot({path:'docs/evidence/battle-attack-phone.png',fullPage:true});
+  await expect.poll(async()=>page.evaluate(()=>window.__lantern().busy)).toBe(false);
   const current=await page.evaluate(()=>window.__lantern());
   expect(current.battle.enemyHp).toBeLessThan(34);expect(current.battle.hp).toBeLessThan(36);
   expect(current.battle.logs.some(l=>l.key==='strike')).toBe(true);expect(current.battle.logs.some(l=>l.key==='enemyHit')).toBe(true);

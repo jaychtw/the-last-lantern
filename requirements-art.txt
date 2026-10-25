@@ -1,0 +1,2 @@
+# Optional offline art-authoring tool; not a runtime/player requirement.
+Pillow==12.3.0
