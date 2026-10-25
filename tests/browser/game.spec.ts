@@ -81,7 +81,7 @@ for(const zh of [false,true]){
     await p.locator('#settings').click();await p.locator('[data-save="1"]').click();
     const saved=(await state(p)).game;
     await p.locator('[data-command=close]').click();
-    await p.reload();await p.locator('[data-command=continue]').click();
+    await p.reload();await p.locator('[data-command=continue]').click();await expect(p.locator('#panel')).not.toBeVisible();
     const reloaded=(await state(p)).game;
     expect(reloaded.flags).toEqual(saved.flags);expect(reloaded.seed).toBe(saved.seed);
     expect(reloaded.coins).toBe(saved.coins);expect(reloaded.tonics).toBe(saved.tonics);
@@ -131,11 +131,11 @@ for(const width of [320,390,768,1440])test(`responsive, bilingual, larger text a
 });
 
 test('corrupt autosave is kept intact; manual saving and reload recovery work',async({page:p})=>{
-  await p.addInitScript(()=>localStorage.setItem('lantern-v1-auto','{broken save'));
+  await p.addInitScript(()=>localStorage.setItem('lantern-v2-auto','{broken save'));
   await p.goto('./');await expect(p.locator('.warning')).toBeVisible();await p.locator('[data-command=begin]').click();
   await p.locator('#settings').click();await p.locator('[data-save="1"]').click();
-  expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-auto'))).toBe('{broken save');
-  expect(await p.evaluate(()=>JSON.parse(localStorage.getItem('lantern-v1-1')!).version)).toBe(1);
+  expect(await p.evaluate(()=>localStorage.getItem('lantern-v2-auto'))).toBe('{broken save');
+  expect(await p.evaluate(()=>JSON.parse(localStorage.getItem('lantern-v2-1')!).version)).toBe(2);
   await p.locator('[data-load="1"]').click();await p.locator('[data-command=confirm]').click();
   await expect(p.locator('#panel')).not.toBeVisible();expect((await state(p)).game.hp).toBe(36);
 });
@@ -162,21 +162,21 @@ test('keyboard focus, pause and project-subpath assets remain usable',async({pag
 
 test('save/load, overwrite cancellation and new-journey confirmation preserve progress',async({page:p})=>{
   await begin(p);await p.locator('#settings').click();await p.locator('[data-save="2"]').click();
-  const saved=await p.evaluate(()=>localStorage.getItem('lantern-v1-2'));
+  const saved=await p.evaluate(()=>localStorage.getItem('lantern-v2-2'));
   await p.locator('[data-command=close]').click();await p.locator('#world').focus();
   await p.keyboard.down('d');await p.waitForTimeout(500);await p.keyboard.up('d');
   await p.locator('#settings').click();await p.locator('[data-save="2"]').click();
   await expect(p.locator('#panel')).toHaveClass('panel-confirm');await p.locator('[data-command=cancel-confirm]').click();
-  expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-2'))).toBe(saved);
-  await p.locator('[data-load="2"]').click();await p.locator('[data-command=confirm]').click();
+  expect(await p.evaluate(()=>localStorage.getItem('lantern-v2-2'))).toBe(saved);
+  await p.locator('[data-load="2"]').click();await p.locator('[data-command=confirm]').click();await expect(p.locator('#panel')).not.toBeVisible();
   expect((await state(p)).game.x).toBe(JSON.parse(saved!).x);
   await p.reload();await p.locator('[data-command=begin]').click();
   await expect(p.locator('#panel')).toHaveClass('panel-confirm');
-  const auto=await p.evaluate(()=>localStorage.getItem('lantern-v1-auto'));
+  const auto=await p.evaluate(()=>localStorage.getItem('lantern-v2-auto'));
   await p.locator('[data-command=cancel-confirm]').click();
   await expect(p.locator('#panel')).toHaveClass('panel-start');
-  expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-auto'))).toBe(auto);
-  expect(await p.evaluate(()=>localStorage.getItem('lantern-v1-2'))).toBe(saved);
+  expect(await p.evaluate(()=>localStorage.getItem('lantern-v2-auto'))).toBe(auto);
+  expect(await p.evaluate(()=>localStorage.getItem('lantern-v2-2'))).toBe(saved);
 });
 
 test('production character atlas contains distinct articulated frames in all eight directions',async({page:p})=>{

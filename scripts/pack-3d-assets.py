@@ -5,6 +5,8 @@ import json,hashlib,math
 root=Path(__file__).resolve().parents[1];out=root/'public/art3d';raw=root/'assets/renders';out.mkdir(parents=True,exist_ok=True)
 manifest=json.loads((raw/'manifest.json').read_text())
 spans={'cottage':8.4,'cottage-copper':8.4,'rowan-idle':3,'rowan-portrait':1.8,'mira':2.8,'mira-portrait':1.65,'mira-thoughtful':1.65,'tree':5.7,'bush':2.4,'flowers':2.4,'chest':1.6,'chest-open':1.8,'beacon':4.3,'blob':2.3,'rocks':2.4,'sign':2.1,'bridge':4.5,'desk':3.5,'stool':1.6,'hearth':3.8}
+campaign=raw/'campaign-spans.json'
+if campaign.exists():spans.update(json.loads(campaign.read_text()))
 result={'assets':{},'walk':{},'poses':{},'provenance':{}}
 sky=root/'assets/source/battle-sky.png'
 sky_image=Image.open(sky).convert('RGB');sky_image.save(out/'battle-sky.webp','WEBP',quality=92,method=3)
@@ -25,7 +27,7 @@ def shadow_matte(im,anchor):
     im.putalpha(Image.composite(ImageChops.multiply(a,fade),a,shadow));return im
 for name,meta in manifest.items():
     p=raw/meta['file'];im=Image.open(p).convert('RGBA')
-    if name not in spans and not name.endswith('-ground') and name!='battle-environment':continue
+    if name not in spans and not name.endswith('-ground') and not name.startswith('battle-'):continue
     if name in spans:im=shadow_matte(im,meta['anchor'])
     im.save(out/(name+'.webp'),'WEBP',quality=92,method=3)
     result['assets'][name]={'file':name+'.webp','w':im.width,'h':im.height,'anchor':meta['anchor'],'scale':50*spans[name]/im.width if name in spans else 1}

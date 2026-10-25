@@ -1,6 +1,6 @@
 {
   "target": "http://127.0.0.1:8090/",
-  "artifact": "064f6e317e1088fd1da65cb80788bede6f7022fc3996dc956282de19f6b7a712",
+  "artifact": "056c2af3cd77229eed62343dfa7883af868015019ca5ba76a89812e32dc7390e",
   "publicDeployment": false,
   "checks": [
     "Packaged build starts into the exploration scene.",
@@ -34,9 +34,6 @@
             ],
             [
               "#location-sub"
-            ],
-            [
-              "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
             ],
             [
               "button[data-place=\"mira\"] > b"
@@ -73,6 +70,9 @@
             ],
             [
               "#journal > span"
+            ],
+            [
+              "#equipment > span"
             ],
             [
               "#settings > span"
@@ -124,9 +124,6 @@
               "#location-sub"
             ],
             [
-              "button[data-place=\"mira\"] > span[aria-hidden=\"true\"]"
-            ],
-            [
               "button[data-place=\"mira\"] > b"
             ],
             [
@@ -161,6 +158,9 @@
             ],
             [
               "#journal > span"
+            ],
+            [
+              "#equipment > span"
             ],
             [
               "#settings > span"
@@ -206,7 +206,13 @@
               ".enemy-card > .tiny"
             ],
             [
-              ".enemy-card > small"
+              "small:nth-child(3)"
+            ],
+            [
+              ".element-line:nth-child(4)"
+            ],
+            [
+              ".element-line:nth-child(5)"
             ],
             [
               ".battle-hero-status > strong"
@@ -255,6 +261,15 @@
             ],
             [
               "button[data-action=\"guard\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"ether\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"ether\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"ether\"] > span:nth-child(2) > small"
             ],
             [
               "button[data-action=\"flee\"] > .command-symbol[aria-hidden=\"true\"]"
@@ -291,7 +306,13 @@
               ".enemy-card > .tiny"
             ],
             [
-              ".enemy-card > small"
+              "small:nth-child(3)"
+            ],
+            [
+              ".element-line:nth-child(4)"
+            ],
+            [
+              ".element-line:nth-child(5)"
             ],
             [
               ".battle-hero-status > strong"
@@ -340,6 +361,15 @@
             ],
             [
               "button[data-action=\"guard\"] > span:nth-child(2) > small"
+            ],
+            [
+              "button[data-action=\"ether\"] > .command-symbol[aria-hidden=\"true\"]"
+            ],
+            [
+              "button[data-action=\"ether\"] > span:nth-child(2) > strong"
+            ],
+            [
+              "button[data-action=\"ether\"] > span:nth-child(2) > small"
             ],
             [
               "button[data-action=\"flee\"] > .command-symbol[aria-hidden=\"true\"]"

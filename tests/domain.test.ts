@@ -95,7 +95,7 @@ describe('versioned persistence and bilingual resources',()=>{
     expect(load(blocked,'1')).toEqual({kind:'blocked'});expect(save(blocked,'1',fresh())).toBe(false);
   });
   it('rejects invalid saves including unsupported versions, invalid locations and impossible quest states',()=>{
-    for(const override of [{version:2},{hp:0},{x:NaN},{scene:'tower'},{coins:-1},{tonics:100},{flags:{talked:false,chest:false,won:false,lit:true}},{name:'a'.repeat(25)}]){
+    for(const override of [{version:3},{hp:0},{x:NaN},{scene:'tower'},{coins:-1},{tonics:100},{flags:{talked:false,chest:false,won:false,lit:true}},{name:'a'.repeat(25)}]){
       expect(validGame({...fresh(),...override})).toBe(false);
     }
   });

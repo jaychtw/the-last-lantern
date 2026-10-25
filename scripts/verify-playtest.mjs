@@ -39,7 +39,7 @@ try{
   await expect.poll(async()=>page.evaluate(()=>window.__lantern().busy)).toBe(false);
   const current=await page.evaluate(()=>window.__lantern());
   expect(current.battle.enemyHp).toBeLessThan(34);expect(current.battle.hp).toBeLessThan(36);
-  expect(current.battle.logs.some(l=>l.key==='strike')).toBe(true);expect(current.battle.logs.some(l=>l.key==='enemyHit')).toBe(true);
+  expect(current.battle.logs.some(l=>l.key==='strike'||l.key==='critical')).toBe(true);expect(current.battle.logs.some(l=>l.key==='enemyHit')).toBe(true);
   report.checks.push('Touch navigation reaches the contact encounter, live language switching preserves battle, and Attack resolves both sides with domain logs.');
   expect(errors).toEqual([]);report.checks.push('No page exceptions.');
   await context.close();

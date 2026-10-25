@@ -1,4 +1,5 @@
 import type {Lang} from './domain';
+import {campaignText} from './content';
 const en={
   title:'The Last Lantern',subtitle:'A little light. A long way home.',chapter:'CHAPTER I',chapterName:'A light worth following',
   gate:'GATE A · PLAYABLE SLICE',loading:'Gathering the little lights…',loadError:'The artwork could not load. Please reload to try again.',
@@ -112,5 +113,5 @@ const zh:Messages={
 export type Key=keyof Messages;
 export const messages:Record<Lang,Messages>={en,'zh-TW':zh};
 export function translate(lang:Lang,key:string,n?:number):string {
-  return (messages[lang][key as Key]??key).replace('{n}',String(n??''));
+  return (campaignText[key]?.[lang==='en'?0:1]??messages[lang][key as Key]??key).replace('{n}',String(n??''));
 }

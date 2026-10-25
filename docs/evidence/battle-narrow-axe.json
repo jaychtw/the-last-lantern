@@ -1,0 +1,18 @@
+[
+  {
+    "lang": "en",
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ],
+    "passes": 21
+  },
+  {
+    "lang": "zh-TW",
+    "violations": [],
+    "incomplete": [
+      "color-contrast"
+    ],
+    "passes": 21
+  }
+]

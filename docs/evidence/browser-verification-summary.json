@@ -1,0 +1,199 @@
+{
+  "uniqueChecks": 20,
+  "latestPassed": 20,
+  "unresolvedFailures": 0,
+  "history": [
+    {
+      "rawReport": "campaign-integration-results.json",
+      "stats": {
+        "startTime": "2026-10-25T08:01:36.931Z",
+        "duration": 1395844.279,
+        "expected": 4,
+        "skipped": 13,
+        "unexpected": 1,
+        "flaky": 0
+      },
+      "note": "Full campaign checks passed; initial legacy Continue assertion read state before asynchronous scene restoration, then was corrected and passed in the final regression run."
+    },
+    {
+      "rawReport": "browser-results.json",
+      "stats": {
+        "startTime": "2026-10-25T08:26:55.455Z",
+        "duration": 238572.19400000002,
+        "expected": 18,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "note": "Final clean regression run; completion-note copy was corrected in both languages. No rules, renderer, artwork or input logic changed after the full campaign captures."
+    }
+  ],
+  "checks": [
+    {
+      "file": "battle-layout.spec.ts",
+      "title": "narrow battle keeps larger-text commands below status in both languages",
+      "project": "",
+      "status": "passed",
+      "durationMs": 17748,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with English desktop inputs",
+      "project": "",
+      "status": "passed",
+      "durationMs": 679041,
+      "sourceReport": "campaign-integration-results.json"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with Traditional Chinese touch inputs",
+      "project": "",
+      "status": "passed",
+      "durationMs": 623253,
+      "sourceReport": "campaign-integration-results.json"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Gate A save migration is non-destructive in the actual browser",
+      "project": "",
+      "status": "passed",
+      "durationMs": 3063,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered English desktop interactions",
+      "project": "",
+      "status": "passed",
+      "durationMs": 67712,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered Traditional Chinese touch interactions",
+      "project": "",
+      "status": "passed",
+      "durationMs": 49752,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "defeat returns home, keeps discoveries, and supports retry",
+      "project": "",
+      "status": "passed",
+      "durationMs": 32121,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 320px",
+      "project": "",
+      "status": "passed",
+      "durationMs": 4445,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 390px",
+      "project": "",
+      "status": "passed",
+      "durationMs": 4929,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 768px",
+      "project": "",
+      "status": "passed",
+      "durationMs": 13251,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 1440px",
+      "project": "",
+      "status": "passed",
+      "durationMs": 9293,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "corrupt autosave is kept intact; manual saving and reload recovery work",
+      "project": "",
+      "status": "passed",
+      "durationMs": 2771,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "blocked storage allows a session and explains that saving is unavailable",
+      "project": "",
+      "status": "passed",
+      "durationMs": 5349,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "keyboard focus, pause and project-subpath assets remain usable",
+      "project": "",
+      "status": "passed",
+      "durationMs": 3324,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "save/load, overwrite cancellation and new-journey confirmation preserve progress",
+      "project": "",
+      "status": "passed",
+      "durationMs": 5695,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "production character atlas contains distinct articulated frames in all eight directions",
+      "project": "",
+      "status": "passed",
+      "durationMs": 2837,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports mouse ground traversal",
+      "project": "",
+      "status": "passed",
+      "durationMs": 3767,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports touch ground traversal",
+      "project": "",
+      "status": "passed",
+      "durationMs": 2582,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in English",
+      "project": "",
+      "status": "passed",
+      "durationMs": 2934,
+      "sourceReport": "browser-results.json"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in zh-TW",
+      "project": "",
+      "status": "passed",
+      "durationMs": 1951,
+      "sourceReport": "browser-results.json"
+    }
+  ],
+  "buildBoundary": {
+    "fullCampaignJS": "index-BCrJlpcy.js",
+    "finalJS": "index-Q4S8ARqg.js",
+    "stylesheet": "index-R7wCqtNX.css",
+    "changeAfterCampaignCaptures": "Only shared EN/zh-TW completion-note wording; verified with two checkpoint presentation tests on final build. Full campaign playthroughs use real interactions; checkpoint presentation/performance fixtures are identified separately."
+  }
+}

@@ -13,3 +13,11 @@ Blender renders use CPU Cycles with authored warm key/cool rim light, procedural
 Fraunces and DM Sans are bundled locally under SIL OFL 1.1; complete licenses are in `docs/licenses/` and the review package. Chinese text uses device system fonts. Original short Web Audio oscillator cues remain optional/muted by default; there are no sampled tracks. No accounts, telemetry, external runtime font service or image CDN is needed.
 
 The first vector candidate at commit `4156480a644648e6e92fd8c68193223ff727f79a` was rejected. Its art direction and QA evidence must not be described as approval of this revision. Fresh running-game captures and a candid reference comparison are required in `GATE-A-REVIEW.md`.
+
+## Gate B production extension
+
+The owner approved the revised Gate A direction; see `APPROVALS.md`. `scripts/render-campaign-assets.py` extends the same source geometry/material/light family with original Bramble Hopper, Moss Moth, Pebbleback, Lantern Wisp, Twig Sentinel, Cave Nibbler, Ashling, Hollow Knight, Watchtower Eye, Thornkeeper, Rootbound Warden and Dim Guardian. Each has a separate source model and action presentation. Names follow the GDD's original working concepts; no franchise character design or model is reused.
+
+The extension also authors Arlen, equipment/quest icons, actual carved rune tablets, fern/arch/pillar/crystal props, shrine/forest/cavern/quarry/tower/sanctum grounds and matching region battle scenery. These assets remain separate from Rowan, collision, interactable state, UI and action effects. Runtime textures and raw-source hashes are in the current manifest; reusable models are in `assets/source/`. The original distant matte supplies sky/valley distance only in open-air meadow/quarry battle compositions.
+
+Audio now includes original quiet synthesized pentatonic ambience as well as cues, with no sampled or licensed music. These are AI-assisted authored assets and code, not claimed to be a human art team's commercial production. New campaign scenes still require human gameplay/visual review; initial direction approval does not automatically approve every asset or composition.

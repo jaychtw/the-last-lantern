@@ -1,10 +1,9 @@
 {
-  "files": 46,
+  "version": "0.3.0-gate-b",
+  "archiveSha256": "056c2af3cd77229eed62343dfa7883af868015019ca5ba76a89812e32dc7390e",
+  "files": 92,
   "allHashesMatch": true,
-  "archiveSha256": "064f6e317e1088fd1da65cb80788bede6f7022fc3996dc956282de19f6b7a712",
-  "servedGameFiles": 41,
+  "servedGameFiles": 87,
   "allHTTPHashesMatch": true,
-  "testedJavascript": "index-Bwo6_aPY.js",
-  "testedStylesheet": "index-D9jl7ANa.css",
-  "server": "Extracted archive Python helper on loopback; no public deployment."
+  "server": "Exact extracted archive Python helper on loopback; no public deployment."
 }

@@ -259,6 +259,466 @@
         0.6530721485614777
       ],
       "scale": 0.419921875
+    },
+    "enemy-hopper": {
+      "file": "enemy-hopper.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-hopper-attack": {
+      "file": "enemy-hopper-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-moth": {
+      "file": "enemy-moth.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-moth-attack": {
+      "file": "enemy-moth-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-pebbleback": {
+      "file": "enemy-pebbleback.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-pebbleback-attack": {
+      "file": "enemy-pebbleback-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-wisp": {
+      "file": "enemy-wisp.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-wisp-attack": {
+      "file": "enemy-wisp-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-twig": {
+      "file": "enemy-twig.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-twig-attack": {
+      "file": "enemy-twig-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-nibbler": {
+      "file": "enemy-nibbler.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-nibbler-attack": {
+      "file": "enemy-nibbler-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-ashling": {
+      "file": "enemy-ashling.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-ashling-attack": {
+      "file": "enemy-ashling-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-hollow": {
+      "file": "enemy-hollow.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-hollow-attack": {
+      "file": "enemy-hollow-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-eye": {
+      "file": "enemy-eye.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-eye-attack": {
+      "file": "enemy-eye-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000006556510925,
+        0.6935912668704987
+      ],
+      "scale": 0.33203125
+    },
+    "enemy-thorn": {
+      "file": "enemy-thorn.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "enemy-thorn-attack": {
+      "file": "enemy-thorn-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "enemy-root": {
+      "file": "enemy-root.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "enemy-root-attack": {
+      "file": "enemy-root-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "enemy-guardian": {
+      "file": "enemy-guardian.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "enemy-guardian-attack": {
+      "file": "enemy-guardian-attack.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7314693033695221
+      ],
+      "scale": 0.64453125
+    },
+    "arch": {
+      "file": "arch.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.6999618113040924
+      ],
+      "scale": 0.48828125
+    },
+    "pillar": {
+      "file": "pillar.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7499522566795349
+      ],
+      "scale": 0.390625
+    },
+    "crystal": {
+      "file": "crystal.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.9346995875239372
+      ],
+      "scale": 0.22460937499999997
+    },
+    "fern": {
+      "file": "fern.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.8570746630430222
+      ],
+      "scale": 0.2734375
+    },
+    "weapon": {
+      "file": "weapon.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.8702996373176575
+      ],
+      "scale": 0.263671875
+    },
+    "armour": {
+      "file": "armour.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.8845419511198997
+      ],
+      "scale": 0.25390625
+    },
+    "ring": {
+      "file": "ring.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.9346995875239372
+      ],
+      "scale": 0.22460937499999997
+    },
+    "smith": {
+      "file": "smith.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5000004172325134,
+        0.7957033514976501
+      ],
+      "scale": 0.2734375
+    },
+    "shrine-ground": {
+      "file": "shrine-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "forest-ground": {
+      "file": "forest-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "cavern-ground": {
+      "file": "cavern-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "quarry-ground": {
+      "file": "quarry-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "tower-ground": {
+      "file": "tower-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "sanctum-ground": {
+      "file": "sanctum-ground.webp",
+      "w": 1600,
+      "h": 1143,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "scale": 1
+    },
+    "battle-forest": {
+      "file": "battle-forest.webp",
+      "w": 1600,
+      "h": 900,
+      "anchor": [
+        0.38324955105781555,
+        0.7942859530448914
+      ],
+      "scale": 1
+    },
+    "battle-cavern": {
+      "file": "battle-cavern.webp",
+      "w": 1600,
+      "h": 900,
+      "anchor": [
+        0.38324955105781555,
+        0.7942859530448914
+      ],
+      "scale": 1
+    },
+    "battle-quarry": {
+      "file": "battle-quarry.webp",
+      "w": 1600,
+      "h": 900,
+      "anchor": [
+        0.38324955105781555,
+        0.7942859530448914
+      ],
+      "scale": 1
+    },
+    "battle-tower": {
+      "file": "battle-tower.webp",
+      "w": 1600,
+      "h": 900,
+      "anchor": [
+        0.38324955105781555,
+        0.7942859530448914
+      ],
+      "scale": 1
+    },
+    "runes": {
+      "file": "runes.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.7856597155332565
+      ],
+      "scale": 0.341796875
+    },
+    "key": {
+      "file": "key.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.8845419511198997
+      ],
+      "scale": 0.25390625
+    },
+    "seed": {
+      "file": "seed.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.8702996373176575
+      ],
+      "scale": 0.263671875
+    },
+    "seal": {
+      "file": "seal.webp",
+      "w": 512,
+      "h": 512,
+      "anchor": [
+        0.5,
+        0.9165870770812035
+      ],
+      "scale": 0.234375
     }
   },
   "walk": {
@@ -1163,6 +1623,52 @@
     "interior-ground": "371d223fab70aad67606a56b58f65fff4f8d23dc78700f90ce5befe1f16a3d22",
     "battle-environment": "21df9cddeaa6fc8ba7e60d64c0c912fbbf47bfb3b5363db0f88c0ff9f8ad2ee8",
     "beacon-dormant": "8d60199fcaade16aadfec8d292b695c425beb2f2804e38191605008a73c96c69",
+    "enemy-hopper": "08423e20080567b156ea330da5a3240f89ad227ea39ce00e0a559b5e6223bbb8",
+    "enemy-hopper-attack": "d6b355929ef2c7c1acde81a73fb05b3d67d6bc9f657c50cc6bcbc1013c5e930a",
+    "enemy-moth": "c08a7934e5b90fcbcfa26ca10b777bca8ac303720575eb6701d0b51334747f8c",
+    "enemy-moth-attack": "acf474e99ed47f01344655e4e17db6840e9d9cbbd975923866cc76e33623e05f",
+    "enemy-pebbleback": "30f7878d6c0b55e1607853dd1a3ff4206af3f5cd7e05edb9e43f59be23d41826",
+    "enemy-pebbleback-attack": "bc2808743cb680acd501d9272febbb06675d8daff39557b87c0cb899a4bfeda1",
+    "enemy-wisp": "c04147ec085b2449fa1eb2f8bad0f894a638145d96d97ed6c58ac1dfd25e062a",
+    "enemy-wisp-attack": "d51a13c33669a219e1be35cd78a1584ff0af62a2d088a099da20e1c03304b8bd",
+    "enemy-twig": "7876d084569a4a820e61ede0faee1ce34ef1d2bde5017e2d18ac019a497f716a",
+    "enemy-twig-attack": "2ac88738aa93b26d0e89b574156ccafa2f1c451c53e9b3f39f95608e7c06abe8",
+    "enemy-nibbler": "852a2f925a243426a9f58921fac635c0fdc6851501ded947c06745bbb5caf95d",
+    "enemy-nibbler-attack": "782285b9ccb7fa98ad9f77419df2131babbe7926243ef9978d35ac90b9ad66a4",
+    "enemy-ashling": "7fc9360c6cdcd2966bb5ed0d03977540bd2c55718717c55b510e480cdfb22c9a",
+    "enemy-ashling-attack": "a1ce7495c632631b32b87090a4db72b5041f35e14386b529d9e924bd8ad5b495",
+    "enemy-hollow": "ce6777de503ca3c105451c6a7a1f35e566913091044061a1bedbe118b7718f55",
+    "enemy-hollow-attack": "876dc1429feb653ea6a2974ec5cfbd6d041f038b4ef4b48d2d616da0c42b10a0",
+    "enemy-eye": "9a221c543fc1daf5b3322ab361efe821abc1460e82674c892c3d95fa9a3a04d5",
+    "enemy-eye-attack": "b34d79a45be82cfb9cf8e0b5e5bba4a170ef84100c4991b601ef0ff25e465fe6",
+    "enemy-thorn": "f00cb2eb7189e01cc539ea3d020097e2da804e99018ed6130aa8e196fc39333c",
+    "enemy-thorn-attack": "a6c93675dcd9b7b40925d7c43f2a9fc28f9994fee4c1f61a35a5934feffffb19",
+    "enemy-root": "e62a6ef78725f9f6231fc5dd3172ca406ea2768ea753346faa116f2487f9f285",
+    "enemy-root-attack": "3047e04989f7bec6b31a90c4348f677c81372f8ee08591128036a6a7e02b1c9b",
+    "enemy-guardian": "2007eebb5bff4df9114dc90d73dc41713c97c15973ac1ff29e972afcc9fb9038",
+    "enemy-guardian-attack": "60390f20625fd634a118a37e2b9682117f69117617acfa5f64a56d7b699c4d6e",
+    "arch": "719aa060ca54d950e2bb5c2b81349ba4901831071079d837c9b11083ac6f185c",
+    "pillar": "db30a75e12bde551830083cd7cfc9b35e35dc961b7d2a3a1267356b84a85128f",
+    "crystal": "e42ba556f976c92b27c2b2b1a19cb594520b51b4408b202e74c576621e6d33fb",
+    "fern": "20261a0ee9c6270a342aa3d13f91887d0a6ccd4b217c8e0d1895dd7b8dcd29df",
+    "weapon": "3270fa3aeb1baffd6b632ecae0c78f2961bf16f0209668ed3600d7b3a21da708",
+    "armour": "2e97ed0e79f534a393ce27808eaa2faee7361c8a886983819c93ab7d13bbb436",
+    "ring": "727f063178a2a6e27f8c075244f2056ca468ccba197a3dd11fcb6c489d4c9f97",
+    "smith": "1712213f7de23ac2f99d50ba8c59da55c5eb7498f4cf3f8592f73d63b15f5cbd",
+    "shrine-ground": "e27575119958e45450a511a8985e87974d96c6e1a7ca55f307c5cbd9b89c3177",
+    "forest-ground": "df44e632490b2efb5c33584eb15930c4a41a48e5f109874ccfc8d1e41dbe4232",
+    "cavern-ground": "9fe27edc5c04c040cdb73151cfb2466a480e55968f3c17bba9eb625ffd2eb2fa",
+    "quarry-ground": "e3215a32f20208ea3c7a16fd111411180b8c1c06520360a055d64498aca9e4dc",
+    "tower-ground": "d6934cffa8fd7a124473574d5d5bd88f23d3bdaf834bfce1b5c6ab5363b6ceb0",
+    "sanctum-ground": "d623a27f20f333d4ad80d6929dc102d19102ba92315ef916c12d459c3cf03b56",
+    "battle-forest": "bc5c690ac38cd648351518509f5357f515cc1879436a7012079d69bb29ee7ac1",
+    "battle-cavern": "5bf1c07c8f4d690a8cfd6d93df2b7c9b6a62ac869542eb0a38b4c7e4f4e94dd6",
+    "battle-quarry": "da1fbe9c8e1bbe72d718fed06e0c62556ac01fd3db5166443516c26f4d38bcd5",
+    "battle-tower": "9f97e0a43c15b2e0edf8d94a980197feecdede97763c0772f531c8a2614968ac",
+    "runes": "5e99ba59c301e21937789ca715162dcfee921dc88aca64446083775bc232271a",
+    "key": "524ab58e548017fda6e023e29dd2533fe3cf831b2d0eb6e9a7358f659d74d405",
+    "seed": "0f67eab3d9977a3fe60f04d238f7c90e486a472c32113b10ac1668b0433bed7b",
+    "seal": "8a6c66f98671dca3dcd7be932405ca6bb187a432da895ec80636d436f28c6473",
     "rowan-walk-0-0": "98cbc944b9f5ed58d298a3a9566c6d20321b7981dac708e2437ee4795e856a54",
     "rowan-walk-0-1": "967657d0ce46aa450da282511205fc7897ed977329c61ba8dd20ef27dde680a2",
     "rowan-walk-0-2": "f53a4cd9d372606aef168ac2593d3d2208b91612841de1b634250f3587919475",

@@ -8,10 +8,10 @@ if not (dist / 'index.html').exists():
     raise SystemExit('Run npm run build first.')
 out = root / 'playtest'
 out.mkdir(exist_ok=True)
-archive = out / 'the-last-lantern-gate-a.zip'
-instructions = '''THE LAST LANTERN / 最後的引路燈 — Revised Gate A visual review
+archive = out / 'the-last-lantern-gate-b.zip'
+instructions = '''THE LAST LANTERN / 最後的引路燈 — Gate B full-adventure review
 
-This is a local playable art-and-interaction candidate, not an approved release.
+This is a complete-adventure review candidate for Gate C, not an approved release.
 Requires Python 3 and a recent browser with Canvas2D/WebP. No Node.js needed to play.
 
 1. Extract the entire ZIP to a folder.
@@ -34,7 +34,10 @@ Tap the visible world to walk there. Escape opens pause/settings.
 探索可選擇地點並沿路前往；設定提供語言、動態效果、文字與存檔。
 
 Speak with Mira, visit her cottage, find the supplies, and follow the eastern
-road. Meet the Dewdrop Blob in the clearing, then relight the Meadow Lantern.
+road. Meet the Dewdrop Blob in the clearing, then relight the Meadow Lantern. Visit the Meadow Shrine, calm the Thornkeeper,
+and follow Whisperwood to Moss Cavern. Its rune stones and Warden protect
+the Woodland Lantern. Cross Quarry Road, unlock the tower, meet the Dim
+Guardian, and restore the warded network without releasing the ancient blaze.
 Combat: Attack, Ember (3 MP), Mend (4 MP), Tonic, Guard and Flee. When the
 dewdrop gathers itself, Guard reduces damage. Defeat brings you safely home
 at a 10% coin cost (rounded down), retaining discoveries.
@@ -44,11 +47,12 @@ desktop/touch usability, English/Traditional Chinese readability and comfort.
 The revised art uses original Blender-authored 3D models, materials, lights
 and character poses, composited as independent prerendered layers/frames.
 The supplied concept collage is a reference only, never a playable image.
-Whether this candidate reaches the new visual target awaits human review.
+The owner approved the Gate A visual direction. Full-adventure gameplay,
+pacing, sound, balance and new scenes now await Gate C human review.
 The camera is fixed and lighting is primarily baked. Performance must be
 reviewed on actual devices; source render time is not runtime frame time.
 
-Gate B and public deployment require separate explicit approval.
+Gate C gameplay acceptance and public deployment require separate approval.
 Physical-phone performance, screen readers and first-time player balance
 have not been verified in this cloud environment. Three manual save slots
 and autosave stay in this browser; private mode may block persistence.
@@ -69,6 +73,6 @@ files['SHA256SUMS.txt']=''.join(f'{digest}  {name}\n' for name,digest in manifes
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
     for name,data in files.items(): z.writestr(name,data)
 digest=hashlib.sha256(archive.read_bytes()).hexdigest()
-(out/'SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n')
-(root/'docs/evidence/build-manifest.json').write_text(json.dumps({'archive':archive.name,'archive_sha256':digest,'files':manifest},indent=2)+'\n')
+(out/'GATE-B-SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n')
+(root/'docs/evidence/build-manifest.json').write_text(json.dumps({'version':json.loads((root/'package.json').read_text())['version'],'archive':archive.name,'archive_sha256':digest,'files':manifest},indent=2)+'\n')
 print(f'{archive} ({archive.stat().st_size} bytes)\nSHA-256: {digest}')

@@ -1,5 +1,7 @@
 # Gate A — revised visual proof of concept
 
+**Approved by the owner on 2026-10-25.** See [approval record](APPROVALS.md). This report preserves the delivery-time findings; its evidence links are frozen to the approved commit.
+
 Prepared **2026-10-25 (Asia/Taipei)**. Authority: the owner's new concept collage and [revision brief](VISUAL-REVISION.md), unchanged [GDD v1.0](design/GDD-v1.0.txt), and [UGDS v1.0.0](design/UGDS-v1.0.0.md) pinned to `d5c6696efdd6efc028118600466db44aecae0c9b`.
 
 **Human visual/interaction acceptance is pending.** The previous flat-vector candidate (`4156480a644648e6e92fd8c68193223ff727f79a`) was rejected. This revision replaces its presentation pipeline and retains the established rules. It does not claim to have reached the supplied reference's commercial quality. The owner's existing “Push to main” instruction authorizes source/evidence/package publication for review outside the cloud workspace. Gate B, full RPG production and public game deployment remain unauthorized. No CI success or public deployment is claimed.
@@ -7,12 +9,12 @@ Prepared **2026-10-25 (Asia/Taipei)**. Authority: the owner's new concept collag
 ## Review the actual game
 
 - [Download the revised playable ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-a.zip), [instructions](../playtest/README.md), [SHA-256](../playtest/SHA256SUMS.txt).
-- [Desktop town](evidence/gameplay-1440-en.png), [phone town, Traditional Chinese](evidence/gameplay-390-zh-TW.png).
-- [Mira dialogue](evidence/dialogue-1440-en.png), [second expression](evidence/dialogue-thoughtful-1440-en.png), [phone dialogue](evidence/dialogue-390-zh-TW.png).
-- [Desktop battle](evidence/battle-1440-en.png), [phone battle](evidence/battle-390-zh-TW.png), [live attack feedback](evidence/battle-attack-phone.png), [cottage interior](evidence/interior-1440-en.png).
-- [Lantern completion](evidence/completed-1440-en.png), [phone landscape](evidence/phone-landscape.png).
-- [Short gameplay recording](evidence/gate-a-gameplay.mp4), [complete desktop recording](evidence/playthrough-desktop-en.webm), [complete phone recording](evidence/playthrough-phone-zh-TW.webm).
-- [Build-file hash manifest](evidence/build-manifest.json), [packaged gameplay checks](evidence/playtest-verification.json).
+- [Desktop town](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/gameplay-1440-en.png), [phone town, Traditional Chinese](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/gameplay-390-zh-TW.png).
+- [Mira dialogue](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/dialogue-1440-en.png), [second expression](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/dialogue-thoughtful-1440-en.png), [phone dialogue](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/dialogue-390-zh-TW.png).
+- [Desktop battle](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/battle-1440-en.png), [phone battle](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/battle-390-zh-TW.png), [live attack feedback](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/battle-attack-phone.png), [cottage interior](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/interior-1440-en.png).
+- [Lantern completion](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/completed-1440-en.png), [phone landscape](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/phone-landscape.png).
+- [Short gameplay recording](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/gate-a-gameplay.mp4), [complete desktop recording](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/playthrough-desktop-en.webm), [complete phone recording](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/playthrough-phone-zh-TW.webm).
+- [Build-file hash manifest](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/build-manifest.json), [packaged gameplay checks](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/playtest-verification.json).
 
 Extract the ZIP and follow its bilingual `START-HERE.txt`. Python 3 and a recent browser suffice; no Node/npm/Blender installation or cloud workspace is needed to play. The helper serves bundled files locally, with optional trusted-LAN phone access. It does not deploy the game. Saves remain in that browser.
 
@@ -52,12 +54,12 @@ There are no additional party members, regions, bosses, campaign progression, sh
 | `npm run build` | Pass; strict TypeScript + Vite; relative asset URLs, 51.92 kB JS (21.28 kB gzip) and 30.45 kB CSS (7.71 kB gzip) |
 | `npm test` | **16 passed**, 0 failed/skipped; independent combat/RNG/costs/telegraphs, quests, collision/navigation, persistence and localization |
 | Introductory battle policy | **250/250 seeds won** without consumables under the tested guard/heal/magic policy; feasibility evidence, not human balance acceptance |
-| `npm run test:browser` | **14 passed**, 0 failed/skipped/flaky, 201.2 s, one worker; [raw report](evidence/browser-results.json) |
+| `npm run test:browser` | **14 passed**, 0 failed/skipped/flaky, 201.2 s, one worker; [raw report](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/browser-results.json) |
 | Complete browser flows | English keyboard/mouse and zh-TW touch chapter, dialogue/portrait changes, cottage/rest/notes, chest, encounter, lantern completion, manual save/reload, live language switch |
 | Recovery/input coverage | Defeat/retry, corruption preservation, blocked storage, overwrite/load/restart confirmations, pause/focus, inverse-projected mouse/touch ground traversal |
 | Rendered layouts | 320/390/768/1440 px, both languages and larger text; no horizontal overflow; desktop/phone battle fills full viewport |
 | Animation assets | 64 decoded, nonempty, distinct walk frames across eight directions; attack/cast each eight frames, guard/hurt/victory states |
-| Portable archive integrity | **3,980,067 bytes**, all **46** extracted per-file hashes match; all **41** game files match when fetched from the actual Python helper; [integrity report](evidence/artifact-integrity.json) |
+| Portable archive integrity | **3,980,067 bytes**, all **46** extracted per-file hashes match; all **41** game files match when fetched from the actual Python helper; [integrity report](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/artifact-integrity.json) |
 | `node scripts/verify-playtest.mjs` | Pass on the extracted ZIP; touch traversal/contact battle, live language switching, both sides of Attack, no page exceptions; 844×390 landscape capture |
 | Accessibility automation | Zero reported axe violations in the tested settings/journal/exploration/battle states; manual incomplete checks remain |
 | Design/rule preservation | `git diff --exit-code 4156480 -- src/domain.ts docs/design/GDD-v1.0.txt docs/design/UGDS-v1.0.0.md` passes; rules and pinned authority unchanged |
@@ -70,7 +72,7 @@ Automated axe scans report only the states actually audited. Incomplete/manual c
 
 ## Performance and technical limitations
 
-[Raw final performance snapshot](evidence/performance.json): the exact extracted ZIP, with actual Hearthmere movement/hero/scenery/camera updates, approximately 4.4 seconds sampled after warm-up per viewport. No Blender render, video capture or other browser verification workload ran concurrently. Phone device scale was 2, capped to 1.5× canvas rendering; tablet/desktop scale was 1.
+[Raw final performance snapshot](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/performance.json): the exact extracted ZIP, with actual Hearthmere movement/hero/scenery/camera updates, approximately 4.4 seconds sampled after warm-up per viewport. No Blender render, video capture or other browser verification workload ran concurrently. Phone device scale was 2, capped to 1.5× canvas rendering; tablet/desktop scale was 1.
 
 | CSS width | Sampled frames | Mean FPS | 95th-percentile frame time |
 | --- | ---: | ---: | ---: |
@@ -83,7 +85,7 @@ Automated axe scans report only the states actually audited. Incomplete/manual c
 
 During integration, visual capture exposed the browser dialog's default maximum width (a right-side unused strip) and a distant matte occluded by the foreground. Both were corrected; a fullscreen-width assertion now checks the actual battle at desktop and phone sizes. The earlier interrupted run is not counted as final verification. A negative animation-clock resume edge case and rectangular shadow-catcher spill were also corrected during development.
 
-Offline Blender authoring uses CPU Cycles at 48 samples. This Blender 4.3.2 build lacks OpenImageDenoise; denoising is explicitly disabled and some grain remains. Editable models and runtime assets are committed, so normal builds do not rerender art. Art generation is substantially slower than ordinary TypeScript builds. The current 32 compressed textures total 3,801,314 bytes and approximately 83.18 MiB of uncompressed RGBA pixels before browser/canvas overhead; eager texture decode is a mobile memory risk to profile on hardware. [Asset sizes, dimensions and hashes](evidence/art-assets.json). The source script and original distant-matte image/prompt preserve maintainability, while more assets/animation directions would increase atlas size, texture decode cost and authoring work.
+Offline Blender authoring uses CPU Cycles at 48 samples. This Blender 4.3.2 build lacks OpenImageDenoise; denoising is explicitly disabled and some grain remains. Editable models and runtime assets are committed, so normal builds do not rerender art. Art generation is substantially slower than ordinary TypeScript builds. The current 32 compressed textures total 3,801,314 bytes and approximately 83.18 MiB of uncompressed RGBA pixels before browser/canvas overhead; eager texture decode is a mobile memory risk to profile on hardware. [Asset sizes, dimensions and hashes](https://github.com/jaychtw/the-last-lantern/blob/aaea025337ae068fe42c5958e7a55ec858823303/docs/evidence/art-assets.json). The source script and original distant-matte image/prompt preserve maintainability, while more assets/animation directions would increase atlas size, texture decode cost and authoring work.
 
 The runtime has a fixed camera and primarily baked light/shadows. Tree sway/bobbing/action lights are presentation effects, not dynamic 3D simulation. Layer contact shadows approximate scene-wide lighting; free camera, dynamic shadow interaction and arbitrary equipment variants require additional exports or a new pipeline decision. Device system fonts supply Traditional Chinese glyphs. No sampled score, controller support, installable PWA/service worker or backend is included. No claim of browser/device compatibility beyond tested Chromium emulation is made.
 

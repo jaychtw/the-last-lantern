@@ -1,0 +1,73 @@
+{
+  "capture": "Actual Playwright browser interactions; no synthetic gameplay frames. Full campaigns used faster battles and named walking routes. Video is scaled for repository size; screenshots retain viewport resolution.",
+  "audio": "Silent recordings: Playwright does not capture the synthesized game audio.",
+  "buildBoundary": "Full campaign captures use index-BCrJlpcy.js; only the shared completion-note wording changed afterward. Final copy is separately verified on index-Q4S8ARqg.js.",
+  "recordings": [
+    {
+      "original": "campaign-desktop-en.webm",
+      "originalSha256": "a2f7645a34c47a7fd89c31ae5fdb915bba758b3b2bc9a443b93b5b3dfe2ab430",
+      "file": "campaign-desktop-en.mp4",
+      "sha256": "7382d3a964c92724dd49367c14f39778df93b6592bd348b269bb47948f53201a",
+      "durationSeconds": 677.56,
+      "bytes": 22626449,
+      "stream": {
+        "codec_name": "h264",
+        "width": 720,
+        "height": 500,
+        "r_frame_rate": "25/1"
+      },
+      "transcode": "H.264 / yuv420p / CRF 28 / fast preset. Original frame dimensions retained; game frames unchanged."
+    },
+    {
+      "original": "campaign-phone-zh-TW.webm",
+      "originalSha256": "a2a920a5535f5da875597c01223f6015ff4868cf5e431719f2a38df7878547d2",
+      "file": "campaign-phone-zh-TW.mp4",
+      "sha256": "1b52064f4d2a49e91be471333c7970244e7aaf67f8c2f8e291c89f2e9a52ff66",
+      "durationSeconds": 623.0,
+      "bytes": 18545636,
+      "stream": {
+        "codec_name": "h264",
+        "width": 312,
+        "height": 674,
+        "r_frame_rate": "25/1"
+      },
+      "transcode": "H.264 / yuv420p / CRF 28 / fast preset. Original frame dimensions retained; game frames unchanged."
+    }
+  ],
+  "excerpt": {
+    "source": "campaign-desktop-en.webm",
+    "cutsSeconds": [
+      [
+        0,
+        15
+      ],
+      [
+        200,
+        212
+      ],
+      [
+        239,
+        251
+      ],
+      [
+        585,
+        600
+      ],
+      [
+        629,
+        638
+      ]
+    ],
+    "editing": "Five real-time excerpts concatenated; no speed changes or invented gameplay.",
+    "file": "gate-b-gameplay.mp4",
+    "sha256": "d895c2076b8dbc9958d87eb8eb28562a7eeddcfffb77433ade099d7d5cc8645d",
+    "durationSeconds": 62.96,
+    "bytes": 4653339,
+    "stream": {
+      "codec_name": "h264",
+      "width": 720,
+      "height": 500,
+      "r_frame_rate": "25/1"
+    }
+  }
+}

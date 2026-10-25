@@ -1,19 +1,21 @@
-# Revised Gate A local playtest
+# Gate B full-adventure local playtest
 
-[Download the playable ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-a.zip) — **3,980,067 bytes**. [Review report and reference comparison](../docs/GATE-A-REVIEW.md).
+[Download the Gate B ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-b.zip) — **7,222,768 bytes**. [Gameplay, QA and limits](../docs/GATE-B-REVIEW.md).
 
 1. Extract the entire ZIP.
 2. In that folder run `python3 serve-playtest.py` (Windows: `py serve-playtest.py`).
-3. Open the printed local address. Use `--lan` and your computer's LAN IP for a phone on trusted Wi-Fi; stop with Ctrl+C.
+3. Open the local address printed by the helper. Use `--lan` and your computer’s LAN IP for a phone on trusted Wi-Fi; stop with Ctrl+C.
 
-No cloud workspace, Node/npm, Blender or account is needed. Recent Canvas2D/WebP-capable browser and Python 3 are required. Open through the helper, not directly through `index.html`. Bilingual `START-HERE.txt`, local fonts/licenses and per-file hashes are inside.
+No cloud workspace, Node/npm, Blender or account is needed. A recent Canvas2D/WebP browser and Python 3 suffice. Open through the helper, not directly through `index.html`. Bilingual `START-HERE.txt`, bundled fonts/licenses and per-file hashes are inside.
 
 SHA-256:
 
 ```text
-064f6e317e1088fd1da65cb80788bede6f7022fc3996dc956282de19f6b7a712
+056c2af3cd77229eed62343dfa7883af868015019ca5ba76a89812e32dc7390e
 ```
 
-The exact extracted artifact passed all 46 per-file hashes; all 41 served game files matched over HTTP. Gameplay and accessibility checks are separately recorded in [packaged verification](../docs/evidence/playtest-verification.json). These are local checks, not public deployment or human visual approval.
+All **92** extracted file hashes match, and all **87** served game files matched over HTTP. See [integrity evidence](../docs/evidence/artifact-integrity.json) and [packaged gameplay checks](../docs/evidence/playtest-verification.json).
 
-This is the replacement Blender/prerendered-3D visual candidate. The previous vector-art candidate was rejected. Review the town, Mira dialogue, animated battle, desktop/touch comfort and EN/zh-TW against the supplied concept collage. The collage is not inserted in the game. Saves remain in your browser. Human visual approval, physical-device performance, Safari/Firefox and screen-reader verification remain pending. Gate B and public game deployment are not authorized.
+The owner approved the Gate A direction. This complete-adventure candidate adds three lights/bosses, equipment, leveling, spells, shops, dungeons, rune puzzles and a saved ending. It now awaits Gate C human gameplay, pacing, balance, audio and polish review. Public deployment remains unauthorized. Physical-device, Safari/Firefox and screen-reader checks remain outstanding.
+
+Valid Gate A saves migrate without overwriting their original bytes. Saves stay in your browser; three manual slots and safe-boundary autosave are provided. The [approved Gate A ZIP](https://github.com/jaychtw/the-last-lantern/raw/aaea025337ae068fe42c5958e7a55ec858823303/playtest/the-last-lantern-gate-a.zip) remains available separately as historical review evidence.

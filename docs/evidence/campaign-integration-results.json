@@ -1,0 +1,574 @@
+{
+  "config": {
+    "configFile": "/workspace/the-last-lantern/playwright.config.ts",
+    "rootDir": "/workspace/the-last-lantern/tests/browser",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspace/the-last-lantern/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/workspace/the-last-lantern/tests/browser",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 240000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "docs/evidence/browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run preview -- --port 4173 --strictPort --base /the-last-lantern/",
+      "url": "http://127.0.0.1:4173/the-last-lantern/",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "battle-layout.spec.ts",
+      "file": "battle-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "narrow battle keeps larger-text commands below status in both languages",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 120000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16282,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:01:39.809Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "57209c86e9cadef30d8b-ae4c2a4176d086fe9c1f",
+          "file": "battle-layout.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "campaign.spec.ts",
+      "file": "campaign.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "complete Gate B campaign with English desktop inputs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 679041,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:01:56.560Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba824951ebd2097fff00-33be296749db5c65de95",
+          "file": "campaign.spec.ts",
+          "line": 7,
+          "column": 30
+        },
+        {
+          "title": "complete Gate B campaign with Traditional Chinese touch inputs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 900000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 623253,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:13:15.750Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba824951ebd2097fff00-c7cb9bdb5b59d0e1b463",
+          "file": "campaign.spec.ts",
+          "line": 7,
+          "column": 30
+        },
+        {
+          "title": "Gate A save migration is non-destructive in the actual browser",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2536,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:23:39.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ba824951ebd2097fff00-de5639d7f4e5bb7a090f",
+          "file": "campaign.spec.ts",
+          "line": 84,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "game.spec.ts",
+      "file": "game.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "complete Gate A via rendered English desktop interactions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 57148,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"caveRunes\": false,\u001b[22m\n\u001b[32m-   \"chest\": true,\u001b[39m\n\u001b[31m+   \"chest\": false,\u001b[39m\n\u001b[2m    \"clear\": false,\u001b[22m\n\u001b[2m    \"guardian\": false,\u001b[22m\n\u001b[2m    \"guardianHeard\": false,\u001b[22m\n\u001b[32m-   \"lit\": true,\u001b[39m\n\u001b[31m+   \"lit\": false,\u001b[39m\n\u001b[2m    \"root\": false,\u001b[22m\n\u001b[32m-   \"talked\": true,\u001b[39m\n\u001b[31m+   \"talked\": false,\u001b[39m\n\u001b[2m    \"thorn\": false,\u001b[22m\n\u001b[2m    \"towerLit\": false,\u001b[22m\n\u001b[2m    \"towerRunes\": false,\u001b[22m\n\u001b[2m    \"travelGift\": false,\u001b[22m\n\u001b[32m-   \"won\": true,\u001b[39m\n\u001b[31m+   \"won\": false,\u001b[39m\n\u001b[2m    \"woodlandLit\": false,\u001b[22m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"caveRunes\": false,\u001b[22m\n\u001b[32m-   \"chest\": true,\u001b[39m\n\u001b[31m+   \"chest\": false,\u001b[39m\n\u001b[2m    \"clear\": false,\u001b[22m\n\u001b[2m    \"guardian\": false,\u001b[22m\n\u001b[2m    \"guardianHeard\": false,\u001b[22m\n\u001b[32m-   \"lit\": true,\u001b[39m\n\u001b[31m+   \"lit\": false,\u001b[39m\n\u001b[2m    \"root\": false,\u001b[22m\n\u001b[32m-   \"talked\": true,\u001b[39m\n\u001b[31m+   \"talked\": false,\u001b[39m\n\u001b[2m    \"thorn\": false,\u001b[22m\n\u001b[2m    \"towerLit\": false,\u001b[22m\n\u001b[2m    \"towerRunes\": false,\u001b[22m\n\u001b[2m    \"travelGift\": false,\u001b[22m\n\u001b[32m-   \"won\": true,\u001b[39m\n\u001b[31m+   \"won\": false,\u001b[39m\n\u001b[2m    \"woodlandLit\": false,\u001b[22m\n\u001b[2m  }\u001b[22m\n    at /workspace/the-last-lantern/tests/browser/game.spec.ts:86:28",
+                    "location": {
+                      "file": "/workspace/the-last-lantern/tests/browser/game.spec.ts",
+                      "column": 28,
+                      "line": 86
+                    },
+                    "snippet": "  84 |     await p.reload();await p.locator('[data-command=continue]').click();\n  85 |     const reloaded=(await state(p)).game;\n> 86 |     expect(reloaded.flags).toEqual(saved.flags);expect(reloaded.seed).toBe(saved.seed);\n     |                            ^\n  87 |     expect(reloaded.coins).toBe(saved.coins);expect(reloaded.tonics).toBe(saved.tonics);\n  88 |     // Switching language mid-journey retains meaningful state.\n  89 |     await p.locator('#language').click();expect((await state(p)).game.flags).toEqual(saved.flags);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/workspace/the-last-lantern/tests/browser/game.spec.ts",
+                        "column": 28,
+                        "line": 86
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 4\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"caveRunes\": false,\u001b[22m\n\u001b[32m-   \"chest\": true,\u001b[39m\n\u001b[31m+   \"chest\": false,\u001b[39m\n\u001b[2m    \"clear\": false,\u001b[22m\n\u001b[2m    \"guardian\": false,\u001b[22m\n\u001b[2m    \"guardianHeard\": false,\u001b[22m\n\u001b[32m-   \"lit\": true,\u001b[39m\n\u001b[31m+   \"lit\": false,\u001b[39m\n\u001b[2m    \"root\": false,\u001b[22m\n\u001b[32m-   \"talked\": true,\u001b[39m\n\u001b[31m+   \"talked\": false,\u001b[39m\n\u001b[2m    \"thorn\": false,\u001b[22m\n\u001b[2m    \"towerLit\": false,\u001b[22m\n\u001b[2m    \"towerRunes\": false,\u001b[22m\n\u001b[2m    \"travelGift\": false,\u001b[22m\n\u001b[32m-   \"won\": true,\u001b[39m\n\u001b[31m+   \"won\": false,\u001b[39m\n\u001b[2m    \"woodlandLit\": false,\u001b[22m\n\u001b[2m  }\u001b[22m\n\n  84 |     await p.reload();await p.locator('[data-command=continue]').click();\n  85 |     const reloaded=(await state(p)).game;\n> 86 |     expect(reloaded.flags).toEqual(saved.flags);expect(reloaded.seed).toBe(saved.seed);\n     |                            ^\n  87 |     expect(reloaded.coins).toBe(saved.coins);expect(reloaded.tonics).toBe(saved.tonics);\n  88 |     // Switching language mid-journey retains meaningful state.\n  89 |     await p.locator('#language').click();expect((await state(p)).game.flags).toEqual(saved.flags);\n    at /workspace/the-last-lantern/tests/browser/game.spec.ts:86:28"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T08:23:41.759Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/workspace/the-last-lantern/test-results/game-complete-Gate-A-via-r-461ad-nglish-desktop-interactions/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/workspace/the-last-lantern/test-results/game-complete-Gate-A-via-r-461ad-nglish-desktop-interactions/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/workspace/the-last-lantern/test-results/game-complete-Gate-A-via-r-461ad-nglish-desktop-interactions/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/workspace/the-last-lantern/tests/browser/game.spec.ts",
+                    "column": 28,
+                    "line": 86
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-e603e29903480fec63d2",
+          "file": "game.spec.ts",
+          "line": 46,
+          "column": 3
+        },
+        {
+          "title": "complete Gate A via rendered Traditional Chinese touch interactions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-c6ad654b7c322c83c274",
+          "file": "game.spec.ts",
+          "line": 46,
+          "column": 3
+        },
+        {
+          "title": "defeat returns home, keeps discoveries, and supports retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-4d298c773bb42801fd75",
+          "file": "game.spec.ts",
+          "line": 100,
+          "column": 1
+        },
+        {
+          "title": "responsive, bilingual, larger text and accessible settings at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-b653b1a8613c1a2016da",
+          "file": "game.spec.ts",
+          "line": 117,
+          "column": 39
+        },
+        {
+          "title": "responsive, bilingual, larger text and accessible settings at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-69b719436f14b83d8d57",
+          "file": "game.spec.ts",
+          "line": 117,
+          "column": 39
+        },
+        {
+          "title": "responsive, bilingual, larger text and accessible settings at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-4753c7223ac83cb2cc8f",
+          "file": "game.spec.ts",
+          "line": 117,
+          "column": 39
+        },
+        {
+          "title": "responsive, bilingual, larger text and accessible settings at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-d796281731573d297626",
+          "file": "game.spec.ts",
+          "line": 117,
+          "column": 39
+        },
+        {
+          "title": "corrupt autosave is kept intact; manual saving and reload recovery work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-381ffd2561adee4df5a2",
+          "file": "game.spec.ts",
+          "line": 133,
+          "column": 1
+        },
+        {
+          "title": "blocked storage allows a session and explains that saving is unavailable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-99a8094f219577a309ad",
+          "file": "game.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "keyboard focus, pause and project-subpath assets remain usable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-3cfb3b90f1f1468a32a3",
+          "file": "game.spec.ts",
+          "line": 152,
+          "column": 1
+        },
+        {
+          "title": "save/load, overwrite cancellation and new-journey confirmation preserve progress",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-d380f5b2415e497d77da",
+          "file": "game.spec.ts",
+          "line": 163,
+          "column": 1
+        },
+        {
+          "title": "production character atlas contains distinct articulated frames in all eight directions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-572d31be0de6660f00b2",
+          "file": "game.spec.ts",
+          "line": 182,
+          "column": 1
+        },
+        {
+          "title": "inverse scene projection supports mouse ground traversal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-eb83d8eafb3eba71e9d9",
+          "file": "game.spec.ts",
+          "line": 200,
+          "column": 33
+        },
+        {
+          "title": "inverse scene projection supports touch ground traversal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8b1bb1493a64c9fc3ab6-6c8120b17273516dbc90",
+          "file": "game.spec.ts",
+          "line": 200,
+          "column": 33
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-10-25T08:01:36.931Z",
+    "duration": 1395844.279,
+    "expected": 4,
+    "skipped": 13,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

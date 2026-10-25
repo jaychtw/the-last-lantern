@@ -1,5 +1,7 @@
 # Revised Gate A visual brief — 2026-10-25
 
+The owner subsequently approved this direction. [Approval record](APPROVALS.md) authorizes Gate B; the pre-approval boundary below is historical. The same visual quality target remains in force.
+
 The creative director rejected the first Gate A graphical quality and flat-vector direction. The concept collage attached in the revision request is the primary visual reference and quality target. It is a reference, not a reusable game asset sheet. The original GDD and pinned UGDS remain governing documents; this brief supersedes the earlier visual treatment.
 
 Target: colorful polished Switch-generation fantasy RPG presentation. Prioritize dimensional architecture, expressive stylized characters, coherent proportions/silhouettes, vibrant material colors, atmospheric light/natural shadows, layered depth and restrained attractive game UI. Preserve one playable Rowan, classic solitary-hero exploration/progression, turn-based combat, dialogue/objectives, English/Traditional Chinese and desktop/mobile support. Do not add party members or alter mechanics to accommodate artwork.

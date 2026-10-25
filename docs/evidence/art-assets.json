@@ -1,8 +1,10 @@
 {
-  "pipeline": "Blender 4.3.2 CPU Cycles 48 samples, original distant image_gen matte, WebP packing, native Canvas2D runtime",
-  "textures": 32,
-  "encodedBytes": 3801314,
-  "decodedRGBABytes": 87219872,
+  "version": "0.3.0-gate-b",
+  "pipeline": "Original Blender 4.3.2 CPU Cycles 48 samples; independent WebP layers and pose atlases; original far-distance matte; native Canvas2D",
+  "textures": 78,
+  "encodedBytes": 7019858,
+  "catalogDecodedRGBABytes": 191899808,
+  "memoryNote": "Full catalog pixels, not simultaneous resident RAM. Runtime retains shared actors/atlases and only the current region exclusive layers; browser caches are browser-managed.",
   "walkDirections": 8,
   "walkFrames": 64,
   "battleFrames": {
@@ -13,6 +15,30 @@
     "victory": 1
   },
   "files": {
+    "arch.webp": {
+      "bytes": 48138,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "b3f2beacf8b6789272227fe823aa8163ed3b6ac7f4ddf8b0cf4b4f5e7fc011ba"
+    },
+    "armour.webp": {
+      "bytes": 43248,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9ea07a0956ab7a83015ce9f1656d7fd732fd7a64524cf3f8ed4deb33dc795d07"
+    },
+    "battle-cavern.webp": {
+      "bytes": 132612,
+      "size": [
+        1600,
+        900
+      ],
+      "sha256": "82652bd33593c9304b71b9bc431ae38c1dd83cce01e03282b9702e39890225cf"
+    },
     "battle-environment.webp": {
       "bytes": 382426,
       "size": [
@@ -21,6 +47,22 @@
       ],
       "sha256": "9570410c12b2737c89af7737d2180acae7425700b95fb3937e480082dd3853b2"
     },
+    "battle-forest.webp": {
+      "bytes": 247308,
+      "size": [
+        1600,
+        900
+      ],
+      "sha256": "78bc565afb469829602561df9c7891e2c56398692fccd5e3b29e9634bb7a83c3"
+    },
+    "battle-quarry.webp": {
+      "bytes": 86072,
+      "size": [
+        1600,
+        900
+      ],
+      "sha256": "2854722705a5c86009a75b0fd181efbc53957810c2d522f1e461b4b569963c55"
+    },
     "battle-sky.webp": {
       "bytes": 301766,
       "size": [
@@ -28,6 +70,14 @@
         941
       ],
       "sha256": "432218dc9df212df0ddf6319bdae995eb2dfe56c7f54bed210992f5037744b28"
+    },
+    "battle-tower.webp": {
+      "bytes": 188384,
+      "size": [
+        1600,
+        900
+      ],
+      "sha256": "c6cd86f774dc1d61eeaa92440e833cb8b9c1073e56629265fa7ea858cdca38fb"
     },
     "beacon-dormant.webp": {
       "bytes": 33606,
@@ -69,6 +119,14 @@
       ],
       "sha256": "c0ebc7e535709f3227b373bd8ef21fd8dcf60ee2f0c1380fcac8b4e72dabde3a"
     },
+    "cavern-ground.webp": {
+      "bytes": 116124,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "e8092946412aa675da1b19b90001164bba223502ffc93974b2fbaf307f7204f5"
+    },
     "chest-open.webp": {
       "bytes": 45660,
       "size": [
@@ -101,6 +159,14 @@
       ],
       "sha256": "29ff236b0fde563712af8889948cf2d5901cd3683ea71e4a5d5ae28a8f088965"
     },
+    "crystal.webp": {
+      "bytes": 30258,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "46232d8668fa4f484947dbfbbc4820b3c244cfc140091549a230446d00dc44ff"
+    },
     "desk.webp": {
       "bytes": 45958,
       "size": [
@@ -109,6 +175,206 @@
       ],
       "sha256": "891c30f8075210cfdb4231d09acc067a3b4c221460e0d2f6f1245b80484aa1f9"
     },
+    "enemy-ashling-attack.webp": {
+      "bytes": 40324,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "3cb4638778747e004c8c5033974c897b92888c4468432b69a9ef42ab1267fd29"
+    },
+    "enemy-ashling.webp": {
+      "bytes": 38962,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a880b68fa29fa0982f5147b5566d6a3cf306016caea7ce5ffdcb38ecdc6b3f38"
+    },
+    "enemy-eye-attack.webp": {
+      "bytes": 40612,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "03a3cd7db15b7d10119d9370167d827c55270189a46ee5968c3b441dc70158a9"
+    },
+    "enemy-eye.webp": {
+      "bytes": 39956,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9a2a1e60184a568b0704bc9eafdbfe217335911f6caeee22dd6e833ba3f99e2e"
+    },
+    "enemy-guardian-attack.webp": {
+      "bytes": 38050,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "cee779fa49cc0906f5bd1542d66bbeb4f34258fe042386650d698298bb197aff"
+    },
+    "enemy-guardian.webp": {
+      "bytes": 38046,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "230291d5dabf2ca814b184589fe2aac48687c44993ad9fd71e5419ef37458799"
+    },
+    "enemy-hollow-attack.webp": {
+      "bytes": 43448,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "b9edf7d113965f8a46bf60e416940a031d13c0e73db50e2cda9aad8baabd6ecf"
+    },
+    "enemy-hollow.webp": {
+      "bytes": 42690,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ce7a315aa2665257456335aab83f2b6e6713dab00d986278db3aee2676988bef"
+    },
+    "enemy-hopper-attack.webp": {
+      "bytes": 37032,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "840d405e23ceee5361cbee4cdb3b95d101272f9517f284d229422d550c560eea"
+    },
+    "enemy-hopper.webp": {
+      "bytes": 36638,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "aa4b1b4119cb94f4c3c0570545281645cb02e25e0a02b84bb5fd3536d0234272"
+    },
+    "enemy-moth-attack.webp": {
+      "bytes": 40300,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "d2846f0a29cd226ab13adf5f31d1a9108c7d41fb0ec556c94cc218099140236c"
+    },
+    "enemy-moth.webp": {
+      "bytes": 39452,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "4f2f9613e468ebf0b0202784188cc4dab0a05de1112a1ff1ce5a085c114485fe"
+    },
+    "enemy-nibbler-attack.webp": {
+      "bytes": 34872,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "28d5ef170f58aaf794abf9a6828ec649e842a90883aacf90fe602c0f1595424f"
+    },
+    "enemy-nibbler.webp": {
+      "bytes": 34538,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "804a16adf1a5f14935ee92e04f193d1bde255570c0a59d1dfe1417c5310c4cfc"
+    },
+    "enemy-pebbleback-attack.webp": {
+      "bytes": 33470,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "98cc1208c14b00d91c91ff4ac643fb52d37f08e603192a40fda13e7c432d97f2"
+    },
+    "enemy-pebbleback.webp": {
+      "bytes": 32578,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "67d4d21db87baa47438eb02953db02f371ce22c62aea7d4691d0f2acde7d56d5"
+    },
+    "enemy-root-attack.webp": {
+      "bytes": 44842,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "892b14d96d1e5aa1617db563a5c58a7ddb22bfb3915b0739fe6ec212b2abf8fb"
+    },
+    "enemy-root.webp": {
+      "bytes": 44262,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "cc84c41225fb2e838b11647f8132b1c8396046151529dbf7b85030649a20e54b"
+    },
+    "enemy-thorn-attack.webp": {
+      "bytes": 45138,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "1f74a44b83a46c9808c137e1810167056566f79423e5f16ab7e03113d6d8d209"
+    },
+    "enemy-thorn.webp": {
+      "bytes": 44710,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "636cdf9e76c551c3edc964aedecfe64116a19b6a99cc6139950ea812af3096d1"
+    },
+    "enemy-twig-attack.webp": {
+      "bytes": 48566,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "7ed234395dff82f5c240db4cfbc0f99154addbac9d7dc2686856d9a4f0a7972e"
+    },
+    "enemy-twig.webp": {
+      "bytes": 48462,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a4e8b35b91bf4b41d656cece3c4e76131e8f65bb0a576c6d099691242a3bea40"
+    },
+    "enemy-wisp-attack.webp": {
+      "bytes": 34958,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "6fcd3cfbc406b87f47973cd9eaf3cfe9358d12fe1953cb497598adc0d98c2bc2"
+    },
+    "enemy-wisp.webp": {
+      "bytes": 34698,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "779a5a890f36cdd1565b67eb3cc08cbc44e9ea910e3f7b61a2ac21e478c3e050"
+    },
+    "fern.webp": {
+      "bytes": 36736,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "ff4e58635a0d66a5a130d12febe60c1cb70c81afc97ce6a416feb8230cf749a6"
+    },
     "flowers.webp": {
       "bytes": 37608,
       "size": [
@@ -116,6 +382,14 @@
         512
       ],
       "sha256": "1e14c4cbe7fa7574e0b6d891745c72f0fbc1162746de2c4b6256cba3681549bf"
+    },
+    "forest-ground.webp": {
+      "bytes": 202258,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "586bbd6fdfeecfbde7f87082fba55ed6384c43ffeab983f53db96e5569f998b9"
     },
     "hearth.webp": {
       "bytes": 38152,
@@ -132,6 +406,14 @@
         1020
       ],
       "sha256": "b3967f3d859b686e80dd00556ae2a7c977f408d00184491e9b43fb73fa12290b"
+    },
+    "key.webp": {
+      "bytes": 40934,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9682cfebf63010cbb2672c5442bdf351ff971381ea74e4bc77d66d7be17ede0a"
     },
     "meadow-ground.webp": {
       "bytes": 206838,
@@ -164,6 +446,30 @@
         384
       ],
       "sha256": "13b44900382013bc211e3604dbbd54280e739e77421a4c7c6a8ab9e08cedb0f7"
+    },
+    "pillar.webp": {
+      "bytes": 38904,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "fe6688f41cb7b965ac574a144825d77e54a007273e38bf67146af01e098402a7"
+    },
+    "quarry-ground.webp": {
+      "bytes": 200766,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "dc7aa01d6a1e1f93f29f56f95b1a6621f17a61fa2ad3f329e3217071b1855959"
+    },
+    "ring.webp": {
+      "bytes": 41496,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "9f5844e0f2b8bc8111d80c3eb748e4fa65274de06826b6f9d60fe71d8b0e0faf"
     },
     "rocks.webp": {
       "bytes": 22422,
@@ -237,6 +543,46 @@
       ],
       "sha256": "704520c841494e8fc3f77138dd314bacfd9f8562512cffd698dd6848a93aff9d"
     },
+    "runes.webp": {
+      "bytes": 32936,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "2d5089e0523b245376f50eb34ca9ca6e34681b6cabc37706ed7c65f8143d3383"
+    },
+    "sanctum-ground.webp": {
+      "bytes": 206116,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "3345e07be9ca814838f7a8013cc93be4e86b8086f6d23b9f62c38a42e4f3338b"
+    },
+    "seal.webp": {
+      "bytes": 25794,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "a06cecd6f8ab89b68ff48e933ceb270d7e7f56012f4c38bb91b26c3a37b380d0"
+    },
+    "seed.webp": {
+      "bytes": 41948,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "0a666ff8ac1348c1e575d0b504d93084f1e0f8856e92cc31e425ceaf0d5f1553"
+    },
+    "shrine-ground.webp": {
+      "bytes": 210632,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "2ab854f46dd51e38c54af681a3e0188a3e4c691ddf379ad18a870da3da40e58a"
+    },
     "sign.webp": {
       "bytes": 39976,
       "size": [
@@ -245,6 +591,14 @@
       ],
       "sha256": "ee0b2bf7ff46e4ab6f3da93ba9669ad380959b47d62ac4cb294e81abebe773c5"
     },
+    "smith.webp": {
+      "bytes": 45376,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "e80ad8152d8336672f926e2c0eb2c541e43af2781b9762becda72876183d0983"
+    },
     "stool.webp": {
       "bytes": 37924,
       "size": [
@@ -252,6 +606,14 @@
         512
       ],
       "sha256": "e84382b906e71cdb902b0dc0dbafc6815d5999a43fb7596e6f236d667b2074de"
+    },
+    "tower-ground.webp": {
+      "bytes": 205718,
+      "size": [
+        1600,
+        1143
+      ],
+      "sha256": "2d853536fb548a66d123dc160c216c39f11ee30de630dcbd21d6803359f334a8"
     },
     "town-ground.webp": {
       "bytes": 234816,
@@ -268,6 +630,14 @@
         512
       ],
       "sha256": "7c16053f8dde7db3542bfbaeb907ed3dfe1c4d95507c9df343896a00171c9165"
+    },
+    "weapon.webp": {
+      "bytes": 40182,
+      "size": [
+        512,
+        512
+      ],
+      "sha256": "f2cbdf6439b0a5d9df38f7bd2f899cf7f7f045f7dc171bde97c48ca9603b36df"
     }
   }
 }
