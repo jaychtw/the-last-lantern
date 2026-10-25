@@ -15,3 +15,6 @@ playtest/*
 
 !playtest/the-last-lantern-gate-b.zip
 !playtest/GATE-B-SHA256SUMS.txt
+
+!playtest/the-last-lantern-gate-c.zip
+!playtest/GATE-C-SHA256SUMS.txt

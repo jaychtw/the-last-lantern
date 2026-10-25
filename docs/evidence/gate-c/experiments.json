@@ -1,0 +1,243 @@
+{
+  "warning": "Intrusive diagnostics and rejected candidates are not final acceptance results. Marker batching and idle-frame reuse were both withdrawn after frame-pacing checks. Only a lazy combat backdrop cache and development-tool hardening ship; normal exploration rendering and marker code are restored verbatim.",
+  "passes": [
+    {
+      "label": "baseline-trace",
+      "profile": "profile-baseline-trace.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.345444999999017,
+      "observedCallbacks": 267,
+      "callbacksPerSecond": 31.993500646164637,
+      "mainThreadTaskSeconds": 8.302308,
+      "scriptSecondsIncludingNativeCanvas": 6.0854420000000005,
+      "note": "Diagnostic full Chromium trace of the approved build; nested trace durations are not additive CPU totals."
+    },
+    {
+      "label": "before",
+      "profile": "profile-before.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.387073999998393,
+      "observedCallbacks": 251,
+      "callbacksPerSecond": 29.927004340255984,
+      "mainThreadTaskSeconds": 8.377436000000001,
+      "scriptSecondsIncludingNativeCanvas": 6.233295,
+      "note": "Initial instrumented approved-build reference."
+    },
+    {
+      "label": "context-cpu",
+      "profile": "profile-context-cpu.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.311709000001429,
+      "observedCallbacks": 275,
+      "callbacksPerSecond": 33.085855147232984,
+      "mainThreadTaskSeconds": 8.302277,
+      "scriptSecondsIncludingNativeCanvas": 6.078642,
+      "note": "Diagnostic CPU/readback-oriented context; no reliable acceptance gain; not shipped."
+    },
+    {
+      "label": "context-desync",
+      "profile": "profile-context-desync.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.37192800000048,
+      "observedCallbacks": 279,
+      "callbacksPerSecond": 33.32565688572382,
+      "mainThreadTaskSeconds": 6.125005,
+      "scriptSecondsIncludingNativeCanvas": 5.814198,
+      "note": "Diagnostic low-latency context hint; no stable acceptance gain; not shipped."
+    },
+    {
+      "label": "crop-walk",
+      "profile": "profile-crop-walk.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.606088999993517,
+      "observedCallbacks": 224,
+      "callbacksPerSecond": 26.02808313975939,
+      "mainThreadTaskSeconds": 8.594935,
+      "scriptSecondsIncludingNativeCanvas": 0.330634,
+      "note": "Rejected: walk-atlas crop views alone did not improve whole-frame pacing."
+    },
+    {
+      "label": "diagnostic-no-ground",
+      "profile": "profile-diagnostic-no-ground.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.308203000000503,
+      "observedCallbacks": 336,
+      "callbacksPerSecond": 40.4419583873889,
+      "mainThreadTaskSeconds": 8.260781,
+      "scriptSecondsIncludingNativeCanvas": 0.27314299999999997,
+      "note": "Diagnostic omission only; never production artwork or acceptance evidence."
+    },
+    {
+      "label": "diagnostic-no-hero",
+      "profile": "profile-diagnostic-no-hero.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.34675900000002,
+      "observedCallbacks": 288,
+      "callbacksPerSecond": 34.50441063411551,
+      "mainThreadTaskSeconds": 8.335568,
+      "scriptSecondsIncludingNativeCanvas": 0.27244799999999997,
+      "note": "Diagnostic omission only; never production artwork or acceptance evidence."
+    },
+    {
+      "label": "diagnostic-no-tree",
+      "profile": "profile-diagnostic-no-tree.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.130639000002702,
+      "observedCallbacks": 486,
+      "callbacksPerSecond": 59.773899689783114,
+      "mainThreadTaskSeconds": 6.709742,
+      "scriptSecondsIncludingNativeCanvas": 5.573563,
+      "note": "Diagnostic omission only; never production artwork or acceptance evidence."
+    },
+    {
+      "label": "flush-attribution",
+      "profile": "profile-flush-attribution.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.340282000004663,
+      "observedCallbacks": 266,
+      "callbacksPerSecond": 31.89340600232118,
+      "mainThreadTaskSeconds": 8.328989,
+      "scriptSecondsIncludingNativeCanvas": 6.071168,
+      "note": "Native canvas work can be charged to the next save/restore; this is not reliable per-asset self time."
+    },
+    {
+      "label": "materialized",
+      "profile": "profile-materialized.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.337316000004648,
+      "observedCallbacks": 253,
+      "callbacksPerSecond": 30.345497279923052,
+      "mainThreadTaskSeconds": 8.328549,
+      "scriptSecondsIncludingNativeCanvas": 6.058368,
+      "note": "Rejected: forcing cache rasterization did not resolve the slowdown."
+    },
+    {
+      "label": "presample-blit",
+      "profile": "profile-presample-blit.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.431022999997367,
+      "observedCallbacks": 254,
+      "callbacksPerSecond": 30.126830397696615,
+      "mainThreadTaskSeconds": 8.361761000000001,
+      "scriptSecondsIncludingNativeCanvas": 0.458777,
+      "note": "Rejected: high-quality presampling and cheap blits did not improve whole-frame pacing."
+    },
+    {
+      "label": "prescale-bitmap",
+      "profile": "profile-prescale-bitmap.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.53732100000343,
+      "observedCallbacks": 181,
+      "callbacksPerSecond": 21.201030159218245,
+      "mainThreadTaskSeconds": 8.526076,
+      "scriptSecondsIncludingNativeCanvas": 0.19741799999999998,
+      "note": "Rejected: transferring cached surfaces to bitmaps did not fix frame pacing."
+    },
+    {
+      "label": "prescale-canvas",
+      "profile": "profile-prescale-canvas.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.590188000001945,
+      "observedCallbacks": 184,
+      "callbacksPerSecond": 21.419787320132965,
+      "mainThreadTaskSeconds": 8.583069,
+      "scriptSecondsIncludingNativeCanvas": 0.20006000000000002,
+      "note": "Rejected: per-asset scaled canvas cache regressed frame time."
+    },
+    {
+      "label": "prescale-exact",
+      "profile": "profile-prescale-exact.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.442869999998948,
+      "observedCallbacks": 252,
+      "callbacksPerSecond": 29.84767028273933,
+      "mainThreadTaskSeconds": 8.43013,
+      "scriptSecondsIncludingNativeCanvas": 0.234346,
+      "note": "Rejected: exact-sized draw derivatives did not yield a stable improvement."
+    },
+    {
+      "label": "retained-native",
+      "profile": "profile-retained-native.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.027484999998705,
+      "observedCallbacks": 245,
+      "callbacksPerSecond": 30.520144229486508,
+      "mainThreadTaskSeconds": 1.9920809999999998,
+      "scriptSecondsIncludingNativeCanvas": 0.19025599999999998,
+      "note": "Rejected: retained layers at output resolution still did not establish a reliable FPS improvement."
+    },
+    {
+      "label": "retained",
+      "profile": "profile-retained.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.03682399999525,
+      "observedCallbacks": 187,
+      "callbacksPerSecond": 23.267897866135993,
+      "mainThreadTaskSeconds": 2.517341,
+      "scriptSecondsIncludingNativeCanvas": 0.093679,
+      "note": "Rejected: retained DOM/Canvas layers reduced main-thread work but worsened observed rAF pacing."
+    },
+    {
+      "label": "swiftshader-control",
+      "profile": "profile-swiftshader-control.json",
+      "url": "http://127.0.0.1:8091/",
+      "wallSeconds": 8.086020000002463,
+      "observedCallbacks": 27,
+      "callbacksPerSecond": 3.3390963663201148,
+      "mainThreadTaskSeconds": 0.21541499999999997,
+      "scriptSecondsIncludingNativeCanvas": 0.058595,
+      "note": "Diagnostic only: explicitly enabled GPU pipeline still uses CPU SwiftShader; substantially slower, not representative physical GPU hardware and not shipped."
+    },
+    {
+      "label": "tree-cache",
+      "profile": "profile-tree-cache.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.377400999997917,
+      "observedCallbacks": 263,
+      "callbacksPerSecond": 31.393984840891033,
+      "mainThreadTaskSeconds": 8.365806,
+      "scriptSecondsIncludingNativeCanvas": 6.27501,
+      "note": "Rejected: tree cache alone did not improve whole-frame pacing."
+    },
+    {
+      "label": "tree-walk-lazy",
+      "profile": "profile-tree-walk-lazy.json",
+      "url": "http://127.0.0.1:8092/",
+      "wallSeconds": 8.354804999995395,
+      "observedCallbacks": 264,
+      "callbacksPerSecond": 31.59858309082564,
+      "mainThreadTaskSeconds": 8.334018,
+      "scriptSecondsIncludingNativeCanvas": 5.779918,
+      "note": "Rejected: combined crop/cache did not improve whole-frame pacing."
+    }
+  ],
+  "markerBatching": {
+    "status": "Rejected before delivery",
+    "sourcePatch": "experiment-marker-batching.patch",
+    "candidateArtifactSha256": "379bfa5b99598bce5934c41f1265e1694330c270276c8bb6265c53d9bcdc330c",
+    "primaryReport": "benchmark-after-batched.json",
+    "counterbalancedReports": [
+      "benchmark-crossover-after-1.json",
+      "benchmark-crossover-after-2.json",
+      "benchmark-crossover-after-3.json",
+      "benchmark-crossover-before-1.json",
+      "benchmark-crossover-before-2.json",
+      "benchmark-crossover-before-3.json"
+    ],
+    "reason": "Layout counts improved but town pacing did not establish a safe benefit. Baseline marker code restored; do not substitute the rejected candidate measurements for final-build results."
+  },
+  "idleFrameReuse": {
+    "status": "Rejected before delivery",
+    "sourcePatch": "experiment-idle-frame-reuse.patch",
+    "artifactSha256": "f96bf6b8762141ef75b0ae953d24390625abfc2cdd732528c1b3be4ba792d122",
+    "comparison": "comparison-idle-cache.json",
+    "schedule": "benchmark-schedule-idle-cache.json",
+    "reason": "Counterbalanced town tails remained worse; reduced-motion CPU savings did not justify a possible default-path regression."
+  },
+  "deliveredCandidate": {
+    "profile": "profile-final.json",
+    "trace": "trace-final.json.gz",
+    "artifactSha256": "a5c818100e24ecf369caff191cd52c36eb1f2ae01e450302df528cb878f137de",
+    "runtime": "Only lazy combat backdrop cache; exploration, resize, update and main are accepted source verbatim."
+  }
+}

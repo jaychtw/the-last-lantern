@@ -8,11 +8,12 @@ if not (dist / 'index.html').exists():
     raise SystemExit('Run npm run build first.')
 out = root / 'playtest'
 out.mkdir(exist_ok=True)
-archive = out / 'the-last-lantern-gate-b.zip'
-instructions = '''THE LAST LANTERN / 最後的引路燈 — Gate B full-adventure review
+archive = out / 'the-last-lantern-gate-c.zip'
+instructions = '''THE LAST LANTERN / 最後的引路燈 — Gate C performance and gameplay review
 
-This is a complete-adventure review candidate for Gate C, not an approved release.
+This is a Gate C engineering review candidate, not an approved production release.
 Requires Python 3 and a recent browser with Canvas2D/WebP. No Node.js needed to play.
+Review report: https://github.com/jaychtw/the-last-lantern/blob/main/docs/GATE-C-REVIEW.md
 
 1. Extract the entire ZIP to a folder.
 2. Open a terminal in that folder.
@@ -47,8 +48,10 @@ desktop/touch usability, English/Traditional Chinese readability and comfort.
 The revised art uses original Blender-authored 3D models, materials, lights
 and character poses, composited as independent prerendered layers/frames.
 The supplied concept collage is a reference only, never a playable image.
-The owner approved the Gate A visual direction. Full-adventure gameplay,
-pacing, sound, balance and new scenes now await Gate C human review.
+The owner accepted the Gate B presentation as the minimum visual baseline.
+The artwork, campaign and visual identity are preserved. Read the Gate C
+report for measured performance gaps; desktop cloud exploration remains
+below target. Human gameplay, pacing, sound and balance review remain open.
 The camera is fixed and lighting is primarily baked. Performance must be
 reviewed on actual devices; source render time is not runtime frame time.
 
@@ -73,6 +76,6 @@ files['SHA256SUMS.txt']=''.join(f'{digest}  {name}\n' for name,digest in manifes
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
     for name,data in files.items(): z.writestr(name,data)
 digest=hashlib.sha256(archive.read_bytes()).hexdigest()
-(out/'GATE-B-SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n')
+(out/'GATE-C-SHA256SUMS.txt').write_text(f'{digest}  {archive.name}\n')
 (root/'docs/evidence/build-manifest.json').write_text(json.dumps({'version':json.loads((root/'package.json').read_text())['version'],'archive':archive.name,'archive_sha256':digest,'files':manifest},indent=2)+'\n')
 print(f'{archive} ({archive.stat().st_size} bytes)\nSHA-256: {digest}')

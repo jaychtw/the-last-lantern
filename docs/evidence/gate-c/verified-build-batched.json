@@ -1,0 +1,21 @@
+{
+  "version": "0.4.0-gate-c",
+  "productionFiles": {
+    "./assets/index-zS67AcHH.js": {
+      "bytes": 92642,
+      "sha256": "592aad066119ccfcc9e3f03d95dc07b3c82006e28d3650c8049058b707b1b993"
+    },
+    "./assets/index-R7wCqtNX.css": {
+      "bytes": 34282,
+      "sha256": "c1ac719e6cf5b0da6357a26ee90aa62198bd81b27bd5d59d841aa1efe5eb5b96"
+    }
+  },
+  "browser": "154.0.8037.57",
+  "domainTests": 31,
+  "browserChecks": 22,
+  "suite": "npm run test:browser; actual production preview under /the-last-lantern/",
+  "runtimeChangeAfterSuite": "None; subsequent edits are documentation and measurement/package tooling only.",
+  "CI": "Not run",
+  "deployment": false,
+  "productionAcceptance": false
+}

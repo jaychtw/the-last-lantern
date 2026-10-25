@@ -1,0 +1,74 @@
+{
+  "version": "0.4.0-gate-c",
+  "build": "index-zS67AcHH.js",
+  "capture": "Actual successful complete browser campaigns on the final runtime. Recordings are best-effort 25 FPS captures at reduced resolution, not quantitative performance or physical-device evidence.",
+  "audio": "Silent: Playwright capture does not record the synthesized game audio.",
+  "recordings": [
+    {
+      "original": "campaign-desktop-en.webm",
+      "originalSha256": "f3695286cb394447e9aee448aa1599926f8fb72129ac1efa8c03f2e6739a7b38",
+      "file": "campaign-desktop-en.mp4",
+      "sha256": "e6adab8007f7eb42c0648155b0958032b60ad6fc07bad51b994ceb609e88d48d",
+      "bytes": 22461394,
+      "durationSeconds": 667.2,
+      "stream": {
+        "codec_name": "h264",
+        "width": 720,
+        "height": 500,
+        "r_frame_rate": "25/1"
+      },
+      "transcode": "H.264/yuv420p/CRF 28/fast; original duration retained. Even source dimensions retained; odd dimensions would be padded, never stretched."
+    },
+    {
+      "original": "campaign-phone-zh-TW.webm",
+      "originalSha256": "17c8e7464ae6fa1302faf2252f293d99cc8523bfa2f9516a312c04ebf71d3cb8",
+      "file": "campaign-phone-zh-TW.mp4",
+      "sha256": "c2a0c6b28100f4eeb3f36078ade209c82b0bade2241f9dc5f33bf2bff72ed5f3",
+      "bytes": 18495334,
+      "durationSeconds": 625.36,
+      "stream": {
+        "codec_name": "h264",
+        "width": 312,
+        "height": 674,
+        "r_frame_rate": "25/1"
+      },
+      "transcode": "H.264/yuv420p/CRF 28/fast; original duration retained. Even source dimensions retained; odd dimensions would be padded, never stretched."
+    }
+  ],
+  "excerpt": {
+    "source": "campaign-desktop-en.webm",
+    "file": "gate-c/gameplay.mp4",
+    "sha256": "5903f9191c2459cd157b865311bd82a66cb12d1923bcacce761279266567af5c",
+    "bytes": 4483680,
+    "durationSeconds": 62.96,
+    "stream": {
+      "codec_name": "h264",
+      "width": 720,
+      "height": 500,
+      "r_frame_rate": "25/1"
+    },
+    "cutsSeconds": [
+      [
+        0,
+        12
+      ],
+      [
+        186,
+        198
+      ],
+      [
+        223,
+        235
+      ],
+      [
+        576,
+        591
+      ],
+      [
+        615,
+        627
+      ]
+    ],
+    "editing": "Five real-time excerpts selected around actual campaign capture events; no speed changes, interpolation, generated frames or substituted mockups."
+  }
+}

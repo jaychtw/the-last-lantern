@@ -1,0 +1,341 @@
+{
+  "method": "Source order alternates across scenarios and reverses across repetitions. One browser at a time; not simultaneous benchmarking.",
+  "schedule": [
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-before-0-town-desktop.json",
+      "recordedAt": "2026-10-25T14:41:26.466Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-after-0-town-desktop.json",
+      "recordedAt": "2026-10-25T14:41:44.384Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-after-0-town-phone.json",
+      "recordedAt": "2026-10-25T14:42:01.938Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-before-0-town-phone.json",
+      "recordedAt": "2026-10-25T14:42:19.152Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-before-0-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:42:36.731Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-after-0-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:42:54.777Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-after-0-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:43:12.353Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-before-0-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:43:29.633Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-before-0-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:43:46.666Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-after-0-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:44:03.861Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-after-0-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:44:21.153Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-before-0-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:44:38.244Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-before-0-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:44:55.310Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-after-0-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:45:13.120Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 0,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-after-0-combat-phone.json",
+      "recordedAt": "2026-10-25T14:45:30.753Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 0,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-before-0-combat-phone.json",
+      "recordedAt": "2026-10-25T14:45:48.067Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-after-1-town-desktop.json",
+      "recordedAt": "2026-10-25T14:46:05.491Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-before-1-town-desktop.json",
+      "recordedAt": "2026-10-25T14:46:23.171Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-before-1-town-phone.json",
+      "recordedAt": "2026-10-25T14:46:40.628Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-after-1-town-phone.json",
+      "recordedAt": "2026-10-25T14:46:57.720Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-after-1-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:47:15.144Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-before-1-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:47:33.639Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-before-1-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:47:52.295Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-after-1-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:48:09.585Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-after-1-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:48:28.364Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-before-1-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:48:45.979Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-before-1-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:49:03.909Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-after-1-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:49:20.950Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-after-1-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:49:37.980Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-before-1-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:49:55.774Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 1,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-before-1-combat-phone.json",
+      "recordedAt": "2026-10-25T14:50:13.458Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 1,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-after-1-combat-phone.json",
+      "recordedAt": "2026-10-25T14:50:30.862Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-before-2-town-desktop.json",
+      "recordedAt": "2026-10-25T14:50:48.234Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "town-desktop",
+      "file": "benchmark-paired-idle-cache-after-2-town-desktop.json",
+      "recordedAt": "2026-10-25T14:51:05.653Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-after-2-town-phone.json",
+      "recordedAt": "2026-10-25T14:51:23.055Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "town-phone",
+      "file": "benchmark-paired-idle-cache-before-2-town-phone.json",
+      "recordedAt": "2026-10-25T14:51:40.221Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-before-2-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:51:57.460Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "overworld-desktop",
+      "file": "benchmark-paired-idle-cache-after-2-overworld-desktop.json",
+      "recordedAt": "2026-10-25T14:52:15.357Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-after-2-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:52:32.933Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "overworld-phone",
+      "file": "benchmark-paired-idle-cache-before-2-overworld-phone.json",
+      "recordedAt": "2026-10-25T14:52:50.017Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-before-2-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:53:07.363Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "dungeon-desktop",
+      "file": "benchmark-paired-idle-cache-after-2-dungeon-desktop.json",
+      "recordedAt": "2026-10-25T14:53:24.739Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-after-2-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:53:42.064Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "dungeon-phone",
+      "file": "benchmark-paired-idle-cache-before-2-dungeon-phone.json",
+      "recordedAt": "2026-10-25T14:53:59.285Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-before-2-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:54:16.399Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "combat-desktop",
+      "file": "benchmark-paired-idle-cache-after-2-combat-desktop.json",
+      "recordedAt": "2026-10-25T14:54:33.848Z"
+    },
+    {
+      "variant": "after",
+      "repeat": 2,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-after-2-combat-phone.json",
+      "recordedAt": "2026-10-25T14:54:51.789Z"
+    },
+    {
+      "variant": "before",
+      "repeat": 2,
+      "scenario": "combat-phone",
+      "file": "benchmark-paired-idle-cache-before-2-combat-phone.json",
+      "recordedAt": "2026-10-25T14:55:09.385Z"
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "method": "Actual battle canvases and trusted Attack input, identical validated presentation checkpoints and virtual time. Not a complete campaign claim.",
+  "captures": [
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "idle",
+      "file": "visual-before-combat-meadow-1440-idle.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2005,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "player",
+      "file": "visual-before-combat-meadow-1440-player.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2205,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "enemy",
+      "file": "visual-before-combat-meadow-1440-enemy.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 3105,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "idle",
+      "file": "visual-before-combat-sanctum-1440-idle.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2004,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "player",
+      "file": "visual-before-combat-sanctum-1440-player.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2204,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2004
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "enemy",
+      "file": "visual-before-combat-sanctum-1440-enemy.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 3104,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2004
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "idle",
+      "file": "visual-before-combat-meadow-390-idle.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2005,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "player",
+      "file": "visual-before-combat-meadow-390-player.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2205,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "enemy",
+      "file": "visual-before-combat-meadow-390-enemy.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 3105,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "idle",
+      "file": "visual-before-combat-sanctum-390-idle.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2003,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "player",
+      "file": "visual-before-combat-sanctum-390-player.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 2203,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2003
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "before",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "enemy",
+      "file": "visual-before-combat-sanctum-390-enemy.png",
+      "build": "./assets/index-Q4S8ARqg.js",
+      "timing": {
+        "now": 3103,
+        "raf": 3088,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2003
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "idle",
+      "file": "visual-after-combat-meadow-1440-idle.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2005,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "player",
+      "file": "visual-after-combat-meadow-1440-player.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2205,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "meadow",
+      "phase": "enemy",
+      "file": "visual-after-combat-meadow-1440-enemy.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 3105,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "idle",
+      "file": "visual-after-combat-sanctum-1440-idle.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2005,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "player",
+      "file": "visual-after-combat-sanctum-1440-player.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2205,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 1440,
+      "scene": "sanctum",
+      "phase": "enemy",
+      "file": "visual-after-combat-sanctum-1440-enemy.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 3105,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2005
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "idle",
+      "file": "visual-after-combat-meadow-390-idle.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2004,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "player",
+      "file": "visual-after-combat-meadow-390-player.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2204,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2004
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "meadow",
+      "phase": "enemy",
+      "file": "visual-after-combat-meadow-390-enemy.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 3104,
+        "raf": 3104,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2004
+          }
+        ],
+        "phase": "enemy"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "idle",
+      "file": "visual-after-combat-sanctum-390-idle.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2003,
+        "raf": 2000,
+        "clicks": []
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "player",
+      "file": "visual-after-combat-sanctum-390-player.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 2203,
+        "raf": 2192,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2003
+          }
+        ],
+        "phase": "player"
+      }
+    },
+    {
+      "variant": "after",
+      "width": 390,
+      "scene": "sanctum",
+      "phase": "enemy",
+      "file": "visual-after-combat-sanctum-390-enemy.png",
+      "build": "./assets/index-zS67AcHH.js",
+      "timing": {
+        "now": 3103,
+        "raf": 3088,
+        "clicks": [
+          {
+            "action": "attack",
+            "now": 2003
+          }
+        ],
+        "phase": "enemy"
+      }
+    }
+  ],
+  "historicalOnly": true,
+  "note": "Pre-alignment visual-harness diagnostics. A per-page 1 ms monotonic clock origin offset changed animated captures. Current capture files are replaced by the aligned final run; these historical hashes are not assertions about current files."
+}

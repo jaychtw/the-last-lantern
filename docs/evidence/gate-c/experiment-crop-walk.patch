@@ -1,0 +1,48 @@
+diff --git a/src/renderer.ts b/src/renderer.ts
+index 108a013..793c7ef 100644
+--- a/src/renderer.ts
++++ b/src/renderer.ts
+@@ -13,6 +13,7 @@ export class World {
+   private scene:Scene='town';private time=0;private direction=0;private frame=0;private game!:Game;
+   private x=0;private y=0;private zoom=1;private width=1;private height=1;private dpr=1;
+   private running=false;private last=performance.now();private isMoving=false;private battleRaf=0;private fade=0;
++  private walkFrames=new Map<Frame,ImageBitmap>();
+   frameTimes:number[]=[];reduced=false;
+   app={start:()=>{this.last=performance.now();this.running=true;},stop:()=>{this.running=false;}};
+   constructor(private host:HTMLElement,private tick:(dt:number)=>void,private click:(p:Point)=>void){}
+@@ -33,7 +34,18 @@ export class World {
+     const response=await fetch(`${import.meta.env.BASE_URL}art3d/runtime.json`);if(!response.ok)throw Error('3D asset manifest unavailable');this.manifest=await response.json() as Manifest;
+     const shared=Object.entries(this.manifest.assets).filter(([name])=>!name.endsWith('-ground')&&!name.startsWith('battle-')&&!name.startsWith('enemy-')&&name!=='blob');
+     this.core=new Set([...shared.map(([name])=>name),'walk',...Object.keys(this.manifest.poses)]);
+-    await Promise.all([...shared.map(([name,a])=>this.image(name,a.file)),this.image('walk','rowan-walk.webp'),...Object.entries(this.manifest.poses).map(([name,p])=>this.image(name,p.file))]);await this.prepare(g);
++    await Promise.all([...shared.map(([name,a])=>this.image(name,a.file)),this.image('walk','rowan-walk.webp'),...Object.entries(this.manifest.poses).map(([name,p])=>this.image(name,p.file))]);
++    // Crop without resampling once. A high-quality scaled draw from the large
++    // atlas otherwise repeatedly processes far more pixels than this one pose.
++    if(typeof createImageBitmap==='function'){
++      const atlas=this.images.walk;
++      const results=await Promise.allSettled(Object.values(this.manifest.walk).flat().map(async f=>({frame:f,image:await createImageBitmap(atlas,f.x,f.y,f.w,f.h)})));
++      if(results.every(result=>result.status==='fulfilled')){
++        for(const result of results)if(result.status==='fulfilled')this.walkFrames.set(result.value.frame,result.value.image);
++        delete this.images.walk;
++      }else for(const result of results)if(result.status==='fulfilled')result.value.image.close();
++    }
++    await this.prepare(g);
+     const context=this.canvas.getContext('2d',{alpha:false});if(!context)throw Error('Canvas unavailable');this.ctx=context;
+     this.canvas.setAttribute('aria-hidden','true');this.host.appendChild(this.canvas);new ResizeObserver(()=>this.resize()).observe(this.host);this.resize();this.build(g);
+     this.canvas.addEventListener('pointerdown',e=>{const r=this.canvas.getBoundingClientRect(),x=(e.clientX-r.left-this.x)/this.zoom,y=(e.clientY-r.top-this.y)/this.zoom;this.click({x,y:500+(y-500)/Math.SQRT1_2});});
+@@ -82,7 +94,7 @@ export class World {
+     this.y=sh*this.zoom<this.height?(this.height-sh*this.zoom)/2:-Math.max(0,Math.min(sh*this.zoom-this.height,p.y*this.zoom-this.height*.64));
+   }
+   private asset(ctx:CanvasRenderingContext2D,name:string,x:number,y:number,scale=1){const a=this.manifest.assets[name],image=this.images[name];if(!a||!image)return;const s=a.scale*scale,w=a.w*s,h=a.h*s;ctx.drawImage(image,x-a.anchor[0]*w,y-a.anchor[1]*h,w,h);}
+-  private pose(ctx:CanvasRenderingContext2D,image:HTMLImageElement,f:Frame,x:number,y:number,size:number){const h=size*f.h/f.w;ctx.drawImage(image,f.x,f.y,f.w,f.h,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);}
++  private pose(ctx:CanvasRenderingContext2D,image:HTMLImageElement|undefined,f:Frame,x:number,y:number,size:number){const h=size*f.h/f.w,frame=this.walkFrames.get(f);if(frame)ctx.drawImage(frame,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);else if(image)ctx.drawImage(image,f.x,f.y,f.w,f.h,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);}
+   render(){
+     if(!this.ctx||!this.manifest||!this.game)return;const ctx=this.ctx,g=this.game;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.globalAlpha=1;ctx.fillStyle=g.scene==='interior'?'#211e19':'#699a40';ctx.fillRect(0,0,this.width,this.height);
+     ctx.save();ctx.translate(this.x,this.y);ctx.scale(this.zoom,this.zoom);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+@@ -120,5 +132,5 @@ export class World {
+       this.collect(now-previous);previous=now;if(!this.reduced)this.battleRaf=requestAnimationFrame(draw);
+     };this.battleRaf=requestAnimationFrame(draw);
+   }
+-  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0),resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
++  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length+this.walkFrames.size,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0)+[...this.walkFrames.values()].reduce((n,image)=>n+image.width*image.height*4,0),croppedWalkFrames:this.walkFrames.size,resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
+ }

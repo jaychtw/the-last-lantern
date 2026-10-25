@@ -1,0 +1,48 @@
+{
+  "method": "Actual trusted d-pad taps in a fresh game, event dispatch to the next rAF after observed movement; upper-bound presentation opportunity, not hardware input-to-photon. Eight alternating safe left/right taps per build. Real time; no canvas wrappers.",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "devicePixelRatio": 2,
+  "touchEmulation": true,
+  "headless": true,
+  "samples": [
+    {
+      "variant": "before",
+      "browser": "154.0.8037.57",
+      "renderResolution": 1.5,
+      "intervalsMs": [
+        52.899999998509884,
+        47.100000001490116,
+        48.399999998509884,
+        46.69999999552965,
+        48.70000000298023,
+        50,
+        46.899999998509884,
+        30.299999997019768
+      ],
+      "meanMs": 46.37499999906868,
+      "p95Ms": 52.899999998509884,
+      "maxMs": 52.899999998509884
+    },
+    {
+      "variant": "after",
+      "browser": "154.0.8037.57",
+      "renderResolution": 1.5,
+      "intervalsMs": [
+        51.5,
+        44.400000005960464,
+        36.5,
+        28.30000000447035,
+        46.20000000298023,
+        45.599999994039536,
+        31.100000001490116,
+        30.899999998509884
+      ],
+      "meanMs": 39.31250000093132,
+      "p95Ms": 51.5,
+      "maxMs": 51.5
+    }
+  ]
+}

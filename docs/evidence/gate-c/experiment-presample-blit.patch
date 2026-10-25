@@ -1,0 +1,61 @@
+diff --git a/src/renderer.ts b/src/renderer.ts
+index 108a013..d91767f 100644
+--- a/src/renderer.ts
++++ b/src/renderer.ts
+@@ -13,6 +13,7 @@ export class World {
+   private scene:Scene='town';private time=0;private direction=0;private frame=0;private game!:Game;
+   private x=0;private y=0;private zoom=1;private width=1;private height=1;private dpr=1;
+   private running=false;private last=performance.now();private isMoving=false;private battleRaf=0;private fade=0;
++  private rasters=new Map<string,ImageBitmap>();private rasterBytes=0;
+   frameTimes:number[]=[];reduced=false;
+   app={start:()=>{this.last=performance.now();this.running=true;},stop:()=>{this.running=false;}};
+   constructor(private host:HTMLElement,private tick:(dt:number)=>void,private click:(p:Point)=>void){}
+@@ -42,7 +43,7 @@ export class World {
+   private collect(ms:number){if(ms>0&&ms<2000){this.frameTimes.push(ms);if(this.frameTimes.length>3600)this.frameTimes.shift();}}
+   private add(name:string,x:number,y:number,scale=1){this.actors.push({name,x,y,scale,depth:y});}
+   build(g:Game){
+-    this.scene=g.scene;this.game=g;this.actors=[];this.fade=this.reduced?0:1;
++    this.clearRasters();this.scene=g.scene;this.game=g;this.actors=[];this.fade=this.reduced?0:1;
+     if(g.scene==='town'){
+       this.add('cottage-copper',250,105,.7);this.add('cottage',800,90,.65);this.add('cottage-copper',1170,150,.6);
+       this.add('cottage',350,415);this.add('cottage-copper',832,355,.98);this.add('beacon',625,335,.78);this.add('mira',635,450,.9);
+@@ -72,7 +73,7 @@ export class World {
+ 
+     this.update(g,0,false);this.render();
+   }
+-  private resize(){this.width=this.host.clientWidth;this.height=this.host.clientHeight;this.dpr=Math.min(devicePixelRatio,1.5);this.canvas.width=Math.round(this.width*this.dpr);this.canvas.height=Math.round(this.height*this.dpr);this.zoom=this.width<600?.88:this.width<1000?1.02:1.13;if(this.game){this.update(this.game,0,false);this.render();}}
++  private resize(){this.clearRasters();this.width=this.host.clientWidth;this.height=this.host.clientHeight;this.dpr=Math.min(devicePixelRatio,1.5);this.canvas.width=Math.round(this.width*this.dpr);this.canvas.height=Math.round(this.height*this.dpr);this.zoom=this.width<600?.88:this.width<1000?1.02:1.13;if(this.game){this.update(this.game,0,false);this.render();}}
+   update(g:Game,dt:number,moving:boolean,dx=0,dy=0){
+     if(g.scene!==this.scene)this.build(g);this.game=g;this.time+=dt;this.isMoving=moving;
+     if(moving&&(dx||dy))this.direction=(Math.round(Math.atan2(dx,dy)/(Math.PI/4))+8)%8;
+@@ -81,12 +82,20 @@ export class World {
+     this.x=sw*this.zoom<this.width?(this.width-sw*this.zoom)/2:-Math.max(0,Math.min(sw*this.zoom-this.width,p.x*this.zoom-this.width*.5));
+     this.y=sh*this.zoom<this.height?(this.height-sh*this.zoom)/2:-Math.max(0,Math.min(sh*this.zoom-this.height,p.y*this.zoom-this.height*.64));
+   }
+-  private asset(ctx:CanvasRenderingContext2D,name:string,x:number,y:number,scale=1){const a=this.manifest.assets[name],image=this.images[name];if(!a||!image)return;const s=a.scale*scale,w=a.w*s,h=a.h*s;ctx.drawImage(image,x-a.anchor[0]*w,y-a.anchor[1]*h,w,h);}
+-  private pose(ctx:CanvasRenderingContext2D,image:HTMLImageElement,f:Frame,x:number,y:number,size:number){const h=size*f.h/f.w;ctx.drawImage(image,f.x,f.y,f.w,f.h,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);}
++  private clearRasters(){for(const image of this.rasters.values())image.close();this.rasters.clear();this.rasterBytes=0;}
++  private raster(name:string,w:number,h:number,frame?:Frame){
++    const width=Math.max(1,Math.round(w*this.zoom*this.dpr)),height=Math.max(1,Math.round(h*this.zoom*this.dpr)),key=`${name}:${width}:${height}:${frame?.x??0}:${frame?.y??0}`;
++    const old=this.rasters.get(key);if(old)return old;if(typeof OffscreenCanvas==='undefined')return null;
++    const canvas=new OffscreenCanvas(width,height),ctx=canvas.getContext('2d',{willReadFrequently:true});if(!ctx)return null;ctx.imageSmoothingQuality='high';
++    if(frame)ctx.drawImage(this.images[name],frame.x,frame.y,frame.w,frame.h,0,0,width,height);else ctx.drawImage(this.images[name],0,0,width,height);
++    ctx.getImageData(0,0,width,height);const image=canvas.transferToImageBitmap();this.rasters.set(key,image);this.rasterBytes+=width*height*4;return image;
++  }
++  private asset(ctx:CanvasRenderingContext2D,name:string,x:number,y:number,scale=1){const a=this.manifest.assets[name],image=this.images[name];if(!a||!image)return;const s=a.scale*scale,w=a.w*s,h=a.h*s,cached=this.raster(name,w,h);ctx.imageSmoothingQuality=cached?'low':'high';ctx.drawImage(cached??image,x-a.anchor[0]*w,y-a.anchor[1]*h,w,h);}
++  private pose(ctx:CanvasRenderingContext2D,image:HTMLImageElement,f:Frame,x:number,y:number,size:number){const h=size*f.h/f.w,cached=image===this.images.walk?this.raster('walk',size,h,f):null;ctx.imageSmoothingQuality=cached?'low':'high';if(cached)ctx.drawImage(cached,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);else ctx.drawImage(image,f.x,f.y,f.w,f.h,x-f.anchor[0]*size,y-f.anchor[1]*h,size,h);}
+   render(){
+     if(!this.ctx||!this.manifest||!this.game)return;const ctx=this.ctx,g=this.game;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.globalAlpha=1;ctx.fillStyle=g.scene==='interior'?'#211e19':'#699a40';ctx.fillRect(0,0,this.width,this.height);
+     ctx.save();ctx.translate(this.x,this.y);ctx.scale(this.zoom,this.zoom);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+-    ctx.drawImage(this.images[g.scene+'-ground'],0,0,g.scene==='interior'?1000:1400,g.scene==='interior'?850:1000);
++    const gw=g.scene==='interior'?1000:1400,gh=g.scene==='interior'?850:1000,ground=this.raster(g.scene+'-ground',gw,gh);ctx.imageSmoothingQuality=ground?'low':'high';ctx.drawImage(ground??this.images[g.scene+'-ground'],0,0,gw,gh);
+     for(const a of [...this.actors,{name:'hero',x:g.x,y:g.y,scale:.86,depth:g.y}].sort((a,b)=>a.depth-b.depth)){
+       if(a.name==='blob'&&g.flags.won)continue;const p=project(a);if(p.x+400<-this.x/this.zoom||p.x-400>(this.width-this.x)/this.zoom||p.y+400<-this.y/this.zoom||p.y-500>(this.height-this.y)/this.zoom)continue;
+       if(a.name==='hero')this.pose(ctx,this.images.walk,this.manifest.walk[String(this.direction)][this.frame],p.x,p.y,150*.86);
+@@ -120,5 +129,5 @@ export class World {
+       this.collect(now-previous);previous=now;if(!this.reduced)this.battleRaf=requestAnimationFrame(draw);
+     };this.battleRaf=requestAnimationFrame(draw);
+   }
+-  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0),resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
++  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0),rasterCacheBytes:this.rasterBytes,rasterCacheEntries:this.rasters.size,resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
+ }

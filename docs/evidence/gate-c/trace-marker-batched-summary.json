@@ -1,0 +1,1741 @@
+{
+  "note": "Trace durations are inclusive and nested; do not sum categories as total CPU. Diagnostic instrumentation, not acceptance timing.",
+  "events": [
+    [
+      "RunTask",
+      {
+        "count": 8772,
+        "totalInclusiveMs": 10313.902000000153,
+        "maxMs": 57.713
+      }
+    ],
+    [
+      "ThreadControllerImpl::RunTask",
+      {
+        "count": 8751,
+        "totalInclusiveMs": 10266.702000000527,
+        "maxMs": 57.336
+      }
+    ],
+    [
+      "ProxyMain::BeginMainFrame",
+      {
+        "count": 243,
+        "totalInclusiveMs": 8519.190999999995,
+        "maxMs": 57.331
+      }
+    ],
+    [
+      "WebFrameWidgetImpl::BeginMainFrame",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6517.666000000005,
+        "maxMs": 44.868
+      }
+    ],
+    [
+      "Blink.Animate.UpdateTime",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6501.906999999998,
+        "maxMs": 44.862
+      }
+    ],
+    [
+      "PageAnimator::serviceScriptedAnimations",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6499.505000000002,
+        "maxMs": 44.851
+      }
+    ],
+    [
+      "FrameRequestCallbackCollection::ExecuteFrameCallbacks",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6491.433000000002,
+        "maxMs": 44.578
+      }
+    ],
+    [
+      "FireAnimationFrame",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6490.661999999998,
+        "maxMs": 44.567
+      }
+    ],
+    [
+      "AsyncTask Run",
+      {
+        "count": 243,
+        "totalInclusiveMs": 6489.241,
+        "maxMs": 44.56
+      }
+    ],
+    [
+      "FunctionCall",
+      {
+        "count": 251,
+        "totalInclusiveMs": 6476.833000000004,
+        "maxMs": 44.352
+      }
+    ],
+    [
+      "ThreadPool_RunTask",
+      {
+        "count": 530,
+        "totalInclusiveMs": 4320.580000000002,
+        "maxMs": 16.88
+      }
+    ],
+    [
+      "TaskGraphRunner::RunTask",
+      {
+        "count": 6593,
+        "totalInclusiveMs": 4260.372999999999,
+        "maxMs": 5.485
+      }
+    ],
+    [
+      "RasterizerTaskImpl::RunOnWorkerThread",
+      {
+        "count": 5664,
+        "totalInclusiveMs": 4202.620999999989,
+        "maxMs": 5.481
+      }
+    ],
+    [
+      "RasterTask",
+      {
+        "count": 5664,
+        "totalInclusiveMs": 4176.510000000012,
+        "maxMs": 5.477
+      }
+    ],
+    [
+      "ZeroCopyRasterBuffer::Playback",
+      {
+        "count": 5664,
+        "totalInclusiveMs": 4155.829999999997,
+        "maxMs": 5.469
+      }
+    ],
+    [
+      "DisplayItemList::Raster",
+      {
+        "count": 5664,
+        "totalInclusiveMs": 3810.9459999999985,
+        "maxMs": 5.423
+      }
+    ],
+    [
+      "Commit",
+      {
+        "count": 246,
+        "totalInclusiveMs": 1774.4120000000012,
+        "maxMs": 12.132
+      }
+    ],
+    [
+      "LayerTreeHost::DoUpdateLayers",
+      {
+        "count": 246,
+        "totalInclusiveMs": 1734.8049999999992,
+        "maxMs": 12.021
+      }
+    ],
+    [
+      "WebFrameWidgetImpl::UpdateLifecycle",
+      {
+        "count": 244,
+        "totalInclusiveMs": 220.01100000000017,
+        "maxMs": 3.078
+      }
+    ],
+    [
+      "Canvas2DResourceProvider::ProduceCanvasResource",
+      {
+        "count": 244,
+        "totalInclusiveMs": 214.42399999999992,
+        "maxMs": 2.042
+      }
+    ],
+    [
+      "ProxyImpl::ReadyToCommit",
+      {
+        "count": 244,
+        "totalInclusiveMs": 154.86100000000002,
+        "maxMs": 5.975
+      }
+    ],
+    [
+      "Receive mojo message",
+      {
+        "count": 1764,
+        "totalInclusiveMs": 139.2820000000007,
+        "maxMs": 36.966
+      }
+    ],
+    [
+      "SimpleWatcher::OnHandleReady",
+      {
+        "count": 1789,
+        "totalInclusiveMs": 125.30800000000073,
+        "maxMs": 4.773
+      }
+    ],
+    [
+      "EpollEvent",
+      {
+        "count": 1781,
+        "totalInclusiveMs": 121.90000000000032,
+        "maxMs": 4.796
+      }
+    ],
+    [
+      "LayerTreeHostImpl::CommitComplete",
+      {
+        "count": 246,
+        "totalInclusiveMs": 118.59300000000005,
+        "maxMs": 4.193
+      }
+    ],
+    [
+      "auto cc::LayerTreeHostImpl::PrepareTiles()::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 492,
+        "totalInclusiveMs": 115.11300000000026,
+        "maxMs": 4.141
+      }
+    ],
+    [
+      "auto cc::TileManager::PrepareTiles(const GlobalStateThatImpactsTilePriority &)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 492,
+        "totalInclusiveMs": 114.2330000000001,
+        "maxMs": 4.14
+      }
+    ],
+    [
+      "TileManager::PrepareTiles",
+      {
+        "count": 492,
+        "totalInclusiveMs": 113.43600000000013,
+        "maxMs": 4.138
+      }
+    ],
+    [
+      "LocalFrameView::RunPaintLifecyclePhase",
+      {
+        "count": 244,
+        "totalInclusiveMs": 99.28799999999998,
+        "maxMs": 1.083
+      }
+    ],
+    [
+      "LocalFrameView::RunStyleAndLayoutLifecyclePhases",
+      {
+        "count": 305,
+        "totalInclusiveMs": 73.63800000000005,
+        "maxMs": 1.724
+      }
+    ],
+    [
+      "TileManager::CheckForCompletedTasksAndIssueSignals",
+      {
+        "count": 745,
+        "totalInclusiveMs": 73.17300000000012,
+        "maxMs": 2.531
+      }
+    ],
+    [
+      "LocalFrameView::UpdateStyleAndLayout",
+      {
+        "count": 1810,
+        "totalInclusiveMs": 71.19299999999986,
+        "maxMs": 1.622
+      }
+    ],
+    [
+      "auto cc::Scheduler::FinishImplFrame()::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 524,
+        "totalInclusiveMs": 64.6020000000002,
+        "maxMs": 3.045
+      }
+    ],
+    [
+      "Paint",
+      {
+        "count": 884,
+        "totalInclusiveMs": 63.65300000000013,
+        "maxMs": 0.6
+      }
+    ],
+    [
+      "DidNotSubmitInLastFrame",
+      {
+        "count": 278,
+        "totalInclusiveMs": 62.80000000000004,
+        "maxMs": 3.04
+      }
+    ],
+    [
+      "auto cc::Scheduler::SendDidNotProduceFrame(const viz::BeginFrameArgs &, FrameSkippedReason)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 283,
+        "totalInclusiveMs": 62.44600000000003,
+        "maxMs": 3.037
+      }
+    ],
+    [
+      "TileManager::ScheduleTasks",
+      {
+        "count": 492,
+        "totalInclusiveMs": 61.41900000000011,
+        "maxMs": 3.919
+      }
+    ],
+    [
+      "LayerTreeHostImpl::DidNotProduceFrame",
+      {
+        "count": 280,
+        "totalInclusiveMs": 60.80600000000003,
+        "maxMs": 3.031
+      }
+    ],
+    [
+      "ProxyImpl::ScheduledActionDraw",
+      {
+        "count": 244,
+        "totalInclusiveMs": 58.54799999999999,
+        "maxMs": 0.446
+      }
+    ],
+    [
+      "MainFrame.Draw",
+      {
+        "count": 244,
+        "totalInclusiveMs": 58.128,
+        "maxMs": 0.445
+      }
+    ],
+    [
+      "Blink.Paint.UpdateTime",
+      {
+        "count": 244,
+        "totalInclusiveMs": 55.33799999999998,
+        "maxMs": 0.779
+      }
+    ],
+    [
+      "TileManager::CheckPendingGpuWorkAndIssueSignals",
+      {
+        "count": 972,
+        "totalInclusiveMs": 46.643999999999934,
+        "maxMs": 0.412
+      }
+    ],
+    [
+      "Blink.Style.UpdateTime",
+      {
+        "count": 138,
+        "totalInclusiveMs": 46.07799999999998,
+        "maxMs": 0.868
+      }
+    ],
+    [
+      "UpdateLayoutTree",
+      {
+        "count": 138,
+        "totalInclusiveMs": 45.212999999999994,
+        "maxMs": 0.861
+      }
+    ],
+    [
+      "TileManager::AssignGpuMemoryToTiles",
+      {
+        "count": 492,
+        "totalInclusiveMs": 43.94800000000004,
+        "maxMs": 0.331
+      }
+    ],
+    [
+      "Document::updateStyle",
+      {
+        "count": 138,
+        "totalInclusiveMs": 42.44399999999998,
+        "maxMs": 0.846
+      }
+    ],
+    [
+      "TileTaskManagerImpl::ScheduleTasks",
+      {
+        "count": 492,
+        "totalInclusiveMs": 41.11700000000001,
+        "maxMs": 2.609
+      }
+    ],
+    [
+      "LocalFrameView::pushPaintArtifactToCompositor",
+      {
+        "count": 244,
+        "totalInclusiveMs": 40.49800000000001,
+        "maxMs": 0.512
+      }
+    ],
+    [
+      "Blink.CompositingCommit.UpdateTime",
+      {
+        "count": 244,
+        "totalInclusiveMs": 40.11399999999998,
+        "maxMs": 0.51
+      }
+    ],
+    [
+      "Layerize",
+      {
+        "count": 244,
+        "totalInclusiveMs": 39.208,
+        "maxMs": 0.488
+      }
+    ],
+    [
+      "LayerTreeHostImpl::ActivateSyncTree",
+      {
+        "count": 246,
+        "totalInclusiveMs": 38.566999999999986,
+        "maxMs": 0.379
+      }
+    ],
+    [
+      "Document::recalcStyle",
+      {
+        "count": 138,
+        "totalInclusiveMs": 38.190999999999995,
+        "maxMs": 0.821
+      }
+    ],
+    [
+      "PrePaint",
+      {
+        "count": 305,
+        "totalInclusiveMs": 37.377,
+        "maxMs": 1.139
+      }
+    ],
+    [
+      "BitmapImage::draw",
+      {
+        "count": 10014,
+        "totalInclusiveMs": 34.158999999999004,
+        "maxMs": 0.205
+      }
+    ],
+    [
+      "LocalFrameView::RunPrePaintLifecyclePhase",
+      {
+        "count": 305,
+        "totalInclusiveMs": 33.33600000000003,
+        "maxMs": 1.128
+      }
+    ],
+    [
+      "Blink.PrePaint.UpdateTime",
+      {
+        "count": 305,
+        "totalInclusiveMs": 32.41700000000003,
+        "maxMs": 1.123
+      }
+    ],
+    [
+      "SoftwareImageDecodeCache::ReduceCacheUsageUntilWithinLimit",
+      {
+        "count": 8608,
+        "totalInclusiveMs": 30.812000000001586,
+        "maxMs": 0.311
+      }
+    ],
+    [
+      "ProxyImpl::Commit",
+      {
+        "count": 244,
+        "totalInclusiveMs": 30.772000000000013,
+        "maxMs": 1.749
+      }
+    ],
+    [
+      "TreeSynchronizer::PushLayerPropertiesTo.Active",
+      {
+        "count": 244,
+        "totalInclusiveMs": 27.944999999999997,
+        "maxMs": 0.315
+      }
+    ],
+    [
+      "TaskSetFinishedTaskImpl::RunOnWorkerThread",
+      {
+        "count": 884,
+        "totalInclusiveMs": 25.782000000000135,
+        "maxMs": 0.728
+      }
+    ],
+    [
+      "LayerTreeHostImpl::FinishCommit",
+      {
+        "count": 246,
+        "totalInclusiveMs": 25.166999999999998,
+        "maxMs": 1.731
+      }
+    ],
+    [
+      "LayerTreeImpl::PullProperties",
+      {
+        "count": 246,
+        "totalInclusiveMs": 24.28899999999998,
+        "maxMs": 1.727
+      }
+    ],
+    [
+      "TileTaskManagerImpl::CheckForCompletedTasks",
+      {
+        "count": 894,
+        "totalInclusiveMs": 23.01400000000003,
+        "maxMs": 0.177
+      }
+    ],
+    [
+      "RasterSource::PerformSolidColorAnalysis",
+      {
+        "count": 5664,
+        "totalInclusiveMs": 17.914000000000446,
+        "maxMs": 0.097
+      }
+    ],
+    [
+      "Document::UpdateStyleAndLayout",
+      {
+        "count": 1716,
+        "totalInclusiveMs": 16.984000000000083,
+        "maxMs": 0.96
+      }
+    ],
+    [
+      "Scheduler::BeginFrame",
+      {
+        "count": 525,
+        "totalInclusiveMs": 15.314999999999978,
+        "maxMs": 1.949
+      }
+    ],
+    [
+      "PaintArtifactCompositor::Update",
+      {
+        "count": 62,
+        "totalInclusiveMs": 15.1,
+        "maxMs": 0.482
+      }
+    ],
+    [
+      "TileManager::DidFinishRunningTileTasksRequiredForDraw",
+      {
+        "count": 492,
+        "totalInclusiveMs": 14.818999999999996,
+        "maxMs": 2.757
+      }
+    ],
+    [
+      "Scheduler::BeginImplFrame",
+      {
+        "count": 523,
+        "totalInclusiveMs": 14.56099999999999,
+        "maxMs": 1.181
+      }
+    ],
+    [
+      "EventHandler::handleMouseMoveEvent",
+      {
+        "count": 61,
+        "totalInclusiveMs": 14.083,
+        "maxMs": 2.725
+      }
+    ],
+    [
+      "LocalFrameView::ScheduleAnimation",
+      {
+        "count": 488,
+        "totalInclusiveMs": 13.814000000000021,
+        "maxMs": 1.3
+      }
+    ],
+    [
+      "Blink.ForcedStyleAndLayout.UpdateTime",
+      {
+        "count": 1716,
+        "totalInclusiveMs": 13.502000000000093,
+        "maxMs": 0.957
+      }
+    ],
+    [
+      "Blink.Layout.UpdateTime",
+      {
+        "count": 62,
+        "totalInclusiveMs": 12.950999999999997,
+        "maxMs": 1.009
+      }
+    ],
+    [
+      "ProxyImpl::ScheduledActionPrepareTiles",
+      {
+        "count": 244,
+        "totalInclusiveMs": 12.303999999999998,
+        "maxMs": 0.596
+      }
+    ],
+    [
+      "LayerTreeHostImpl::PrepareToDraw",
+      {
+        "count": 246,
+        "totalInclusiveMs": 12.293999999999992,
+        "maxMs": 0.163
+      }
+    ],
+    [
+      "LocalFrameView::layout",
+      {
+        "count": 62,
+        "totalInclusiveMs": 12.014,
+        "maxMs": 0.995
+      }
+    ],
+    [
+      "Layout",
+      {
+        "count": 62,
+        "totalInclusiveMs": 11.812999999999999,
+        "maxMs": 0.991
+      }
+    ],
+    [
+      "LayerTreeImpl::UpdateDrawProperties",
+      {
+        "count": 247,
+        "totalInclusiveMs": 10.836,
+        "maxMs": 1.685
+      }
+    ],
+    [
+      "LocalFrameView::performLayout",
+      {
+        "count": 62,
+        "totalInclusiveMs": 10.503,
+        "maxMs": 0.975
+      }
+    ],
+    [
+      "SoftwareImageDecodeTaskImpl::RunOnWorkerThread",
+      {
+        "count": 236,
+        "totalInclusiveMs": 9.992000000000003,
+        "maxMs": 0.357
+      }
+    ],
+    [
+      "auto cc::(anonymous namespace)::InsertNodeForTask(TaskGraph *, TileTask *, uint16_t, uint16_t, size_t, bool)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 4129,
+        "totalInclusiveMs": 8.888999999999909,
+        "maxMs": 3.835
+      }
+    ],
+    [
+      "ImageDecodeTask",
+      {
+        "count": 236,
+        "totalInclusiveMs": 8.59099999999999,
+        "maxMs": 0.354
+      }
+    ],
+    [
+      "ProxyMain::BeginMainFrame::commit",
+      {
+        "count": 244,
+        "totalInclusiveMs": 8.100999999999997,
+        "maxMs": 0.278
+      }
+    ],
+    [
+      "DiscardableImageMap::Generate",
+      {
+        "count": 236,
+        "totalInclusiveMs": 7.658999999999993,
+        "maxMs": 0.164
+      }
+    ],
+    [
+      "LayoutView::HitTest",
+      {
+        "count": 61,
+        "totalInclusiveMs": 7.632,
+        "maxMs": 0.279
+      }
+    ],
+    [
+      "LayerTreeHostImpl::NotifyTileStateChanged",
+      {
+        "count": 5702,
+        "totalInclusiveMs": 7.2890000000005495,
+        "maxMs": 0.089
+      }
+    ],
+    [
+      "auto cc::ResourcePool::OnResourceReleased(size_t, const gpu::SyncToken &, bool)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 5022,
+        "totalInclusiveMs": 6.990000000000403,
+        "maxMs": 0.056
+      }
+    ],
+    [
+      "LayerTreeImpl::UpdateDrawProperties::CalculateDrawProperties",
+      {
+        "count": 247,
+        "totalInclusiveMs": 6.85599999999999,
+        "maxMs": 1.647
+      }
+    ],
+    [
+      "LayerTreeHostImpl::CalculateRenderPasses",
+      {
+        "count": 246,
+        "totalInclusiveMs": 6.695999999999993,
+        "maxMs": 0.122
+      }
+    ],
+    [
+      "HitTest",
+      {
+        "count": 77,
+        "totalInclusiveMs": 6.124000000000001,
+        "maxMs": 0.25
+      }
+    ],
+    [
+      "MinorGC",
+      {
+        "count": 8,
+        "totalInclusiveMs": 4.948,
+        "maxMs": 0.797
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER",
+      {
+        "count": 8,
+        "totalInclusiveMs": 4.401,
+        "maxMs": 0.733
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 4.165000000000001,
+        "maxMs": 0.686
+      }
+    ],
+    [
+      "Scheduler::ScheduleBeginImplFrameDeadline",
+      {
+        "count": 756,
+        "totalInclusiveMs": 3.563999999999989,
+        "maxMs": 0.106
+      }
+    ],
+    [
+      "LayerTreeImpl::UpdateDrawProperties::Occlusion",
+      {
+        "count": 247,
+        "totalInclusiveMs": 3.5469999999999895,
+        "maxMs": 0.052
+      }
+    ],
+    [
+      "BlinkScheduler_PerformMicrotaskCheckpoint",
+      {
+        "count": 1028,
+        "totalInclusiveMs": 3.27599999999992,
+        "maxMs": 0.129
+      }
+    ],
+    [
+      "TileManager::DidFinishRunningTileTasksRequiredForActivation",
+      {
+        "count": 492,
+        "totalInclusiveMs": 3.227999999999989,
+        "maxMs": 0.167
+      }
+    ],
+    [
+      "CullRectUpdate",
+      {
+        "count": 244,
+        "totalInclusiveMs": 3.155999999999989,
+        "maxMs": 0.1
+      }
+    ],
+    [
+      "TreeSynchronizer::PushLayerPropertiesTo.Main",
+      {
+        "count": 246,
+        "totalInclusiveMs": 2.9529999999999954,
+        "maxMs": 0.043
+      }
+    ],
+    [
+      "LayerTreeImpl::PushPropertyTreesTo",
+      {
+        "count": 244,
+        "totalInclusiveMs": 2.7989999999999937,
+        "maxMs": 0.052
+      }
+    ],
+    [
+      "LayerTreeHostImpl::BeginCommit",
+      {
+        "count": 246,
+        "totalInclusiveMs": 2.711999999999994,
+        "maxMs": 0.046
+      }
+    ],
+    [
+      "LocalFrameView::RunCompositingInputsLifecyclePhase",
+      {
+        "count": 305,
+        "totalInclusiveMs": 2.7059999999999875,
+        "maxMs": 0.145
+      }
+    ],
+    [
+      "TileManager::PrepareToDraw",
+      {
+        "count": 246,
+        "totalInclusiveMs": 2.530999999999993,
+        "maxMs": 0.047
+      }
+    ],
+    [
+      "UpdateLayer",
+      {
+        "count": 499,
+        "totalInclusiveMs": 2.5279999999999774,
+        "maxMs": 0.158
+      }
+    ],
+    [
+      "ProxyImpl::ScheduledActionSendBeginMainFrame",
+      {
+        "count": 244,
+        "totalInclusiveMs": 2.5109999999999935,
+        "maxMs": 0.088
+      }
+    ],
+    [
+      "cc::TaskGraphWorkQueue::ScheduleTasks",
+      {
+        "count": 951,
+        "totalInclusiveMs": 2.376999999999957,
+        "maxMs": 0.097
+      }
+    ],
+    [
+      "TileManager::IsReadyToActivate",
+      {
+        "count": 244,
+        "totalInclusiveMs": 2.2469999999999937,
+        "maxMs": 0.046
+      }
+    ],
+    [
+      "SingleThreadProxy::DoPostCommit",
+      {
+        "count": 2,
+        "totalInclusiveMs": 2.219,
+        "maxMs": 1.758
+      }
+    ],
+    [
+      "LayerTreeHost::WaitForCommitCompletion",
+      {
+        "count": 245,
+        "totalInclusiveMs": 2.1569999999999956,
+        "maxMs": 0.255
+      }
+    ],
+    [
+      "Blink.CompositingInputs.UpdateTime",
+      {
+        "count": 305,
+        "totalInclusiveMs": 2.122999999999992,
+        "maxMs": 0.143
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_PARALLEL_PHASE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 2.111,
+        "maxMs": 0.342
+      }
+    ],
+    [
+      "LayerTreeImpl::UpdateTiles",
+      {
+        "count": 247,
+        "totalInclusiveMs": 1.6249999999999971,
+        "maxMs": 0.042
+      }
+    ],
+    [
+      "draw_property_utils::ComputeDrawPropertiesOfVisibleLayers",
+      {
+        "count": 247,
+        "totalInclusiveMs": 1.596999999999996,
+        "maxMs": 0.019
+      }
+    ],
+    [
+      "EventDispatch",
+      {
+        "count": 9,
+        "totalInclusiveMs": 1.494,
+        "maxMs": 0.605
+      }
+    ],
+    [
+      "Scheduler::NotifyReadyToCommit",
+      {
+        "count": 246,
+        "totalInclusiveMs": 1.462999999999997,
+        "maxMs": 0.022
+      }
+    ],
+    [
+      "CalculateRenderSurfaceLayerList",
+      {
+        "count": 247,
+        "totalInclusiveMs": 1.4379999999999968,
+        "maxMs": 0.032
+      }
+    ],
+    [
+      "ProxyImpl::SetNeedsCommitOnImplThread",
+      {
+        "count": 244,
+        "totalInclusiveMs": 1.3279999999999976,
+        "maxMs": 0.044
+      }
+    ],
+    [
+      "SoftwareImageDecodeCache::DecodeImageInTask",
+      {
+        "count": 236,
+        "totalInclusiveMs": 1.3189999999999982,
+        "maxMs": 0.114
+      }
+    ],
+    [
+      "LayerTreeImpl::PushPropertiesTo",
+      {
+        "count": 244,
+        "totalInclusiveMs": 1.2479999999999984,
+        "maxMs": 0.011
+      }
+    ],
+    [
+      "AnimationHost::TickAnimations",
+      {
+        "count": 757,
+        "totalInclusiveMs": 1.1289999999999938,
+        "maxMs": 0.076
+      }
+    ],
+    [
+      "CanvasResource::PrepareTransferableResource",
+      {
+        "count": 244,
+        "totalInclusiveMs": 1.1129999999999993,
+        "maxMs": 0.076
+      }
+    ],
+    [
+      "Receive mojo reply",
+      {
+        "count": 32,
+        "totalInclusiveMs": 1.0710000000000004,
+        "maxMs": 0.106
+      }
+    ],
+    [
+      "LayerTreeHost::AnimationHost::PushProperties",
+      {
+        "count": 246,
+        "totalInclusiveMs": 1.0469999999999995,
+        "maxMs": 0.086
+      }
+    ],
+    [
+      "LayerTreeHost::ApplyCompositorChanges",
+      {
+        "count": 246,
+        "totalInclusiveMs": 1.021,
+        "maxMs": 0.081
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_BACKGROUND_SCAVENGE_PARALLEL",
+      {
+        "count": 15,
+        "totalInclusiveMs": 1.0130000000000001,
+        "maxMs": 0.225
+      }
+    ],
+    [
+      "LocalFrameView::UpdateViewportIntersectionsForSubtree",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.9940000000000007,
+        "maxMs": 0.083
+      }
+    ],
+    [
+      "InputHandler::ClearCurrentlyScrollingNode",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.9830000000000008,
+        "maxMs": 0.008
+      }
+    ],
+    [
+      "DidFinishRunningAllTilesTask::RunOnWorkerThread",
+      {
+        "count": 413,
+        "totalInclusiveMs": 0.9620000000000007,
+        "maxMs": 0.035
+      }
+    ],
+    [
+      "CanvasRenderingContext2D::FinalizeFrame",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.9030000000000006,
+        "maxMs": 0.066
+      }
+    ],
+    [
+      "AsyncTask Scheduled",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.8970000000000007,
+        "maxMs": 0.082
+      }
+    ],
+    [
+      "LocalFrameView::RunAccessibilitySteps",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.8760000000000007,
+        "maxMs": 0.036
+      }
+    ],
+    [
+      "InlineNode::ShapeTextIncludingFirstLine",
+      {
+        "count": 6,
+        "totalInclusiveMs": 0.828,
+        "maxMs": 0.517
+      }
+    ],
+    [
+      "OverlayInterstitialAdDetector::MaybeFireDetection",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.822,
+        "maxMs": 0.137
+      }
+    ],
+    [
+      "Scheduler::OnBeginImplFrameDeadline",
+      {
+        "count": 509,
+        "totalInclusiveMs": 0.7990000000000006,
+        "maxMs": 0.007
+      }
+    ],
+    [
+      "LocalFrameView::NotifyResizeObservers",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.7570000000000006,
+        "maxMs": 0.047
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_ROOTS",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.7570000000000001,
+        "maxMs": 0.174
+      }
+    ],
+    [
+      "ProxyImpl::DidReceiveCompositorFrameAckOnImplThread",
+      {
+        "count": 243,
+        "totalInclusiveMs": 0.7530000000000004,
+        "maxMs": 0.036
+      }
+    ],
+    [
+      "LayerTreeHostImpl::BuildHitTestData",
+      {
+        "count": 246,
+        "totalInclusiveMs": 0.6840000000000005,
+        "maxMs": 0.027
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_WEAK_GLOBAL_HANDLES_IDENTIFY",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.6579999999999999,
+        "maxMs": 0.15
+      }
+    ],
+    [
+      "TileManager::DidFinishRunningAllTileTasks",
+      {
+        "count": 417,
+        "totalInclusiveMs": 0.6420000000000005,
+        "maxMs": 0.06
+      }
+    ],
+    [
+      "LayerTreeImpl::InvalidateRegionForImages",
+      {
+        "count": 246,
+        "totalInclusiveMs": 0.6390000000000005,
+        "maxMs": 0.034
+      }
+    ],
+    [
+      "TileManager::IsReadyToDraw",
+      {
+        "count": 250,
+        "totalInclusiveMs": 0.6240000000000004,
+        "maxMs": 0.039
+      }
+    ],
+    [
+      "Blink.IntersectionObservation.UpdateTime",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.5750000000000004,
+        "maxMs": 0.032
+      }
+    ],
+    [
+      "LocalFrameView::WillStartLifecycleUpdate",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.5520000000000004,
+        "maxMs": 0.064
+      }
+    ],
+    [
+      "RootScrollerController::PerformRootScrollerSelection",
+      {
+        "count": 297,
+        "totalInclusiveMs": 0.5300000000000004,
+        "maxMs": 0.024
+      }
+    ],
+    [
+      "LayoutView::commitPendingSelection",
+      {
+        "count": 288,
+        "totalInclusiveMs": 0.5220000000000004,
+        "maxMs": 0.14
+      }
+    ],
+    [
+      "SingleThreadProxy::DoComposite",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.512,
+        "maxMs": 0.337
+      }
+    ],
+    [
+      "TextureLayer::PushPropertiesTo",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.4840000000000004,
+        "maxMs": 0.025
+      }
+    ],
+    [
+      "PaintController::commitNewDisplayItems",
+      {
+        "count": 236,
+        "totalInclusiveMs": 0.45700000000000035,
+        "maxMs": 0.009
+      }
+    ],
+    [
+      "auto cc::SchedulerStateMachine::SetNeedsBeginMainFrame(bool, bool)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 245,
+        "totalInclusiveMs": 0.45600000000000035,
+        "maxMs": 0.039
+      }
+    ],
+    [
+      "ImageAnimationController::AnimateImagesForSyncTree",
+      {
+        "count": 246,
+        "totalInclusiveMs": 0.4550000000000003,
+        "maxMs": 0.078
+      }
+    ],
+    [
+      "EvaluateScript",
+      {
+        "count": 1,
+        "totalInclusiveMs": 0.444,
+        "maxMs": 0.444
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_WEAK_GLOBAL_HANDLES_PROCESS",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.44300000000000006,
+        "maxMs": 0.089
+      }
+    ],
+    [
+      "ProxyImpl::OnCanDrawStateChanged",
+      {
+        "count": 369,
+        "totalInclusiveMs": 0.4280000000000003,
+        "maxMs": 0.034
+      }
+    ],
+    [
+      "AnimationTimeline::serviceAnimations",
+      {
+        "count": 184,
+        "totalInclusiveMs": 0.4040000000000002,
+        "maxMs": 0.117
+      }
+    ],
+    [
+      "Blink.Accessibility.UpdateTime",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.3980000000000003,
+        "maxMs": 0.034
+      }
+    ],
+    [
+      "draw_property_utils::FindLayersThatNeedUpdates",
+      {
+        "count": 246,
+        "totalInclusiveMs": 0.3820000000000003,
+        "maxMs": 0.016
+      }
+    ],
+    [
+      "TimerBase::run",
+      {
+        "count": 33,
+        "totalInclusiveMs": 0.3760000000000001,
+        "maxMs": 0.174
+      }
+    ],
+    [
+      "PropertyTreeLayerTreeDelegate::UpdatePropertyTreesIfNeeded",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.34099999999999997,
+        "maxMs": 0.21
+      }
+    ],
+    [
+      "ScrollTree::CollectScrollDeltas",
+      {
+        "count": 244,
+        "totalInclusiveMs": 0.33600000000000024,
+        "maxMs": 0.004
+      }
+    ],
+    [
+      "Document::updateActiveStyle",
+      {
+        "count": 138,
+        "totalInclusiveMs": 0.3270000000000002,
+        "maxMs": 0.086
+      }
+    ],
+    [
+      "Scheduler::NotifyBeginMainFrameStarted",
+      {
+        "count": 206,
+        "totalInclusiveMs": 0.2880000000000002,
+        "maxMs": 0.035
+      }
+    ],
+    [
+      "LocalFrameView::performPostLayoutTasks",
+      {
+        "count": 62,
+        "totalInclusiveMs": 0.2870000000000002,
+        "maxMs": 0.012
+      }
+    ],
+    [
+      "RecordingSource::FinishDisplayItemListUpdate",
+      {
+        "count": 220,
+        "totalInclusiveMs": 0.2690000000000002,
+        "maxMs": 0.004
+      }
+    ],
+    [
+      "SharedContextRateLimiter::Tick",
+      {
+        "count": 191,
+        "totalInclusiveMs": 0.2660000000000001,
+        "maxMs": 0.038
+      }
+    ],
+    [
+      "LocalFrameView::DidFinishLifecycleUpdate",
+      {
+        "count": 225,
+        "totalInclusiveMs": 0.2610000000000002,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "SchedulerStateMachine::SetNeedsPrepareTiles",
+      {
+        "count": 250,
+        "totalInclusiveMs": 0.25600000000000017,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "ScrollTree::SetScrollOffset",
+      {
+        "count": 136,
+        "totalInclusiveMs": 0.25000000000000017,
+        "maxMs": 0.022
+      }
+    ],
+    [
+      "StickyAdDetector::MaybeFireDetection",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.246,
+        "maxMs": 0.062
+      }
+    ],
+    [
+      "ProcessUIResourceRequestQueue",
+      {
+        "count": 216,
+        "totalInclusiveMs": 0.2420000000000002,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "SingleThreadProxy::DoCommit",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.233,
+        "maxMs": 0.138
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_TRACED_HANDLES_COMPUTE_WEAKNESS_PARALLEL",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.2220000000000001,
+        "maxMs": 0.103
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_PARALLEL",
+      {
+        "count": 6,
+        "totalInclusiveMs": 0.20800000000000002,
+        "maxMs": 0.117
+      }
+    ],
+    [
+      "LocalFrameView::UpdateLifecyclePhases - start of lifecycle tasks",
+      {
+        "count": 173,
+        "totalInclusiveMs": 0.20500000000000015,
+        "maxMs": 0.026
+      }
+    ],
+    [
+      "Document::rebuildLayoutTree",
+      {
+        "count": 4,
+        "totalInclusiveMs": 0.197,
+        "maxMs": 0.12
+      }
+    ],
+    [
+      "ImageAnimationController::WillActivate",
+      {
+        "count": 157,
+        "totalInclusiveMs": 0.19400000000000012,
+        "maxMs": 0.037
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_FINALIZE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.177,
+        "maxMs": 0.025
+      }
+    ],
+    [
+      "V8.GC_HEAP_ENSURE_SWEEPING_COMPLETED",
+      {
+        "count": 16,
+        "totalInclusiveMs": 0.16600000000000004,
+        "maxMs": 0.107
+      }
+    ],
+    [
+      "auto cc::LayerTreeHost::SetNeedsCommit(bool)::(lambda)::operator()()::(lambda)::operator()(uint32_t) const",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.14600000000000002,
+        "maxMs": 0.109
+      }
+    ],
+    [
+      "DrawLayers.FrameViewerTracing",
+      {
+        "count": 134,
+        "totalInclusiveMs": 0.1400000000000001,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_COLLECT_OLD_TO_NEW_PAGES",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.13600000000000004,
+        "maxMs": 0.09
+      }
+    ],
+    [
+      "ProxyImpl::DidActivateSyncTreeOnImplThread",
+      {
+        "count": 129,
+        "totalInclusiveMs": 0.1330000000000001,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "TreeSynchronizer::SynchronizeTrees",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.119,
+        "maxMs": 0.081
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_TRACED_HANDLES_RESET_PARALLEL",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.118,
+        "maxMs": 0.029
+      }
+    ],
+    [
+      "SingleThreadProxy::ScheduledActionPrepareTiles",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.118,
+        "maxMs": 0.061
+      }
+    ],
+    [
+      "CanvasPerformanceMonitor::RecordMetrics",
+      {
+        "count": 3,
+        "totalInclusiveMs": 0.101,
+        "maxMs": 0.05
+      }
+    ],
+    [
+      "ResourceLoadPriorityOptimizer::UpdateImagePrioritiesAndSpeculativeDecodes",
+      {
+        "count": 62,
+        "totalInclusiveMs": 0.08800000000000005,
+        "maxMs": 0.005
+      }
+    ],
+    [
+      "V8.GC_HEAP_EPILOGUE_SAFEPOINT",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.08300000000000002,
+        "maxMs": 0.031
+      }
+    ],
+    [
+      "V8.GC_HEAP_EXTERNAL_EPILOGUE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.08099999999999999,
+        "maxMs": 0.011
+      }
+    ],
+    [
+      "V8.GC_HEAP_EXTERNAL_PROLOGUE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.071,
+        "maxMs": 0.026
+      }
+    ],
+    [
+      "Blink.UpdateViewportIntersection.UpdateTime",
+      {
+        "count": 25,
+        "totalInclusiveMs": 0.06300000000000003,
+        "maxMs": 0.004
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_RESIZE_NEW_SPACE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.047999999999999994,
+        "maxMs": 0.013
+      }
+    ],
+    [
+      "Document::updateStyleInvalidationIfNeeded",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.043000000000000003,
+        "maxMs": 0.034
+      }
+    ],
+    [
+      "V8.GC_HEAP_EPILOGUE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.042,
+        "maxMs": 0.007
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_FREE_REMEMBERED_SET",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.039999999999999994,
+        "maxMs": 0.007
+      }
+    ],
+    [
+      "Responsiveness.Renderer.UserInteraction",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.039,
+        "maxMs": 0.009
+      }
+    ],
+    [
+      "Parallel scavenge started",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.037000000000000005,
+        "maxMs": 0.024
+      }
+    ],
+    [
+      "V8.GC_TIME_TO_SAFEPOINT",
+      {
+        "count": 12,
+        "totalInclusiveMs": 0.03500000000000001,
+        "maxMs": 0.007
+      }
+    ],
+    [
+      "SingleThreadTaskGraphRunner::CollectCompletedTasks",
+      {
+        "count": 5,
+        "totalInclusiveMs": 0.029000000000000005,
+        "maxMs": 0.024
+      }
+    ],
+    [
+      "V8.GC_HEAP_PROLOGUE",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.028999999999999998,
+        "maxMs": 0.005
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_BACKGROUND_TRACED_HANDLES_COMPUTE_WEAKNESS_PARALLEL",
+      {
+        "count": 3,
+        "totalInclusiveMs": 0.028,
+        "maxMs": 0.019
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_SCAVENGE_RESTORE_AND_QUARANTINE_PINNED",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.020000000000000004,
+        "maxMs": 0.005
+      }
+    ],
+    [
+      "V8.GC_SCAVENGER_BACKGROUND_TRACED_HANDLES_RESET_PARALLEL",
+      {
+        "count": 3,
+        "totalInclusiveMs": 0.02,
+        "maxMs": 0.011
+      }
+    ],
+    [
+      "SingleThreadProxy::NotifyReadyToDraw",
+      {
+        "count": 4,
+        "totalInclusiveMs": 0.02,
+        "maxMs": 0.014
+      }
+    ],
+    [
+      "SingleThreadTaskGraphRunner::ScheduleTasks",
+      {
+        "count": 4,
+        "totalInclusiveMs": 0.016,
+        "maxMs": 0.007
+      }
+    ],
+    [
+      "SingleThreadProxy::DidReceiveCompositorFrameAckOnImplThread",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.014,
+        "maxMs": 0.01
+      }
+    ],
+    [
+      "V8.GC_HEAP_PROLOGUE_SAFEPOINT",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.013000000000000001,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "ClearWeaknessProcessor start",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.012,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "SingleThreadProxy::ScheduledActionSendBeginMainFrame",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.011,
+        "maxMs": 0.009
+      }
+    ],
+    [
+      "ComputeWeaknessProcessor start",
+      {
+        "count": 8,
+        "totalInclusiveMs": 0.01,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "SingleThreadProxy::SetNeedsPrepareTilesOnImplThread",
+      {
+        "count": 4,
+        "totalInclusiveMs": 0.007,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "SingleThreadProxy::NotifyReadyToActivate",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.006,
+        "maxMs": 0.004
+      }
+    ],
+    [
+      "Closed mojo endpoint",
+      {
+        "count": 1,
+        "totalInclusiveMs": 0.003,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "UkmRecorderImpl::NotifyObserversWithNewEntry",
+      {
+        "count": 1,
+        "totalInclusiveMs": 0.003,
+        "maxMs": 0.003
+      }
+    ],
+    [
+      "SurfaceLayer::PushPropertiesTo",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.003,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "SingleThreadProxy::OnCanDrawStateChanged",
+      {
+        "count": 2,
+        "totalInclusiveMs": 0.003,
+        "maxMs": 0.002
+      }
+    ],
+    [
+      "ImageAnimationController::UpdateState",
+      {
+        "count": 1,
+        "totalInclusiveMs": 0.001,
+        "maxMs": 0.001
+      }
+    ]
+  ]
+}

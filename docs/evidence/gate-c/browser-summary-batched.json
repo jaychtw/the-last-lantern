@@ -1,0 +1,170 @@
+{
+  "uniqueChecks": 22,
+  "latestPassed": 22,
+  "unresolvedFailures": 0,
+  "stats": {
+    "startTime": "2026-10-25T12:42:14.370Z",
+    "duration": 1541301.293,
+    "expected": 22,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "file": "battle-layout.spec.ts",
+      "title": "narrow battle keeps larger-text commands below status in both languages",
+      "status": "passed",
+      "durationMs": 15606,
+      "startTime": "2026-10-25T12:42:16.704Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with English desktop inputs",
+      "status": "passed",
+      "durationMs": 669064,
+      "startTime": "2026-10-25T12:42:32.669Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "complete Gate B campaign with Traditional Chinese touch inputs",
+      "status": "passed",
+      "durationMs": 625531,
+      "startTime": "2026-10-25T12:53:41.838Z"
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Gate A save migration is non-destructive in the actual browser",
+      "status": "passed",
+      "durationMs": 2840,
+      "startTime": "2026-10-25T13:04:07.444Z"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in English",
+      "status": "passed",
+      "durationMs": 3539,
+      "startTime": "2026-10-25T13:04:10.372Z"
+    },
+    {
+      "file": "completion-copy.spec.ts",
+      "title": "second-light confirmation follows the current journal in zh-TW",
+      "status": "passed",
+      "durationMs": 1936,
+      "startTime": "2026-10-25T13:04:13.927Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered English desktop interactions",
+      "status": "passed",
+      "durationMs": 68054,
+      "startTime": "2026-10-25T13:04:15.912Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "complete Gate A via rendered Traditional Chinese touch interactions",
+      "status": "passed",
+      "durationMs": 48485,
+      "startTime": "2026-10-25T13:05:24.007Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "defeat returns home, keeps discoveries, and supports retry",
+      "status": "passed",
+      "durationMs": 30362,
+      "startTime": "2026-10-25T13:06:12.526Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 320px",
+      "status": "passed",
+      "durationMs": 4414,
+      "startTime": "2026-10-25T13:06:42.913Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 390px",
+      "status": "passed",
+      "durationMs": 5023,
+      "startTime": "2026-10-25T13:06:47.359Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 768px",
+      "status": "passed",
+      "durationMs": 7326,
+      "startTime": "2026-10-25T13:06:52.399Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "responsive, bilingual, larger text and accessible settings at 1440px",
+      "status": "passed",
+      "durationMs": 8811,
+      "startTime": "2026-10-25T13:06:59.747Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "corrupt autosave is kept intact; manual saving and reload recovery work",
+      "status": "passed",
+      "durationMs": 2827,
+      "startTime": "2026-10-25T13:07:08.580Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "blocked storage allows a session and explains that saving is unavailable",
+      "status": "passed",
+      "durationMs": 5464,
+      "startTime": "2026-10-25T13:07:11.427Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "keyboard focus, pause and project-subpath assets remain usable",
+      "status": "passed",
+      "durationMs": 3335,
+      "startTime": "2026-10-25T13:07:16.911Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "save/load, overwrite cancellation and new-journey confirmation preserve progress",
+      "status": "passed",
+      "durationMs": 5829,
+      "startTime": "2026-10-25T13:07:20.263Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "production character atlas contains distinct articulated frames in all eight directions",
+      "status": "passed",
+      "durationMs": 2594,
+      "startTime": "2026-10-25T13:07:26.127Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports mouse ground traversal",
+      "status": "passed",
+      "durationMs": 3706,
+      "startTime": "2026-10-25T13:07:28.748Z"
+    },
+    {
+      "file": "game.spec.ts",
+      "title": "inverse scene projection supports touch ground traversal",
+      "status": "passed",
+      "durationMs": 2929,
+      "startTime": "2026-10-25T13:07:32.473Z"
+    },
+    {
+      "file": "render-cache.spec.ts",
+      "title": "reduced-motion idle reuses pixels while input, resize and language stay live",
+      "status": "passed",
+      "durationMs": 4394,
+      "startTime": "2026-10-25T13:07:35.434Z"
+    },
+    {
+      "file": "render-cache.spec.ts",
+      "title": "battle backdrop survives action phases and refreshes on resize",
+      "status": "passed",
+      "durationMs": 14649,
+      "startTime": "2026-10-25T13:07:39.849Z"
+    }
+  ],
+  "note": "One complete final suite, including both full campaigns and two new renderer regressions. Focused checks are included, not added again. The initial focused UI-screenshot assertion was corrected to compare raw canvas pixels, preserving its intended invariant."
+}

@@ -1,0 +1,23 @@
+
+> the-last-lantern@0.4.0-gate-c build
+> tsc --noEmit && vite build
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 11 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.66 kB │ gzip:  0.43 kB
+dist/assets/fraunces-vietnamese-wght-normal-CnvboYUG.woff2  11.57 kB
+dist/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2    18.23 kB
+dist/assets/fraunces-latin-ext-wght-normal-Ca2vKHc0.woff2   33.58 kB
+dist/assets/fraunces-latin-wght-normal-ukD16Tqj.woff2       36.62 kB
+dist/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB
+dist/assets/index-R7wCqtNX.css                              34.28 kB │ gzip:  8.39 kB
+dist/assets/index-ZW57hMnJ.js                               92.31 kB │ gzip: 35.91 kB
+✓ built in 521ms
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

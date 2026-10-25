@@ -1,6 +1,6 @@
 {
   "name": "the-last-lantern",
-  "version": "0.3.0-gate-b",
+  "version": "0.4.0-gate-c",
   "private": true,
   "type": "module",
   "engines": {
@@ -16,7 +16,9 @@
     "assets": "blender -b -t 4 --python scripts/render-assets.py -- --only all --samples 48 && blender -b -t 4 --python scripts/render-campaign-assets.py -- --samples 48 && python3 scripts/pack-3d-assets.py",
     "package:playtest": "npm run build && python3 scripts/package-playtest.py",
     "measure": "node scripts/measure.mjs",
-    "assets:campaign": "blender -b -t 4 --python scripts/render-campaign-assets.py -- --samples 48 && python3 scripts/pack-3d-assets.py"
+    "assets:campaign": "blender -b -t 4 --python scripts/render-campaign-assets.py -- --samples 48 && python3 scripts/pack-3d-assets.py",
+    "measure:gate-c": "node scripts/benchmark-gate-c.mjs",
+    "measure:gate-c:paired": "node scripts/paired-benchmark-gate-c.mjs"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "5.2.8",
@@ -29,6 +31,6 @@
     "playwright-core": "1.58.2",
     "typescript": "5.9.3",
     "vite": "7.3.7",
-    "vitest": "3.2.4"
+    "vitest": "4.1.12"
   }
 }

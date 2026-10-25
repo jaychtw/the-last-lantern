@@ -1,0 +1,591 @@
+{
+  "method": "Pooled interval distribution across all three matched repetitions, not an arithmetic mean of FPS. CPU windows use CDP timestamps. All runs/tails retained.",
+  "browserBefore": "154.0.8037.57",
+  "browserAfter": "154.0.8037.57",
+  "scenarios": [
+    {
+      "id": "town-desktop",
+      "before": {
+        "meanFPS": 38.0024266276779,
+        "meanMs": 26.314109090909493,
+        "p95Ms": 33.400000000000546,
+        "p99Ms": 33.400000000001455,
+        "maxMs": 50,
+        "low1FPS": 22.095959595959517,
+        "frames": 1375,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 796,
+        "runFPS": [
+          39.171749865139624,
+          37.04563159901212,
+          37.79151679899222
+        ],
+        "taskSeconds": 36.263809,
+        "cpuWindowSeconds": 36.52781800001685,
+        "heapPeakSampled": 3070168,
+        "heapAfterGC": [
+          2071400,
+          2069128,
+          2075276
+        ],
+        "coldStartDialogMs": [
+          1283,
+          1057,
+          1082
+        ],
+        "coldContinueReadyMs": [
+          250,
+          219,
+          223
+        ]
+      },
+      "after": {
+        "meanFPS": 30.401599328458296,
+        "meanMs": 32.893006357857004,
+        "p95Ms": 50,
+        "p99Ms": 50.100000000000364,
+        "maxMs": 66.70000000000073,
+        "low1FPS": 19.423761735189235,
+        "frames": 1101,
+        "over50Ms": 1,
+        "over100Ms": 0,
+        "missed60HzSlots": 1072,
+        "runFPS": [
+          29.75277844539661,
+          27.476847445563568,
+          33.97921466576055
+        ],
+        "taskSeconds": 36.537968,
+        "cpuWindowSeconds": 36.589446999991196,
+        "heapPeakSampled": 3210800,
+        "heapAfterGC": [
+          2068148,
+          2064796,
+          2065012
+        ],
+        "coldStartDialogMs": [
+          1156,
+          1193,
+          1180
+        ],
+        "coldContinueReadyMs": [
+          247,
+          227,
+          241
+        ]
+      }
+    },
+    {
+      "id": "town-phone",
+      "before": {
+        "meanFPS": 57.34693651724484,
+        "meanMs": 17.437723106609003,
+        "p95Ms": 16.80000000000109,
+        "p99Ms": 33.399999999999636,
+        "maxMs": 66.70000000000073,
+        "low1FPS": 26.7652306907978,
+        "frames": 2073,
+        "over50Ms": 1,
+        "over100Ms": 0,
+        "missed60HzSlots": 96,
+        "runFPS": [
+          54.0194636282796,
+          58.92493079842867,
+          59.08958877961741
+        ],
+        "taskSeconds": 34.64766,
+        "cpuWindowSeconds": 36.36342599999625,
+        "heapPeakSampled": 3211548,
+        "heapAfterGC": [
+          2136488,
+          2136660,
+          2139684
+        ],
+        "coldStartDialogMs": [
+          1119,
+          1118,
+          1090
+        ],
+        "coldContinueReadyMs": [
+          203,
+          193,
+          194
+        ]
+      },
+      "after": {
+        "meanFPS": 57.511347282186755,
+        "meanMs": 17.387872954764433,
+        "p95Ms": 16.80000000000109,
+        "p99Ms": 33.399999999999636,
+        "maxMs": 33.400000000001455,
+        "low1FPS": 29.940119760478687,
+        "frames": 2078,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 90,
+        "runFPS": [
+          57.76125348559288,
+          56.68284991078468,
+          58.090734569388935
+        ],
+        "taskSeconds": 35.302702,
+        "cpuWindowSeconds": 36.34385699998529,
+        "heapPeakSampled": 3151604,
+        "heapAfterGC": [
+          2137608,
+          2137672,
+          2138548
+        ],
+        "coldStartDialogMs": [
+          1104,
+          1170,
+          1137
+        ],
+        "coldContinueReadyMs": [
+          198,
+          197,
+          205
+        ]
+      }
+    },
+    {
+      "id": "overworld-desktop",
+      "before": {
+        "meanFPS": 32.93671465228979,
+        "meanMs": 30.36125523012597,
+        "p95Ms": 33.400000000001455,
+        "p99Ms": 50,
+        "maxMs": 66.70000000000073,
+        "low1FPS": 19.442644199611124,
+        "frames": 1195,
+        "over50Ms": 1,
+        "over100Ms": 0,
+        "missed60HzSlots": 982,
+        "runFPS": [
+          31.035595759296196,
+          35.4225462851846,
+          32.353645149841945
+        ],
+        "taskSeconds": 36.619029000000005,
+        "cpuWindowSeconds": 36.68252099999518,
+        "heapPeakSampled": 3213076,
+        "heapAfterGC": [
+          2069268,
+          2072808,
+          2070512
+        ],
+        "coldStartDialogMs": [
+          1239,
+          928,
+          1187
+        ],
+        "coldContinueReadyMs": [
+          343,
+          331,
+          288
+        ]
+      },
+      "after": {
+        "meanFPS": 35.49358438282235,
+        "meanMs": 28.174105754277242,
+        "p95Ms": 33.400000000000546,
+        "p99Ms": 49.899999999999636,
+        "maxMs": 50,
+        "low1FPS": 20.00615574022773,
+        "frames": 1286,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 888,
+        "runFPS": [
+          39.69766786560806,
+          31.654200586801107,
+          35.139480532396284
+        ],
+        "taskSeconds": 36.5109,
+        "cpuWindowSeconds": 36.61153100000229,
+        "heapPeakSampled": 3190516,
+        "heapAfterGC": [
+          2076004,
+          2071656,
+          2071864
+        ],
+        "coldStartDialogMs": [
+          1228,
+          1216,
+          835
+        ],
+        "coldContinueReadyMs": [
+          304,
+          420,
+          283
+        ]
+      }
+    },
+    {
+      "id": "overworld-phone",
+      "before": {
+        "meanFPS": 58.6469701370726,
+        "meanMs": 17.05117924528327,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 33.30000000000109,
+        "maxMs": 33.400000000001455,
+        "low1FPS": 29.96866911864817,
+        "frames": 2120,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 49,
+        "runFPS": [
+          56.687275198488344,
+          59.587128515391264,
+          59.67052574795634
+        ],
+        "taskSeconds": 33.756848000000005,
+        "cpuWindowSeconds": 36.32687099999748,
+        "heapPeakSampled": 3138396,
+        "heapAfterGC": [
+          2139308,
+          2139648,
+          2144180
+        ],
+        "coldStartDialogMs": [
+          892,
+          871,
+          1150
+        ],
+        "coldContinueReadyMs": [
+          237,
+          225,
+          222
+        ]
+      },
+      "after": {
+        "meanFPS": 58.89639764193127,
+        "meanMs": 16.97896713615045,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 33.30000000000018,
+        "maxMs": 83.29999999999927,
+        "low1FPS": 28.054067839836556,
+        "frames": 2130,
+        "over50Ms": 1,
+        "over100Ms": 0,
+        "missed60HzSlots": 40,
+        "runFPS": [
+          59.50454375700235,
+          59.08958877961741,
+          58.096169465117434
+        ],
+        "taskSeconds": 33.482315,
+        "cpuWindowSeconds": 36.365445999996155,
+        "heapPeakSampled": 3144208,
+        "heapAfterGC": [
+          2141640,
+          2140680,
+          2143636
+        ],
+        "coldStartDialogMs": [
+          1084,
+          1063,
+          802
+        ],
+        "coldContinueReadyMs": [
+          218,
+          217,
+          236
+        ]
+      }
+    },
+    {
+      "id": "dungeon-desktop",
+      "before": {
+        "meanFPS": 59.33723002391709,
+        "meanMs": 16.852825782344905,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 16.80000000000109,
+        "maxMs": 100,
+        "low1FPS": 28.671966636256656,
+        "frames": 2141,
+        "over50Ms": 2,
+        "over100Ms": 0,
+        "missed60HzSlots": 24,
+        "runFPS": [
+          59.254703809587134,
+          58.83868394152698,
+          59.91910920257653
+        ],
+        "taskSeconds": 24.307516,
+        "cpuWindowSeconds": 36.24600199998531,
+        "heapPeakSampled": 3034792,
+        "heapAfterGC": [
+          2085680,
+          2088728,
+          2085772
+        ],
+        "coldStartDialogMs": [
+          928,
+          864,
+          1127
+        ],
+        "coldContinueReadyMs": [
+          325,
+          225,
+          277
+        ]
+      },
+      "after": {
+        "meanFPS": 59.53107150383169,
+        "meanMs": 16.797950628784424,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 16.80000000000109,
+        "maxMs": 66.69999999999982,
+        "low1FPS": 33.794162826420234,
+        "frames": 2147,
+        "over50Ms": 1,
+        "over100Ms": 0,
+        "missed60HzSlots": 17,
+        "runFPS": [
+          59.58663331366503,
+          59.753164504290076,
+          59.2533413225479
+        ],
+        "taskSeconds": 24.577128000000002,
+        "cpuWindowSeconds": 36.22149700002046,
+        "heapPeakSampled": 2946548,
+        "heapAfterGC": [
+          2086704,
+          2086732,
+          2090932
+        ],
+        "coldStartDialogMs": [
+          1202,
+          1127,
+          1103
+        ],
+        "coldContinueReadyMs": [
+          264,
+          231,
+          221
+        ]
+      }
+    },
+    {
+      "id": "dungeon-phone",
+      "before": {
+        "meanFPS": 59.91929351295216,
+        "meanMs": 16.68911533117192,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 16.80000000000109,
+        "maxMs": 33.29999999999927,
+        "low1FPS": 52.49343832020765,
+        "frames": 2159,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 3,
+        "runFPS": [
+          60.002829537037805,
+          59.752667232569365,
+          60.002500104171006
+        ],
+        "taskSeconds": 13.131173,
+        "cpuWindowSeconds": 36.14879099999962,
+        "heapPeakSampled": 2956296,
+        "heapAfterGC": [
+          2131328,
+          2126752,
+          2130280
+        ],
+        "coldStartDialogMs": [
+          1066,
+          1102,
+          1095
+        ],
+        "coldContinueReadyMs": [
+          195,
+          195,
+          190
+        ]
+      },
+      "after": {
+        "meanFPS": 59.97463358856986,
+        "meanMs": 16.673715872281427,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 16.80000000000109,
+        "maxMs": 33.400000000001455,
+        "low1FPS": 56.96530295183483,
+        "frames": 2161,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 1,
+        "runFPS": [
+          60.00233018758009,
+          59.91910920257653,
+          60.00250010417102
+        ],
+        "taskSeconds": 12.767471,
+        "cpuWindowSeconds": 36.139349000004586,
+        "heapPeakSampled": 3034528,
+        "heapAfterGC": [
+          2141624,
+          2131292,
+          2131292
+        ],
+        "coldStartDialogMs": [
+          1106,
+          1098,
+          867
+        ],
+        "coldContinueReadyMs": [
+          199,
+          200,
+          195
+        ]
+      }
+    },
+    {
+      "id": "combat-desktop",
+      "before": {
+        "meanFPS": 54.905024280652384,
+        "meanMs": 18.213269424823537,
+        "p95Ms": 33.29999999999927,
+        "p99Ms": 50.100000000000364,
+        "maxMs": 200,
+        "low1FPS": 11.320541121865597,
+        "frames": 1982,
+        "over50Ms": 19,
+        "over100Ms": 5,
+        "missed60HzSlots": 184,
+        "runFPS": [
+          54.10967998937724,
+          57.50522207335036,
+          53.10484675221063
+        ],
+        "taskSeconds": 25.478297000000005,
+        "cpuWindowSeconds": 36.25165600000764,
+        "heapPeakSampled": 2760956,
+        "heapAfterGC": [
+          2206948,
+          2206528,
+          2207384
+        ],
+        "coldStartDialogMs": [
+          949,
+          1128,
+          1093
+        ],
+        "coldContinueReadyMs": [
+          241,
+          200,
+          226
+        ]
+      },
+      "after": {
+        "meanFPS": 58.173211499393844,
+        "meanMs": 17.190042877560916,
+        "p95Ms": 16.800000000000182,
+        "p99Ms": 33.399999999999636,
+        "maxMs": 83.39999999999964,
+        "low1FPS": 21.70318313352622,
+        "frames": 2099,
+        "over50Ms": 4,
+        "over100Ms": 0,
+        "missed60HzSlots": 66,
+        "runFPS": [
+          58.33791048750852,
+          58.00502654749422,
+          58.17668782937052
+        ],
+        "taskSeconds": 14.936096000000001,
+        "cpuWindowSeconds": 36.17422799998894,
+        "heapPeakSampled": 2823592,
+        "heapAfterGC": [
+          2264552,
+          2265888,
+          2266704
+        ],
+        "coldStartDialogMs": [
+          1140,
+          1134,
+          901
+        ],
+        "coldContinueReadyMs": [
+          198,
+          207,
+          205
+        ]
+      }
+    },
+    {
+      "id": "combat-phone",
+      "before": {
+        "meanFPS": 59.03197542229021,
+        "meanMs": 16.939971817754966,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 33.29999999999927,
+        "maxMs": 99.89999999999964,
+        "low1FPS": 24.44987775061128,
+        "frames": 2129,
+        "over50Ms": 2,
+        "over100Ms": 0,
+        "missed60HzSlots": 35,
+        "runFPS": [
+          58.589854397978854,
+          59.2533413225479,
+          59.2533413225479
+        ],
+        "taskSeconds": 14.077128000000002,
+        "cpuWindowSeconds": 36.189899000004516,
+        "heapPeakSampled": 2846900,
+        "heapAfterGC": [
+          2217480,
+          2221128,
+          2221164
+        ],
+        "coldStartDialogMs": [
+          844,
+          1124,
+          1169
+        ],
+        "coldContinueReadyMs": [
+          180,
+          188,
+          255
+        ]
+      },
+      "after": {
+        "meanFPS": 59.36454153992854,
+        "meanMs": 16.84507239607672,
+        "p95Ms": 16.799999999999272,
+        "p99Ms": 16.80000000000109,
+        "maxMs": 50.100000000000364,
+        "low1FPS": 29.325513196480927,
+        "frames": 2141,
+        "over50Ms": 0,
+        "over100Ms": 0,
+        "missed60HzSlots": 23,
+        "runFPS": [
+          59.58663331366503,
+          59.086899352540726,
+          59.41978329255505
+        ],
+        "taskSeconds": 9.506882,
+        "cpuWindowSeconds": 36.161338999983855,
+        "heapPeakSampled": 2829932,
+        "heapAfterGC": [
+          2223776,
+          2223740,
+          2223740
+        ],
+        "coldStartDialogMs": [
+          868,
+          1116,
+          1090
+        ],
+        "coldContinueReadyMs": [
+          204,
+          197,
+          177
+        ]
+      }
+    }
+  ]
+}

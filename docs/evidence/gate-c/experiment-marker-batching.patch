@@ -1,0 +1,20 @@
+diff --git a/src/main.ts b/src/main.ts
+index a8080f8..eb54582 100644
+--- a/src/main.ts
++++ b/src/main.ts
+@@ -91,10 +91,13 @@ function renderMarkers(){
+   updateMarkers();
+ }
+ function updateMarkers(){
++  // Read geometry before writing any marker styles; avoid a layout flush between
++  // successive markers when the camera moves.
++  const width=worldHost.clientWidth,height=worldHost.clientHeight;
+   for(const p of world.placePositions()){
+     const el=document.querySelector<HTMLElement>(`[data-place="${p.id}"]`);if(!el)continue;
+-    el.style.left=`${p.x}px`;el.style.top=`${p.y+17}px`;
+-    const visible=p.x>45&&p.x<worldHost.clientWidth-45&&p.y>100&&p.y<worldHost.clientHeight-130;
++    const left=`${p.x}px`,top=`${p.y+17}px`;if(el.style.left!==left)el.style.left=left;if(el.style.top!==top)el.style.top=top;
++    const visible=p.x>45&&p.x<width-45&&p.y>100&&p.y<height-130;
+     el.hidden=!visible;el.tabIndex=visible&&panel===null?0:-1;
+   }
+ }

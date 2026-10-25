@@ -1,0 +1,22 @@
+{
+  "version": "0.4.0-gate-c",
+  "productionFiles": {
+    "./assets/index-ZW57hMnJ.js": {
+      "bytes": 92307,
+      "sha256": "247990bff883a10fdc9df143fb446cc71360789eeafc76aa97e240aa1e64d2ed"
+    },
+    "./assets/index-R7wCqtNX.css": {
+      "bytes": 34282,
+      "sha256": "c1ac719e6cf5b0da6357a26ee90aa62198bd81b27bd5d59d841aa1efe5eb5b96"
+    }
+  },
+  "browser": "154.0.8037.57",
+  "domainTests": 31,
+  "browserChecks": 22,
+  "workers": 2,
+  "suite": "npm run test:browser -- --workers=2; production preview under /the-last-lantern/",
+  "runtimeChangeAfterSuite": "None. Exploration render/resize and main.ts are verbatim accepted baseline; only lazy combat backdrop cache retained.",
+  "CI": "Not run",
+  "deployment": false,
+  "productionAcceptance": false
+}

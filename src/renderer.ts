@@ -13,6 +13,7 @@ export class World {
   private scene:Scene='town';private time=0;private direction=0;private frame=0;private game!:Game;
   private x=0;private y=0;private zoom=1;private width=1;private height=1;private dpr=1;
   private running=false;private last=performance.now();private isMoving=false;private battleRaf=0;private fade=0;
+  private battleBackground:HTMLCanvasElement|undefined;private battleBackgroundKey='';private battleBackgroundBuilds=0;
   frameTimes:number[]=[];reduced=false;
   app={start:()=>{this.last=performance.now();this.running=true;},stop:()=>{this.running=false;}};
   constructor(private host:HTMLElement,private tick:(dt:number)=>void,private click:(p:Point)=>void){}
@@ -42,6 +43,7 @@ export class World {
   private collect(ms:number){if(ms>0&&ms<2000){this.frameTimes.push(ms);if(this.frameTimes.length>3600)this.frameTimes.shift();}}
   private add(name:string,x:number,y:number,scale=1){this.actors.push({name,x,y,scale,depth:y});}
   build(g:Game){
+    if(this.battleBackground){this.battleBackground.width=0;this.battleBackground.height=0;this.battleBackground=undefined;}this.battleBackgroundKey='';
     this.scene=g.scene;this.game=g;this.actors=[];this.fade=this.reduced?0:1;
     if(g.scene==='town'){
       this.add('cottage-copper',250,105,.7);this.add('cottage',800,90,.65);this.add('cottage-copper',1170,150,.6);
@@ -104,9 +106,13 @@ export class World {
   mountBattle(stage:HTMLElement,action:string,phase:string,busy:boolean,enemy:EnemyId='dewdrop',scene:Scene='meadow',fast=false){
     this.stopBattle();const canvas=document.createElement('canvas');canvas.className='battle-canvas';canvas.setAttribute('aria-hidden','true');stage.prepend(canvas);
     const ctx=canvas.getContext('2d')!,start=performance.now();let previous=start;
+    const background=this.battleBackground??=document.createElement('canvas');
     const draw=(now:number)=>{
       if(!stage.isConnected)return;const w=stage.clientWidth,h=stage.clientHeight,dpr=Math.min(devicePixelRatio,1.5);if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
-      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);const backdrop=scene==='forest'?'battle-forest':scene==='cavern'?'battle-cavern':scene==='quarry'?'battle-quarry':['tower','sanctum'].includes(scene)?'battle-tower':'battle-environment';for(const key of ['battle-environment','battle-quarry'].includes(backdrop)?['battle-sky',backdrop]:[backdrop]){const bg=this.images[key],cover=Math.max(w/bg.width,h/bg.height);ctx.drawImage(bg,(w-bg.width*cover)/2,(h-bg.height*cover)/2-(key==='battle-sky'?h*.22:0),bg.width*cover,bg.height*cover);}
+      const backdrop=scene==='forest'?'battle-forest':scene==='cavern'?'battle-cavern':scene==='quarry'?'battle-quarry':['tower','sanctum'].includes(scene)?'battle-tower':'battle-environment',key=`${canvas.width}:${canvas.height}:${backdrop}`;
+      if(this.battleBackgroundKey!==key){this.battleBackgroundBuilds++;background.width=canvas.width;background.height=canvas.height;const paint=background.getContext('2d')!;paint.setTransform(dpr,0,0,dpr,0,0);
+        for(const name of ['battle-environment','battle-quarry'].includes(backdrop)?['battle-sky',backdrop]:[backdrop]){const bg=this.images[name],cover=Math.max(w/bg.width,h/bg.height);paint.drawImage(bg,(w-bg.width*cover)/2,(h-bg.height*cover)/2-(name==='battle-sky'?h*.22:0),bg.width*cover,bg.height*cover);}this.battleBackgroundKey=key;}
+      ctx.setTransform(1,0,0,1,0,0);ctx.clearRect(0,0,canvas.width,canvas.height);ctx.drawImage(background,0,0);ctx.setTransform(dpr,0,0,dpr,0,0);
       const mobile=w<600,floor=h*(mobile?.54:.72),hx=w*(mobile?.27:.32),ex=w*(mobile?.73:.69),size=Math.min(w*(mobile?.64:.27),h*.55),es=Math.min(size*(enemies[enemy].boss?1.4:.95),mobile?w*.7:1000);
       const elapsed=Math.max(0,(now-start)/1000),progress=this.reduced?0:Math.min(1,elapsed/(fast?.24:phase==='enemy'?.55:.85));
       const name=busy?(phase==='enemy'?'hurt':action==='attack'?'attack':['ember','mend','ward','gleam','focus','greaterMend','ether'].includes(action)?'cast':action==='guard'?'guard':'victory'):'victory',p=this.manifest.poses[name];
@@ -120,5 +126,5 @@ export class World {
       this.collect(now-previous);previous=now;if(!this.reduced)this.battleRaf=requestAnimationFrame(draw);
     };this.battleRaf=requestAnimationFrame(draw);
   }
-  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0),resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
+  metrics(){const ms=this.frameTimes.slice(-600),sorted=[...ms].sort((a,b)=>a-b);return {battleBackgroundBuilds:this.battleBackgroundBuilds,battleBackgroundBytes:this.battleBackground?this.battleBackground.width*this.battleBackground.height*4:0,frames:ms.length,frameMs:ms,meanMs:ms.reduce((s,v)=>s+v,0)/Math.max(1,ms.length),p95Ms:sorted[Math.floor(sorted.length*.95)]??0,renderer:'Canvas2D · Blender prerendered 3D',gpu:'Not required by runtime compositor',textures:Object.keys(this.images).length,decodedTextureBytes:Object.values(this.images).reduce((n,image)=>n+image.naturalWidth*image.naturalHeight*4,0),resolution:this.dpr,viewport:{width:this.width,height:this.height},heroScreen:this.game?this.screen(this.game):{x:0,y:0},moving:this.isMoving};}
 }

@@ -1,9 +1,9 @@
 {
-  "version": "0.3.0-gate-b",
-  "archive": "the-last-lantern-gate-b.zip",
-  "archive_sha256": "056c2af3cd77229eed62343dfa7883af868015019ca5ba76a89812e32dc7390e",
+  "version": "0.4.0-gate-c",
+  "archive": "the-last-lantern-gate-c.zip",
+  "archive_sha256": "a5c818100e24ecf369caff191cd52c36eb1f2ae01e450302df528cb878f137de",
   "files": {
-    "START-HERE.txt": "c32219872edbf4f9d7814c06d37d121ec90d87e3b408492b43dc5d2de78042c7",
+    "START-HERE.txt": "711d1b995991429e0a8fa99d4a82e8d849005f74326386995351da952d45878c",
     "serve-playtest.py": "df1e177f19359cfafb6d3e839139a558ba8c91386af96556c2791247ef25e0ce",
     "game/art3d/arch.webp": "b3f2beacf8b6789272227fe823aa8163ed3b6ac7f4ddf8b0cf4b4f5e7fc011ba",
     "game/art3d/armour.webp": "9ea07a0956ab7a83015ce9f1656d7fd732fd7a64524cf3f8ed4deb33dc795d07",
@@ -89,9 +89,9 @@
     "game/assets/fraunces-latin-ext-wght-normal-Ca2vKHc0.woff2": "a21ecfbf41fbc393e24ef9b7e38532a27e8da5e0a074aa7d66802d1b5ccec2f0",
     "game/assets/fraunces-latin-wght-normal-ukD16Tqj.woff2": "7f9d191d999336d3b9790afa72e1358e50a13b06d4f289341e92a311967a80f9",
     "game/assets/fraunces-vietnamese-wght-normal-CnvboYUG.woff2": "ce7b18aac7371cde4a740e54e252e9f02de67ff2ed444b18d1d04e66f50edeb0",
-    "game/assets/index-Q4S8ARqg.js": "ac84969c44130227a02a7bad8b50d3e32ac98e7abf22daef952a1607ccc6a79b",
     "game/assets/index-R7wCqtNX.css": "c1ac719e6cf5b0da6357a26ee90aa62198bd81b27bd5d59d841aa1efe5eb5b96",
-    "game/index.html": "d1c153238608789e35fae4dac5a74f1ddedbcad078810de8b4d1cb0b27cf67bb",
+    "game/assets/index-ZW57hMnJ.js": "247990bff883a10fdc9df143fb446cc71360789eeafc76aa97e240aa1e64d2ed",
+    "game/index.html": "f834e3bb1fad3899e640adc0518ca27744745a20f0cbb306208ea11e7f5b310a",
     "THIRD-PARTY-NOTICES.md": "3fabbca7c4d8c708239f85a891bf5af55437023b8c6c8e180bb37b1df5a9a154",
     "licenses/Fraunces-OFL.txt": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3",
     "licenses/DM-Sans-OFL.txt": "6fbd040a29c2037a765dfb9f2561e9965b5c95c6dcb5dce516089d63d5f17af7"

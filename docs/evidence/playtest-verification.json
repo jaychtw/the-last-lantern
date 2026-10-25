@@ -1,6 +1,6 @@
 {
-  "target": "http://127.0.0.1:8090/",
-  "artifact": "056c2af3cd77229eed62343dfa7883af868015019ca5ba76a89812e32dc7390e",
+  "target": "http://127.0.0.1:8094/",
+  "artifact": "a5c818100e24ecf369caff191cd52c36eb1f2ae01e450302df528cb878f137de",
   "publicDeployment": false,
   "checks": [
     "Packaged build starts into the exploration scene.",

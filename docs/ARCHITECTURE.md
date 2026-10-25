@@ -51,3 +51,7 @@ These earlier inspections inform engineering patterns, not visual identity or in
 ## Delivery boundary
 
 Source/evidence/package publication to `main` follows the owner’s established review workflow. No Pages deployment workflow is added. Local tests, source push, CI, Gate C human acceptance, public deployment and live verification are separate. Stop at the complete review candidate for human gameplay/pacing/polish findings.
+
+## Gate C rendering discipline
+
+Normal exploration rendering, resizing, marker/input handling, artwork, animation, filters and resolution remain at the accepted baseline. Prototypes for marker layout batching and reduced-motion frame reuse were withdrawn after pacing checks. Battle sky/environment composition alone is cached at exact physical canvas dimensions and copied 1:1; this lazy, bounded surface is reused across action phases, rebuilt on backdrop/size changes, and released on a world rebuild. Characters, UI and effects remain live. Diagnostics report battle cache bytes/builds. No gameplay, save, content, translation or audio change ships. See the Gate C report for unresolved desktop pacing and physical-device limits.
