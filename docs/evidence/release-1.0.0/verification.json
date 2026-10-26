@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "build": "pass",
+  "domainStatisticsTests": {
+    "passed": 35,
+    "failed": 0
+  },
+  "browser": {
+    "passed": 25,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "workers": 2,
+    "stats": {
+      "startTime": "2026-10-26T03:27:50.561Z",
+      "duration": 866772.177,
+      "expected": 25,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "checks": [
+      {
+        "file": "battle-layout.spec.ts",
+        "title": "narrow battle keeps larger-text commands below status in both languages",
+        "status": "passed",
+        "durationMs": 18670
+      },
+      {
+        "file": "campaign.spec.ts",
+        "title": "complete Gate B campaign with English desktop inputs",
+        "status": "passed",
+        "durationMs": 689910
+      },
+      {
+        "file": "campaign.spec.ts",
+        "title": "complete Gate B campaign with Traditional Chinese touch inputs",
+        "status": "passed",
+        "durationMs": 636652
+      },
+      {
+        "file": "campaign.spec.ts",
+        "title": "Gate A save migration is non-destructive in the actual browser",
+        "status": "passed",
+        "durationMs": 4170
+      },
+      {
+        "file": "completion-copy.spec.ts",
+        "title": "second-light confirmation follows the current journal in English",
+        "status": "passed",
+        "durationMs": 5656
+      },
+      {
+        "file": "completion-copy.spec.ts",
+        "title": "second-light confirmation follows the current journal in zh-TW",
+        "status": "passed",
+        "durationMs": 2714
+      },
+      {
+        "file": "diagnostics.spec.ts",
+        "title": "normal gameplay does not load or mount optional diagnostics",
+        "status": "passed",
+        "durationMs": 2502
+      },
+      {
+        "file": "diagnostics.spec.ts",
+        "title": "diagnostics export on a narrow touch-emulated layout without leaking saves",
+        "status": "passed",
+        "durationMs": 6432
+      },
+      {
+        "file": "diagnostics.spec.ts",
+        "title": "diagnostic capture finishes automatically and stays available over battle dialogs",
+        "status": "passed",
+        "durationMs": 76682
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "complete Gate A via rendered English desktop interactions",
+        "status": "passed",
+        "durationMs": 86309
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "complete Gate A via rendered Traditional Chinese touch interactions",
+        "status": "passed",
+        "durationMs": 57083
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "defeat returns home, keeps discoveries, and supports retry",
+        "status": "passed",
+        "durationMs": 36261
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "responsive, bilingual, larger text and accessible settings at 320px",
+        "status": "passed",
+        "durationMs": 6489
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "responsive, bilingual, larger text and accessible settings at 390px",
+        "status": "passed",
+        "durationMs": 6767
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "responsive, bilingual, larger text and accessible settings at 768px",
+        "status": "passed",
+        "durationMs": 8515
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "responsive, bilingual, larger text and accessible settings at 1440px",
+        "status": "passed",
+        "durationMs": 12065
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "corrupt autosave is kept intact; manual saving and reload recovery work",
+        "status": "passed",
+        "durationMs": 3535
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "blocked storage allows a session and explains that saving is unavailable",
+        "status": "passed",
+        "durationMs": 6949
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "keyboard focus, pause and project-subpath assets remain usable",
+        "status": "passed",
+        "durationMs": 3688
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "save/load, overwrite cancellation and new-journey confirmation preserve progress",
+        "status": "passed",
+        "durationMs": 7492
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "production character atlas contains distinct articulated frames in all eight directions",
+        "status": "passed",
+        "durationMs": 3488
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "inverse scene projection supports mouse ground traversal",
+        "status": "passed",
+        "durationMs": 5199
+      },
+      {
+        "file": "game.spec.ts",
+        "title": "inverse scene projection supports touch ground traversal",
+        "status": "passed",
+        "durationMs": 3525
+      },
+      {
+        "file": "render-cache.spec.ts",
+        "title": "reduced-motion pixels remain stable while input, resize and language stay live",
+        "status": "passed",
+        "durationMs": 6956
+      },
+      {
+        "file": "render-cache.spec.ts",
+        "title": "battle backdrop survives action phases and refreshes on resize",
+        "status": "passed",
+        "durationMs": 15796
+      }
+    ]
+  },
+  "visual": {
+    "pairs": 30,
+    "passed": 30,
+    "maxMeanAbsoluteChannelError": 0.0012342022116903634,
+    "maxOver16LevelsPercent": 0.0
+  },
+  "criticalDefectsIdentified": [],
+  "criticalFixes": [],
+  "acceptedGameCodeChanged": false,
+  "ownerHumanAcceptance": "Desktop and a physical phone; generally smooth, satisfactory and visually accepted. Device/FPS/backend/native-memory characteristics unmeasured.",
+  "diagnosticsDefault": "Disabled; existing normal-game test confirms no optional diagnostic module or UI loads.",
+  "ciAndDeployment": "Not verified: upstream proxy blocks GitHub API and public Pages host; no live-success claim."
+}

@@ -1,5 +1,7 @@
 # Desktop and phone validation — no development tools required
 
+This is an archived optional procedure, not a final-release requirement. The owner has completed desktop and physical-phone acceptance; see [the release report](RELEASE-1.0.0.md).
+
 Use the [Gate C follow-up ZIP](https://github.com/jaychtw/the-last-lantern/raw/refs/heads/main/playtest/the-last-lantern-gate-c.zip). This is a private review package, not production acceptance. The owner has already reported smooth, visually satisfactory desktop play at `b763562`; the procedure below adds measurements to that observation.
 
 ## Start the optional diagnostic

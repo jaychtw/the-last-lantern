@@ -1,0 +1,51 @@
+
+> the-last-lantern@1.0.0 test:browser
+> node scripts/browser-tests.mjs --workers=2
+
+[2m[WebServer] [22m(node:159799) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m(node:159812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 25 tests using 2 workers
+
+(node:159830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:159831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:159830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:159831) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/browser/battle-layout.spec.ts:4:1 › narrow battle keeps larger-text commands below status in both languages (18.7s)
+  ✓   3 tests/browser/campaign.spec.ts:7:30 › complete Gate B campaign with Traditional Chinese touch inputs (10.6m)
+  ✓   4 tests/browser/campaign.spec.ts:84:1 › Gate A save migration is non-destructive in the actual browser (4.2s)
+  ✓   5 tests/browser/completion-copy.spec.ts:3:30 › second-light confirmation follows the current journal in English (5.7s)
+  ✓   6 tests/browser/completion-copy.spec.ts:3:30 › second-light confirmation follows the current journal in zh-TW (2.7s)
+  ✓   7 tests/browser/diagnostics.spec.ts:6:1 › normal gameplay does not load or mount optional diagnostics (2.5s)
+  ✓   8 tests/browser/diagnostics.spec.ts:11:1 › diagnostics export on a narrow touch-emulated layout without leaking saves (6.4s)
+  ✓   2 tests/browser/campaign.spec.ts:7:30 › complete Gate B campaign with English desktop inputs (11.5m)
+  ✓   9 tests/browser/diagnostics.spec.ts:26:1 › diagnostic capture finishes automatically and stays available over battle dialogs (1.3m)
+  ✓  10 tests/browser/game.spec.ts:46:3 › complete Gate A via rendered English desktop interactions (1.4m)
+  ✓  11 tests/browser/game.spec.ts:46:3 › complete Gate A via rendered Traditional Chinese touch interactions (57.1s)
+  ✓  12 tests/browser/game.spec.ts:100:1 › defeat returns home, keeps discoveries, and supports retry (36.3s)
+  ✓  13 tests/browser/game.spec.ts:117:39 › responsive, bilingual, larger text and accessible settings at 320px (6.5s)
+  ✓  14 tests/browser/game.spec.ts:117:39 › responsive, bilingual, larger text and accessible settings at 390px (6.8s)
+  ✓  15 tests/browser/game.spec.ts:117:39 › responsive, bilingual, larger text and accessible settings at 768px (8.5s)
+  ✓  17 tests/browser/game.spec.ts:133:1 › corrupt autosave is kept intact; manual saving and reload recovery work (3.5s)
+  ✓  16 tests/browser/game.spec.ts:117:39 › responsive, bilingual, larger text and accessible settings at 1440px (12.1s)
+  ✓  19 tests/browser/game.spec.ts:152:1 › keyboard focus, pause and project-subpath assets remain usable (3.7s)
+  ✓  18 tests/browser/game.spec.ts:143:1 › blocked storage allows a session and explains that saving is unavailable (6.9s)
+  ✓  21 tests/browser/game.spec.ts:182:1 › production character atlas contains distinct articulated frames in all eight directions (3.5s)
+  ✓  20 tests/browser/game.spec.ts:163:1 › save/load, overwrite cancellation and new-journey confirmation preserve progress (7.5s)
+  ✓  22 tests/browser/game.spec.ts:200:33 › inverse scene projection supports mouse ground traversal (5.2s)
+  ✓  23 tests/browser/game.spec.ts:200:33 › inverse scene projection supports touch ground traversal (3.5s)
+  ✓  24 tests/browser/render-cache.spec.ts:3:1 › reduced-motion pixels remain stable while input, resize and language stay live (7.0s)
+  ✓  25 tests/browser/render-cache.spec.ts:13:1 › battle backdrop survives action phases and refreshes on resize (15.8s)
+
+  25 passed (14.4m)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

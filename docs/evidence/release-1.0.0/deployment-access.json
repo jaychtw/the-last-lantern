@@ -1,0 +1,10 @@
+{
+  "checkedAtUTC": "2026-10-26T03:47:23.597182+00:00",
+  "networkPermissionGranted": true,
+  "upstreamProxyStillDenies": true,
+  "api": "https://api.github.com/repos/jaychtw/the-last-lantern",
+  "pages": "https://jaychtw.github.io/the-last-lantern/",
+  "observedFailure": "CONNECT tunnel rejected with HTTP 403 by envoy proxy; requests did not reach GitHub. gh API requests likewise Forbidden.",
+  "tokenValidity": "Not established; API reachability fails before GitHub authentication can be checked.",
+  "publicStartupVerified": false
+}
