@@ -1,8 +1,8 @@
 # The Last Lantern / 最後的引路燈
 
-An original single-hero fantasy RPG in English and Traditional Chinese. **Version 1.0.0.** The owner has accepted the game after desktop and physical-phone playtests and authorized production release.
+An original single-hero fantasy RPG in English and Traditional Chinese. **Released: version 1.0.0.** The owner has accepted the game after desktop and physical-phone playtests and authorized production release.
 
-[GitHub Pages target](https://jaychtw.github.io/the-last-lantern/) · **[Release status and final results](docs/RELEASE-1.0.0.md)** · [Approval record](docs/APPROVALS.md)
+[Play online](https://jaychtw.github.io/the-last-lantern/) · **[Release status and final results](docs/RELEASE-1.0.0.md)** · [Approval record](docs/APPROVALS.md)
 
 ![Hearthmere, captured from the running game](docs/evidence/gameplay-1440-en.png)
 

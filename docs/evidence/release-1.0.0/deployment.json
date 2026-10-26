@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "releaseCommit": "463cc507f29d33298dfb225e28072e49386ea5a5",
+  "url": "https://jaychtw.github.io/the-last-lantern/",
+  "workflowRun": "https://github.com/jaychtw/the-last-lantern/actions/runs/40266335881",
+  "job": "https://github.com/jaychtw/the-last-lantern/actions/runs/40266335881/job/121389474395",
+  "conclusion": "success",
+  "observedVia": "GitHub public web run and job pages; API access remains unavailable locally.",
+  "publicVerificationEnvironment": "GitHub-hosted runner, existing Playwright dependency and headless Chrome; touch emulation, not a new physical-device claim.",
+  "publicChecks": {
+    "verifiedIndexAndFileHashes": 89,
+    "gameStarts": true,
+    "touchMovement": true,
+    "traditionalChinese": true,
+    "diagnosticModuleAndUIDisabledByDefault": true,
+    "pageErrors": 0
+  },
+  "proof": "The successful release job includes the nonoptional public-start step at this commit. It checks the published index/all 89 hashes before real browser startup, movement and language assertions.",
+  "ownerActionRequired": null,
+  "noncriticalCIWarnings": [
+    "Actions using Node 20 are forced to Node 24; the run succeeded.",
+    "ubuntu-latest runner-image migration notice; the run succeeded."
+  ]
+}

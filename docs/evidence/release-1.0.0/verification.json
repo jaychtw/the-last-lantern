@@ -183,5 +183,10 @@
   "acceptedGameCodeChanged": false,
   "ownerHumanAcceptance": "Desktop and a physical phone; generally smooth, satisfactory and visually accepted. Device/FPS/backend/native-memory characteristics unmeasured.",
   "diagnosticsDefault": "Disabled; existing normal-game test confirms no optional diagnostic module or UI loads.",
-  "ciAndDeployment": "Not verified: upstream proxy blocks GitHub API and public Pages host; no live-success claim."
+  "ciAndDeployment": {
+    "conclusion": "success",
+    "releaseCommit": "463cc507f29d33298dfb225e28072e49386ea5a5",
+    "workflowRun": "https://github.com/jaychtw/the-last-lantern/actions/runs/40266335881",
+    "publicStartupVerifiedByCI": true
+  }
 }

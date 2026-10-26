@@ -6,5 +6,9 @@
   "pages": "https://jaychtw.github.io/the-last-lantern/",
   "observedFailure": "CONNECT tunnel rejected with HTTP 403 by envoy proxy; requests did not reach GitHub. gh API requests likewise Forbidden.",
   "tokenValidity": "Not established; API reachability fails before GitHub authentication can be checked.",
-  "publicStartupVerified": false
+  "publicStartupVerified": true,
+  "localPublicStartupVerified": false,
+  "publicVerificationMethod": "Completed on the authorized Pages runner using existing Playwright; successful job observed through the accessible GitHub web UI.",
+  "workflowRun": "https://github.com/jaychtw/the-last-lantern/actions/runs/40266335881",
+  "remainingOwnerAction": null
 }
