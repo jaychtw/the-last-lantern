@@ -21,6 +21,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -41,3 +42,49 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify the public game starts
+        env:
+          GAME_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          if ! command -v google-chrome >/dev/null && ! command -v chromium >/dev/null; then
+            npx playwright install --with-deps chromium
+          fi
+          node --input-type=module <<'JS'
+          import {chromium, expect} from '@playwright/test';
+          import {existsSync, readFileSync, appendFileSync} from 'node:fs';
+          import {createHash} from 'node:crypto';
+          const url=process.env.GAME_URL;
+          const manifest=JSON.parse(readFileSync('docs/evidence/release-1.0.0/build-manifest.json','utf8'));
+          const hash=data=>createHash('sha256').update(data).digest('hex');
+          let ready=false;
+          for(let attempt=0;attempt<12;attempt++){
+            try{const r=await fetch(url,{cache:'no-store'});ready=r.ok&&hash(Buffer.from(await r.arrayBuffer()))===manifest.files['index.html'].sha256;}catch{}
+            if(ready)break;
+            await new Promise(resolve=>setTimeout(resolve,5000));
+          }
+          if(!ready)throw Error('Published release index did not match the verified candidate.');
+          for(const [name,file] of Object.entries(manifest.files)){
+            const r=await fetch(new URL(name,url));
+            if(!r.ok||hash(Buffer.from(await r.arrayBuffer()))!==file.sha256)throw Error(`Published file mismatch: ${name}`);
+          }
+          const executablePath=['/usr/bin/google-chrome','/usr/bin/chromium'].find(existsSync);
+          const browser=await chromium.launch({executablePath,headless:true,args:['--no-sandbox']});
+          try{
+            const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+            const page=await context.newPage(),errors=[],requests=[];
+            page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
+            const response=await page.goto(url);expect(response.ok()).toBe(true);
+            await page.locator('[data-command=begin]').tap();await expect(page.locator('#panel')).not.toBeVisible();
+            await expect(page.locator('html')).toHaveAttribute('data-scene','town');
+            const initial=await page.evaluate(()=>window.__lantern().game.x);
+            await page.locator('[data-dir=right]').tap();
+            expect(await page.evaluate(()=>window.__lantern().game.x)).toBeGreaterThan(initial);
+            await page.locator('#language').tap();await expect(page.locator('html')).toHaveAttribute('lang','zh-TW');
+            expect(await page.locator('#diagnostic-launch').count()).toBe(0);
+            expect(requests.some(r=>/\/diagnostics-[^/]+\.(js|css)/.test(r))).toBe(false);
+            expect(errors).toEqual([]);
+            const result={version:'1.0.0',commit:process.env.GITHUB_SHA,url,publicFileHashesMatched:Object.keys(manifest.files).length,start:true,touchMovement:true,traditionalChinese:true,diagnosticsDisabledByDefault:true,pageErrors:errors};
+            console.log('PUBLIC_GAME_VERIFIED '+JSON.stringify(result));
+            appendFileSync(process.env.GITHUB_STEP_SUMMARY,'## Public game verified\n\n```json\n'+JSON.stringify(result,null,2)+'\n```\n');
+          }finally{await browser.close();}
+          JS
